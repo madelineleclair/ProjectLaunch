@@ -12,6 +12,7 @@
 ### Projects
 - 'POST api/projects'
 - 'DELETE api/projects/:id'
+- 'UPDATE api/projects/:id'
 - 'GET api/projects/:id'
 - 'GET api/projects'
 
