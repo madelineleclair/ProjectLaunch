@@ -24,6 +24,7 @@ category           | text      | not null
 subcategory        | text      |
 location           | string    | not null
 goal               | integer   | not null
+launch             | boolean   | default false
 duration (either number of days or end on a date and time)
 collaborators     |            | default []
 timestamps
