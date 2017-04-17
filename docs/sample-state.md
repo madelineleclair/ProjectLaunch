@@ -15,7 +15,7 @@
       userName: "test-user",
       image: 'www.fakeurlforcloudinary.com/image/2587',
       goal: 5000000000
-      funds: {
+      pledges: {
         totalPledged: 300000,
         daysLeft: 29,
       }
@@ -24,7 +24,7 @@
       title: "Make a sandwich",
       userName: "Frank",
       goal: 100,
-      funds: {
+      pledges: {
         totalPledged: 500,
         daysLeft: 4,
       }
@@ -42,7 +42,7 @@
       video: 'www.faceurl.com/video/5875',
       goal: 5000000000,
       duration: 30,
-      funds: {
+      pledges: {
         totalPledged: 300000,
         numberBackers: 10,
         daysLeft: 29,
