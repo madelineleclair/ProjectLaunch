@@ -1,7 +1,7 @@
 # API Endpoints
 ## HTML API
  `GET /`
-  - loads React web app
+  - Loads React web app
 
 ## JSON API
 ### Users
@@ -13,9 +13,12 @@
 
 ### Projects
 - `POST api/projects`
+  - Creates project based on initial info. Project will not appear on index or have a show page until it is launched
 - `DELETE api/projects/:id`
 - `UPDATE api/projects/:id`
+  - Allows owner to input missing project information and launch project
 - `GET api/projects/:id`
+  - Retrieves a specific project
 - `GET api/projects`
 
 ### Rewards
@@ -24,13 +27,13 @@
 ### Stories
 - `POST api/projects/:id/stories`
 - `GET api/projects/:id/stories`
-  - retrieve all story information
+  - Retrieves all story information
 
 ### Pledges
 - `POST api/projects/:id/pledges`
-  - adds pledge to database
+  - Adds pledge to database
 - `GET api/projects/:id/pledges`
-  - retrieve all pledges for a specific project
+  - Retrieves all pledges for a specific project
 
 ### Categories
 - `GET api/categories`
