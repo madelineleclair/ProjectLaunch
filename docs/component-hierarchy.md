@@ -9,12 +9,8 @@
       description, percentage funded, and amount pledged
   - Almost funded component
     + Mini project component
-      - Display basic information about the the project, such as picture, title,
-      description, percentage funded, and amount pledged
   - Popular projects
     + Mini project component
-      - Display basic information about the the project, such as picture, title,
-      description, percentage funded, and amount pledged
 
 #### Auth Container
   - Auth component
@@ -23,19 +19,19 @@
   - Nav bar component
   - Session component
   - Search component
+    + Mini project component
   - Explore component
     - Have links to the category component for each category
+
+#### Project Index Container
+  - Mini project component
 
 #### Categories Container
   - Category component
     + Almost funded component
       + Mini project component
-        - Display basic information about the the project, such as picture, title,
-        description, percentage funded, and amount pledged
     + Popular projects
       + Mini project component
-        - Display basic information about the the project, such as picture, title,
-        description, percentage funded, and amount pledged
 
 #### Project Container
   - Project component
@@ -65,3 +61,4 @@ Path               | Component
 /start             | Create Project Container
 /projects/:id/edit | Edit Project Container
 /category/:id      | Category Container
+/discover/:term    | Project Index Container
