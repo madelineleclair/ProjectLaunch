@@ -1,14 +1,18 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    name: 'test-user',
+  session: {
+    currentUser: {
+      id: 1,
+      name: 'test-user',
+    },
+    errors:
+      errors: []
   },
-  forms: {
-    signUp: { errors: [] },
-    logIn: { errors: ["Invalid email or password"] },
-    createProject: { errors: [] }
-  },
+  user: {
+    projects: {
+      title: title
+    }
+  }
   projects: {
     2: {
       title: "Make a spaceship",
