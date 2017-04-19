@@ -2,15 +2,20 @@ import React from 'react';
 import { Link } from 'react-router'
 
 const logOut = (logOut) => (e) => {
-  logOut()
-}
+  logOut();
+};
+
+const handleUserToggle = () => {
+
+};
 
 const NavigationBar = (props) => {
   if (props.loggedIn) {
     return(
       <div>
-        <button onClick={logOut(props.logOut)}>Log out</button>
+        <img src="wp-content/uploads/flamingo.jpg"></img>
         <div>You are logged in as {props.currentUser.name}</div>
+        <button onClick={logOut(props.logOut)}>Log out</button>
       </div>
     );
   } else {

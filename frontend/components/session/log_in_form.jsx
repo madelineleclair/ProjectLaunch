@@ -38,7 +38,6 @@ class LogInForm extends React.Component {
   }
 
   render() {
-    debugger
     const errors = this.props.errors.map((error) => {
       return (<li>{error}</li>);
     })
