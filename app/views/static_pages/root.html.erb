@@ -1,10 +1,11 @@
 
 <script type="text/javascript">
-<% debugger %>
+
   <% if logged_in? %>
     window.current_user = <%= render(
       'api/users/user.json.jbuilder', user: current_user
     ).html_safe %>
   <% end %>
 </script>
+
 <main id="root">You shouldn't see me</main>
