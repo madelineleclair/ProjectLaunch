@@ -10,6 +10,18 @@ class LogInForm extends React.Component {
     this.handlePassword = this.handlePassword.bind(this);
   }
 
+  //not sure if I want to clear the errors when it mounts, should it only clear when it update?
+
+  // componentWillMount() {
+  //   this.props.clearErrors();
+  // }
+
+  componentWillReceiveProps(nextProps) {
+    if(this.props.formType !== nextProps.formType){
+      this.props.clearErrors();
+    }
+  }
+
   handleEmail(e) {
     const email = e.target.value;
     this.setState({ email });
@@ -22,11 +34,11 @@ class LogInForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.props.logIn(this.state).then(() => {this.props.router.push('/');});
   }
 
   render() {
+    debugger
     const errors = this.props.errors.map((error) => {
       return (<li>{error}</li>);
     })

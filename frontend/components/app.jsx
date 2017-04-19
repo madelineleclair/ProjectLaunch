@@ -1,12 +1,10 @@
 import React from 'react';
-import NavigationBar from './navigation/navigation_bar';
+import NavigationBarContainer from './navigation/navigation_bar_container';
 
 const App = ({ children }) => {
-  console.log(NavigationBar)
-  debugger
   return (
     <div>
-      <NavigationBar />
+      <NavigationBarContainer />
       { children }
     </div>
   );

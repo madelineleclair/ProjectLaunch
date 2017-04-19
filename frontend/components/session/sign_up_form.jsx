@@ -11,8 +11,16 @@ class SignUpForm extends React.Component {
     this.handlePassword = this.handlePassword.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+//must be a way for when you refresh to have errors persist, maybe bootstrapping errors to the window. in componentWillUnmount
 
+  // componentWillMount() {
+  //   this.props.clearErrors();
+  // }
+
+  componentWillReceiveProps(nextProps) {
+    if(this.props.formType !== nextProps.formType){
+      this.props.clearErrors();
+    }
   }
 
   handleName(e) {

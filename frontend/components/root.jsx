@@ -6,7 +6,6 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './app'
 
 const Root = ({ store }) => {
-  
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
