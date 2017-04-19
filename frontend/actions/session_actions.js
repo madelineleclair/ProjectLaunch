@@ -42,6 +42,7 @@ export const logIn = (user) => (dispatch) => {
 };
 
 export const logOut = () => (dispatch) => {
+  debugger
   return SessionUtil.logOut().then(() => {
     dispatch(receiveCurrentUser(null));
   });

@@ -69,8 +69,8 @@ class SignUpForm extends React.Component {
               <input onChange={this.handleEmail} type="text" placeholder="Email" value={this.state.email}/>
               <input onChange={this.handlePassword} type="text" placeholder="Password" value={this.state.password}/>
               <button className="sign-up-button" >Create account</button>
-              <button className="guest-button" onClick={this.handleGuest}>Guest log in</button>
             </form>
+            <button className="guest-button" onClick={this.handleGuest}>Guest log in</button>
           </section>
         </div>
       </div>

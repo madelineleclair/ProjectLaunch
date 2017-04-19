@@ -117,6 +117,7 @@ button, h1, h2, div, form, section, main, input, a, ul, li {
 
 .guest-button {
   background: #336EFF;
+  margin: auto;
 }
 
 .guest-button:hover {

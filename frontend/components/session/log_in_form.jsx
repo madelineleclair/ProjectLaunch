@@ -52,8 +52,8 @@ class LogInForm extends React.Component {
           <input onChange={this.handleEmail} type="text" placeholder="Email" value={this.state.email}/>
           <input onChange={this.handlePassword} type="text" placeholder="Password" value={this.state.password}/>
           <button>Log me in!</button>
-          <button onClick={this.handleGuest}>Guest log in</button>
         </form>
+        <button onClick={this.handleGuest}>Guest log in</button>
 
         <ul>
           {errors}
