@@ -1,36 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
+import UserInfo from '../user/user_info';
 
-const logOut = (props) => (e) => {
-  props.logOut().then(() => {props.router.push('/');});
-};
 
-const handleUserToggle = () => {
+class NavigationBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {displayInfo: false};
+    this.handleUserInfoToggle = this.handleUserInfoToggle.bind(this);
+  }
 
-};
+  handleUserInfoToggle () {
+    var displayInfo;
+    if (this.state.displayInfo === false) {
+      displayInfo = true;
+    } else {
+      displayInfo = false;
+    }
+    this.setState({displayInfo});
+  }
 
-const NavigationBar = (props) => {
-  if (props.loggedIn) {
-    return(
-      <div className="navigation-bar">
-        <img src={window.user_image}></img>
-        <div className="user-info-box">You are logged in as {props.currentUser.name}
-          <button onClick={logOut(props)}>Log out</button>
+  render() {
+
+  const info = this.state.displayInfo ? <UserInfo userInfo={ this.props } /> : <div />
+
+    if (this.props.loggedIn) {
+      return(
+        <div className="navigation-bar">
+          <img onClick={this.handleUserInfoToggle} src={window.user_image} />
+          { info }
         </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="navigation-bar">
+      );
+    } else {
+      return (
+        <div className="navigation-bar">
           <Link to="/login">
             <div>Log in</div>
           </Link>
           <Link to='/signup'>
             <div>Sign up</div>
           </Link>
-      </div>
-    )
+        </div>
+      );
+    }
   }
-};
+}
 
 export default NavigationBar;

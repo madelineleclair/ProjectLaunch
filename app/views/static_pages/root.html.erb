@@ -2,10 +2,10 @@
 <script type="text/javascript">
 
   <% if logged_in? %>
-    window.current_user = <%= render(
-      'api/users/user.json.jbuilder', user: current_user
-    ).html_safe %>
+    window.current_user = <%= render('api/users/user.json.jbuilder', user: current_user).html_safe %>
   <% end %>
+
+  window.user_image = "<%= image_path("user_icon.png") %>"
 </script>
 
 <main id="root">You shouldn't see me</main>
