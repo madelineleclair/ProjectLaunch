@@ -13,3 +13,99 @@
  *= require_tree .
  *= require_self
  */
+
+button, h1, h2, div, form, section, main, input, a {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: transparent;
+  text-decoration: none;
+}
+
+
+.sign-up {
+  background: #F7F5F2;
+  padding: 20px;
+}
+
+.make-account {
+  margin: 0 auto;
+  width: 400px;
+  height: 350px;
+  background: white;
+  border: 1px 1px 0px 1px solid #F1EEEA;
+}
+
+.have-account {
+  margin: 0 auto;
+  width: 400px;
+  background: white;
+  height: 60px;
+  text-align: center;
+  align-content: center;
+  background: #F7F6F6;
+  border: 1px solid #F1EEEA;
+}
+
+.have-account section {
+  padding-top: 25px;
+}
+.have-account section a {
+  color: blue;
+}
+
+.have-account section a:hover {
+  color: black;
+}
+
+.sign-up section h2 {
+  margin: auto;
+  width: 350px;
+  padding: 10px 0px 5px 20px ;
+  font-size: 22px;
+}
+.sign-up-form {
+  /*display: initial;*/
+  width: 350px;
+  margin: auto;
+}
+
+.sign-up-form input{
+  display: inline-block;
+  margin: 10px;
+  width: 330px;
+  height: 37px;
+  border-radius: 4px;
+  border: 1px solid #dad7d4;
+}
+
+ .sign-up-button, .guest-button {
+  display: block;
+  border-radius: 4px;
+  margin: 10px;
+  width: 330px;
+  height: 37px;
+  color: white;
+  font-size: 15px;
+}
+
+.sign-up-button {
+  background: #25CB68;
+}
+
+.sign-up-button:hover {
+  background: #009900;
+}
+
+.guest-button {
+  background: #336EFF;
+}
+
+.guest-button:hover {
+  background: #334FFF;
+}
+
+.sign-up-button:hover, .guest-button:hover {
+  cursor: pointer;
+}

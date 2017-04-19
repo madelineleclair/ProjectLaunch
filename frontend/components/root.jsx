@@ -13,7 +13,6 @@ const _redirectIfLoggedIn = (nextState, replace) => {
 }
 
 const Root = ({ store }) => {
-
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
