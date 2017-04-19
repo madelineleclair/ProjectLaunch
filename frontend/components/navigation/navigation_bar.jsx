@@ -12,17 +12,22 @@ const handleUserToggle = () => {
 const NavigationBar = (props) => {
   if (props.loggedIn) {
     return(
-      <div>
+      <div className="navigation-bar">
         <img src="wp-content/uploads/flamingo.jpg"></img>
-        <div>You are logged in as {props.currentUser.name}</div>
-        <button onClick={logOut(props.logOut)}>Log out</button>
+        <div className="user-info-box">You are logged in as {props.currentUser.name}
+          <button onClick={logOut(props.logOut)}>Log out</button>
+        </div>
       </div>
     );
   } else {
     return (
-      <div>
-        <Link to="/login">Log in</Link>
-        <Link to='/signup'>Sign up</Link>
+      <div className="navigation-bar">
+          <Link to="/login">
+            <div>Log in</div>
+          </Link>
+          <Link to='/signup'>
+            <div>Sign up</div>
+          </Link>
       </div>
     )
   }

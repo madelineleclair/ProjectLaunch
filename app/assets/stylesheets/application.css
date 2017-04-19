@@ -14,25 +14,41 @@
  *= require_self
  */
 
-button, h1, h2, div, form, section, main, input, a {
+button, h1, h2, div, form, section, main, input, a, ul, li {
   border: none;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background: transparent;
   text-decoration: none;
+  list-style-type: none;
+  color: black;
 }
 
+.make-account ul {
+  margin: auto;
+  width: 330px;
+  background: #fd003b;
+  color: white;
+}
+
+.sign-up-container {
+  position: relative;
+}
 
 .sign-up {
   background: #F7F5F2;
-  padding: 20px;
+  /*position: absolute;*/
+  padding: 120px 20px;
+  height: 800px;
+  width: 100%;
+  box-shadow: inset 2px 1px 20px 0px rgba(0, 0, 0, 0.22);
 }
 
 .make-account {
   margin: 0 auto;
   width: 400px;
-  height: 350px;
+  padding-bottom: 20px;
   background: white;
   border: 1px 1px 0px 1px solid #F1EEEA;
 }
@@ -41,21 +57,22 @@ button, h1, h2, div, form, section, main, input, a {
   margin: 0 auto;
   width: 400px;
   background: white;
-  height: 60px;
+  height: 30px;
   text-align: center;
   align-content: center;
   background: #F7F6F6;
   border: 1px solid #F1EEEA;
 }
 
-.have-account section {
-  padding-top: 25px;
+.have-account {
+  padding-top: 15px;
 }
-.have-account section a {
+.have-account a {
   color: blue;
+  padding-left: 10px;
 }
 
-.have-account section a:hover {
+.have-account a:hover {
   color: black;
 }
 
@@ -108,4 +125,26 @@ button, h1, h2, div, form, section, main, input, a {
 
 .sign-up-button:hover, .guest-button:hover {
   cursor: pointer;
+}
+
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0px 10px;
+  height: 40px;
+}
+
+.navigation-bar a {
+  padding: 0px 10px;
+  height: 100%;
+}
+
+.navigation-bar a div {
+  padding-top: 10px;
+  height: 69%
+}
+
+.navigation-bar a div:hover {
+ border-bottom: 2px solid #00C82E;
 }

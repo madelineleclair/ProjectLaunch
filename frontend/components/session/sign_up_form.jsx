@@ -54,14 +54,16 @@ class SignUpForm extends React.Component {
       return (<li>{error}</li>);
     })
     return (
-      <div className="sign-up">
-        <section className="have-account">
-          <section>{"Have an account? "}
+      <div className="sign-up-container">
+        <div className="sign-up">
+          <section className="have-account">Have an account?
             <Link to="/login">Log in</Link>
           </section>
-        </section>
-        <section className="make-account">
+          <section className="make-account">
             <h2>Sign up</h2>
+            <ul>
+              {errors}
+            </ul>
             <form className="sign-up-form" onSubmit={this.handleSubmit}>
               <input onChange={this.handleName} type="text" placeholder="Name" value={this.state.name} />
               <input onChange={this.handleEmail} type="text" placeholder="Email" value={this.state.email}/>
@@ -69,11 +71,8 @@ class SignUpForm extends React.Component {
               <button className="sign-up-button" >Create account</button>
               <button className="guest-button" onClick={this.handleGuest}>Guest log in</button>
             </form>
-        </section>
-
-        <ul>
-          {errors}
-        </ul>
+          </section>
+        </div>
       </div>
     );
   }
