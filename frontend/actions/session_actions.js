@@ -18,6 +18,13 @@ const receiveErrors = (errors) => {
   };
 };
 
+export const clearErrors = () => {
+  return {
+    type: RECEIVE_ERRORS,
+    errors: []
+  };
+};
+
 export const signUp = (user) => (dispatch) => {
   return SessionUtil.signUp(user).then((user) => {
     dispatch(receiveCurrentUser(user));
@@ -29,7 +36,7 @@ export const signUp = (user) => (dispatch) => {
 export const logIn = (user) => (dispatch) => {
   return SessionUtil.logIn(user).then((user) => {
     dispatch(receiveCurrentUser(user));
-  }), ((errors) => {
+  }, (errors) => {
     dispatch(receiveErrors(errors.responseJSON));
   });
 };

@@ -22,10 +22,14 @@ class LogInForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     this.props.logIn(this.state).then(() => {this.props.router.push('/');});
   }
 
   render() {
+    const errors = this.props.errors.map((error) => {
+      return (<li>{error}</li>);
+    })
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -34,6 +38,10 @@ class LogInForm extends React.Component {
           <button>Log me in!</button>
           <button>Guest log in</button>
         </form>
+
+        <ul>
+          {errors}
+        </ul>
       </div>
     );
   }

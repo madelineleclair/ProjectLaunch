@@ -11,6 +11,10 @@ class SignUpForm extends React.Component {
     this.handlePassword = this.handlePassword.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+
+  }
+
   handleName(e) {
     const name = e.target.value;
     this.setState({ name });
