@@ -9,6 +9,9 @@ ProjectLaunch is a crowd funding website where businesses and people can obtain 
   + Search
   + Categories and Discover Feature
 
+### Heroku
+  + Link: https://project-launch.herokuapp.com/
+
 ### Links
   1. Wireframes: https://github.com/madeline1991/ProjectLaunch/tree/master/docs/wireframes
   2. Api-endpoints: https://github.com/madeline1991/ProjectLaunch/blob/master/docs/api-endpoints.md
