@@ -8,7 +8,10 @@ const logOut = (props) => (e) => {
 const UserInfo = (props) => {
 
   return (
-    <div className="user-info-box">You are logged in as {props.userInfo.currentUser.name}
+    <div className="user-info-box">You are logged in as
+      <div>
+        {props.userInfo.currentUser.name}
+      </div>
       <button onClick={logOut(props)}>Log out</button>
     </div>
   );

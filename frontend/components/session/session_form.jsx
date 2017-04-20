@@ -85,7 +85,9 @@ class SessionForm extends React.Component {
           <section className="session">
             <h2>{ header }</h2>
             <ul>
-              {errors}
+              <div>
+                {errors}
+              </div>
             </ul>
             <form className="session-form" onSubmit={this.handleSubmit}>
               { nameField }
