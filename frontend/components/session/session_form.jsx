@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if(this.props.formType !== nextProps.formType){
-      this.setState = ({name: "", email: "", password: ""});
+      this.setState({name: "", email: "", password: ""});
       this.props.clearErrors();
     }
   }
@@ -53,14 +53,14 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const errors = this.props.errors.map((error) => {
-      return (<li>{error}</li>);
+    const errors = this.props.errors.map((error, index) => {
+      return (<li key={index}>{error}</li>);
     });
 
-    var header;
-    var nameField;
-    var haveAccount;
-    var submitButton;
+    let header;
+    let nameField;
+    let haveAccount;
+    let submitButton;
 
     if (this.props.formType === "signUp") {
       nameField = <input onChange={this.handleName} type="text" placeholder="Name" value={this.state.name} />;
