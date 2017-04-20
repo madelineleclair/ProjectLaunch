@@ -1,0 +1,18 @@
+button, h1, h2, div, form, section, main, input, a, ul, li, html, body, ol, p {
+  border: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+  background: transparent;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+a:hover, button:hover {
+  cursor: pointer;
+}
