@@ -29,18 +29,18 @@ a:hover {
   cursor: pointer;
 }
 
-.make-account ul {
+.session ul {
   margin: auto;
   width: 330px;
   background: #fd003b;
   color: white;
 }
 
-.sign-up-container {
+.session-container {
   position: relative;
 }
 
-.sign-up {
+.sign-up-or-log-in {
   background: #F7F5F2;
   /*position: absolute;*/
   padding: 120px 20px;
@@ -49,7 +49,7 @@ a:hover {
   box-shadow: inset 2px 1px 20px 0px rgba(0, 0, 0, 0.22);
 }
 
-.make-account {
+.session {
   margin: 0 auto;
   width: 400px;
   padding-bottom: 20px;
@@ -80,19 +80,19 @@ a:hover {
   color: black;
 }
 
-.sign-up section h2 {
+.sign-up-or-log-in section h2 {
   margin: auto;
   width: 350px;
   padding: 10px 0px 5px 20px ;
   font-size: 22px;
 }
-.sign-up-form {
+.session-form {
   /*display: initial;*/
   width: 350px;
   margin: auto;
 }
 
-.sign-up-form input{
+.session-form input{
   display: inline-block;
   margin: 10px;
   width: 330px;
@@ -101,7 +101,7 @@ a:hover {
   border: 1px solid #dad7d4;
 }
 
- .sign-up-button, .guest-button {
+ .submit-button, .guest-button {
   display: block;
   border-radius: 4px;
   margin: 10px;
@@ -111,11 +111,11 @@ a:hover {
   font-size: 15px;
 }
 
-.sign-up-button {
+.submit-button {
   background: #25CB68;
 }
 
-.sign-up-button:hover {
+.submit-button:hover {
   background: #009900;
 }
 

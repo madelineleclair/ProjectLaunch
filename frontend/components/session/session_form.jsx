@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router';
 
-class SignUpForm extends React.Component {
+class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {name: "", email: "", password: ""};
@@ -9,17 +9,12 @@ class SignUpForm extends React.Component {
     this.handleName = this.handleName.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
-    this.handleGuest = this.handleGuest.bind(this)
-  }
-
-//must be a way for when you refresh to have errors persist, maybe bootstrapping errors to the window. in componentWillUnmount
-
-  componentWillMount() {
-    this.props.clearErrors();
+    this.handleGuest = this.handleGuest.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     if(this.props.formType !== nextProps.formType){
+      this.setState = ({name: "", email: "", password: ""});
       this.props.clearErrors();
     }
   }
@@ -41,7 +36,15 @@ class SignUpForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signUp(this.state).then(() => {this.props.router.push('/');});
+    let user;
+
+    if (this.props.formType === "signUp") {
+      user = this.state;
+    } else {
+      user = { email: this.state.email, password: this.state.password };
+    }
+
+    this.props.action(user).then(() => {this.props.router.push('/');});
   }
   // send an ajax call to the backend to log them in, then bootstrap to the window
   handleGuest() {
@@ -52,23 +55,43 @@ class SignUpForm extends React.Component {
   render() {
     const errors = this.props.errors.map((error) => {
       return (<li>{error}</li>);
-    })
+    });
+
+    var header;
+    var nameField;
+    var haveAccount;
+    var submitButton;
+
+    if (this.props.formType === "signUp") {
+      nameField = <input onChange={this.handleName} type="text" placeholder="Name" value={this.state.name} />;
+      header = "Sign up";
+      haveAccount = (<section className="have-account">Have an account?
+                      <Link to="/login">Log in</Link>
+                    </section>);
+      submitButton = "Create account";
+    } else {
+      nameField = <section />;
+      header = "Log in";
+      haveAccount = (<section className="have-account">New to Project Launch?
+                      <Link to="/signup">Sign up!</Link>
+                    </section>);
+      submitButton = "Log me in!";
+    }
+
     return (
-      <div className="sign-up-container">
-        <div className="sign-up">
-          <section className="have-account">Have an account?
-            <Link to="/login">Log in</Link>
-          </section>
-          <section className="make-account">
-            <h2>Sign up</h2>
+      <div className="session-container">
+        <div className="sign-up-or-log-in">
+          { haveAccount }
+          <section className="session">
+            <h2>{ header }</h2>
             <ul>
               {errors}
             </ul>
-            <form className="sign-up-form" onSubmit={this.handleSubmit}>
-              <input onChange={this.handleName} type="text" placeholder="Name" value={this.state.name} />
+            <form className="session-form" onSubmit={this.handleSubmit}>
+              { nameField }
               <input onChange={this.handleEmail} type="text" placeholder="Email" value={this.state.email}/>
               <input onChange={this.handlePassword} type="text" placeholder="Password" value={this.state.password}/>
-              <button className="sign-up-button" >Create account</button>
+              <button className="submit-button" >{ submitButton }</button>
             </form>
             <button className="guest-button" onClick={this.handleGuest}>Guest log in</button>
           </section>
@@ -78,4 +101,4 @@ class SignUpForm extends React.Component {
   }
 }
 
-export default (SignUpForm);
+export default (SessionForm);
