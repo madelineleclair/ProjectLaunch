@@ -14,7 +14,7 @@
  *= require_self
  */
 
-button, h1, h2, div, form, section, main, input, a, ul, li, html {
+button, h1, h2, div, form, section, main, input, a, ul, li, html, body {
   border: none;
   margin: 0;
   padding: 0;
@@ -55,7 +55,8 @@ a:hover, button:hover {
 }
 
 .session-container {
-  position: relative;
+  /*position: relative;*/
+  /*background-color: red;*/
 }
 
 .sign-up-or-log-in {
@@ -63,7 +64,7 @@ a:hover, button:hover {
   /*position: absolute;*/
   padding: 120px 20px;
   height: 800px;
-  box-shadow: inset 2px 1px 20px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
 }
 
 .session {
