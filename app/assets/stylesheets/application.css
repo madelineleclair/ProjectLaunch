@@ -167,13 +167,13 @@ a:hover, button:hover {
 
 .navigation-bar a div {
   padding-top: 20px;
-  height: 60%;
+  height: 62%;
   font-size: 13px;
   font-weight: 500;
 }
 
 .navigation-bar a div:hover {
- border-bottom: 10px solid #00C82E;
+ border-bottom: 3px solid #00C82E;
 }
 
 .user-image {
