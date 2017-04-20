@@ -25,6 +25,10 @@ button, h1, h2, div, form, section, main, input, a, ul, li {
   color: black;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .make-account ul {
   margin: auto;
   width: 330px;
@@ -124,16 +128,12 @@ button, h1, h2, div, form, section, main, input, a, ul, li {
   background: #334FFF;
 }
 
-.sign-up-button:hover, .guest-button:hover {
-  cursor: pointer;
-}
-
 .navigation-bar {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding: 0px 10px;
-  height: 40px;
+  height: 60px;
 }
 
 .navigation-bar a {
@@ -142,10 +142,45 @@ button, h1, h2, div, form, section, main, input, a, ul, li {
 }
 
 .navigation-bar a div {
-  padding-top: 10px;
-  height: 69%
+  padding-top: 20px;
+  height: 60%
 }
 
 .navigation-bar a div:hover {
- border-bottom: 2px solid #00C82E;
+ border-bottom: 10px solid #00C82E;
+}
+
+.user-image {
+  height: 100%;
+  width: 3%;
+  background: #F7F7F9;
+  display: flex;
+  position: relative;
+}
+
+.user-image img {
+  margin: auto;
+  height: 95%;
+}
+
+.user-image:hover {
+  cursor: pointer;
+}
+
+.user-info-box {
+  display: flex;
+  position: absolute;
+  height: 80px;
+  width: 500px;
+  top: 68px;
+  right: 15px;
+  background: #F7F7F9;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info-box button {
+  margin-left: 10px;
+  font-size: 16px;
+  color: blue
 }

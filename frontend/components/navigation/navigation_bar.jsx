@@ -27,7 +27,9 @@ class NavigationBar extends React.Component {
     if (this.props.loggedIn) {
       return(
         <div className="navigation-bar">
-          <img onClick={this.handleUserInfoToggle} src={window.user_image} />
+          <div className="user-image">
+            <img onClick={this.handleUserInfoToggle} src={window.user_image} />
+          </div>
           { info }
         </div>
       );
