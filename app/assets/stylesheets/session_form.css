@@ -90,6 +90,11 @@
   font-size: 12px;
 }
 
+.session-form input:focus {
+  transition: 0.9s;
+  border: 1px solid blue;
+}
+
  .submit-button, .guest-button {
   display: block;
   border-radius: 4px;
