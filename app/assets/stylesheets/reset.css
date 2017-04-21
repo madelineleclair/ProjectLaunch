@@ -17,3 +17,7 @@ button, h1, h2, div, form, section, main, input, a, ul, li, html, body, ol, p {
 a:hover, button:hover {
   cursor: pointer;
 }
+
+a:active {
+  color: black;
+}
