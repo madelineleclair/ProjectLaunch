@@ -11,17 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420133544) do
+ActiveRecord::Schema.define(version: 20170420234641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "projects", force: :cascade do |t|
-    t.string   "type",       null: false
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",                          null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "title",       default: "untitled"
+    t.string   "image_url"
+    t.text     "description"
+    t.string   "location"
+    t.integer  "goal"
+    t.boolean  "launch",      default: false
+    t.date     "launch_date"
+    t.integer  "duration"
+    t.string   "category",                         null: false
   end
+
+  create_table "rewards", force: :cascade do |t|
+    t.integer  "project_id",       null: false
+    t.string   "title",            null: false
+    t.integer  "pledge_amount",    null: false
+    t.text     "description",      null: false
+    t.date     "deliver_date",     null: false
+    t.integer  "number_available"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "rewards", ["project_id"], name: "index_rewards_on_project_id", unique: true, using: :btree
+
+  create_table "stories", force: :cascade do |t|
+    t.integer  "project_id",           null: false
+    t.string   "video_url",            null: false
+    t.text     "description",          null: false
+    t.text     "risks_and_challenges"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "stories", ["project_id"], name: "index_stories_on_project_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            null: false

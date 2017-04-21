@@ -15,6 +15,7 @@ timestamps       |           |
 column name       | data type | details
 ------------------|-----------|-----------
 id                | integer   | not null, primary key
+title             | string    | default: "untitled"
 type              | string    | not null
 user_id           | integer   | not null, indexed
 image_url         | string    |
@@ -51,7 +52,7 @@ column name          | data type | details
 ---------------------|-----------|-----------
 id                   | integer   | not null, primary key
 project_id           | integer   | not null, indexed
-video_url            | integer   | indexed
+video_url            | string    | 
 description          | text      | not null
 risks_and_challenges | text      |
 
