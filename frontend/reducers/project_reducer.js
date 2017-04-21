@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 
 const _defaultState = {
   currentProject: {},
+  errors: []
 }
 
 const ProjectReducer = (state = _defaultState, action) => {
