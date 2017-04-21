@@ -14,7 +14,7 @@
 #
 
 class Reward < ActiveRecord::Base
-  validates :project, :title, :pledge_amount, :description, :deliver_date,
+  validates :project, :title, :pledge_amount, :description, :delivery_date,
     presence: true
 
   belongs_to :project
