@@ -22,11 +22,10 @@ class Api::ProjectsController < ApplicationController
   end
 
   def edit
-    @project = current_user.projects.includes(:story, :rewards)
-      .find(params[:id])
+    @project = current_user.projects.includes(:story, :rewards) .find(params[:id])
 
     if @project
-      render 'api/projects/update'
+      render 'api/projects/update.json.jbuilder'
     else
       render json: ["Unable to locate project"]
     end

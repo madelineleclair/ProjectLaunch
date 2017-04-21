@@ -31,7 +31,7 @@ class NewProjectForm extends React.Component {
     this.setState({ category });
   }
   //handle submit needs to either redirect or not if not logged in
-  //the return value of the create method needs to be the same as the update return, but I don't know what to do about the multiple titles in tables problem.
+  //the return value of the create method needs to be the same as the update return, but I don't know what to do about the multiple titles in tables problem. // do errors, //storying params in the query string if not logged in
   handleSubmit(e) {
     e.preventDefault();
     const project = { title: this.state.title, category: this.state.category }
