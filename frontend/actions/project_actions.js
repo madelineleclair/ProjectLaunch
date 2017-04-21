@@ -25,13 +25,25 @@ export const getProject = (id) => (dispatch) => {
 export const createProject = (project) => (dispatch) => (ProjectUtil.createProject(project).then((project) => dispatch(receiveProject(project))));
 
 export const fetchStory = (project_id) => (dispatch) => {
-  return ProjectUtil.fetchStory(project_id).then((story) => {
-    dispatch(receiveStory(story));
-  });
+  return ProjectUtil.fetchStory(project_id).then((story) =>
+    dispatch(receiveStory(story))
+  );
 };
 
 export const updateProject = (project) => (dispatch) => {
   return ProjectUtil.updateProject(project).then((project) => {
     dispatch(receiveProject(project));
+  });
+};
+
+export const createStory = (story) => (dispatch) => {
+  return ProjectUtil.createStory(story).then((story) => {
+    dispatach(receiveStory(story));
+  });
+};
+
+export const updateStory = (story) => (dispatch) => {
+  return ProjectUtil.updateStory(story).then((story) => {
+    dispatch(receiveStory(story));
   });
 };

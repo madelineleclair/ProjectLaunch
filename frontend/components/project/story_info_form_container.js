@@ -1,10 +1,19 @@
 import StoryInfoForm from './story_info_form';
-import { getProject, updateProject } from '../../actions/project_actions';
+import { fetchStory, updateStory } from '../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
+    let action;
+
+    if (state.project.story) {
+      action = 'update';
+    } else {
+      action = "create";
+    }
+
   return {
-    basicInfo: state.project.basicInfo,
+    story: state.project.story,
+    action,
     projectId: ownProps.params.projectId,
     errors: state.errors,
   };
@@ -12,8 +21,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getProject: (id) => dispatch(getProject(id)),
-    updateProject: (project) => dispatch(updateProject(project)),
+    fetchStory: (project_id) => dispatch(fetchStory(project_id)),
+    createStory: (story) => dispatch(createStory(story)),
+    updateStory: (story) => dispatch(updateStory(story)),
   };
 };
 

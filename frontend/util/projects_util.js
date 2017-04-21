@@ -14,7 +14,7 @@ export const createProject = (project) => {
 };
 
 export const updateProject = (project) => {
-  return $.ajaxy({
+  return $.ajax({
     type: "PATCH",
     url: `api/projects/${project.id}`,
     data: { project }
@@ -26,5 +26,21 @@ export const fetchStory = (project_id) => {
     type: "GET",
     url: `api/stories/${project_id}`,
     data: { project_id }
+  });
+};
+
+export const createStory = (story) => {
+  return $.ajax({
+    type: "POST",
+    url: 'api/stories',
+    data: { story }
+  });
+};
+
+export const updateStory = (story) => {
+  return $.ajax({
+    type: "PATCH",
+    url: `api/stories/${story.id}`,
+    data: { story }
   });
 };
