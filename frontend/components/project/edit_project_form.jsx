@@ -3,7 +3,11 @@ import { Link } from 'react-router'
 
 class EditProjectForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.getProject(this.props.projectId);
   }
 
 //check the links

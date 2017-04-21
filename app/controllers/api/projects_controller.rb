@@ -5,6 +5,8 @@ class Api::ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.find(params[:id])
+    render 'api/projects/update.json.jbuilder'
   end
 
   def create
@@ -12,7 +14,7 @@ class Api::ProjectsController < ApplicationController
     @project.user_id = current_user.id
 
     if @project.save
-      render 'api/projects/create'
+        render 'api/projects/create'
     else
       render json: @project.errors.full_messages, status: 422
     end
