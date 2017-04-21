@@ -34,8 +34,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def update
-    @project = current_user.projects.includes(:story, :rewards)
-      .find(params[:id])
+    @project = current_user.projects.find(params[:id])
 
     if @project.update(update_project_params)
       render 'api/projects/update'

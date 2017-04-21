@@ -3,7 +3,7 @@ import merge from 'lodash/merge';
 
 const _defaultState = {
   basicInfo: {},
-  rewards: {},
+  rewards: [],
   story: null,
   errors: [],
 };

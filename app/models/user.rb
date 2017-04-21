@@ -21,7 +21,13 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
-  has_many :projects 
+  has_many :projects
+  has_many :stories,
+    through: :projects,
+    source: :story
+  has_many :rewards,
+    through: :projects,
+    source: :rewards
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

@@ -2,6 +2,7 @@ import * as ProjectUtil from '../util/projects_util';
 
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const RECEIVE_STORY = "RECEIVE_STORY";
+export const RECEIVE_REWARDS = "RECEIVE_REWARDS"
 
 const receiveProject = (project) => {
   return {
@@ -14,6 +15,13 @@ const receiveStory = (story) => {
   return {
     type: RECEIVE_STORY,
     story
+  };
+};
+
+const receiveRewards = (rewards) => {
+  return {
+    type: RECEIVE_REWARDS,
+    rewards
   };
 };
 

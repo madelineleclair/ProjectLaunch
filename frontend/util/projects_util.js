@@ -44,3 +44,26 @@ export const updateStory = (story) => {
     data: { story }
   });
 };
+
+// export const fetchRewards = (id) => {
+//   return $.ajax({
+//     type: "GET",
+//     url: `api/rewards/${id}`,
+//   });
+// };
+
+export const createReward = (reward) => {
+  return $.ajax({
+    type: "GET",
+    url: 'api/rewards',
+    data: { reward }
+  });
+};
+
+export const updateReward = (reward) => {
+  return $.ajax({
+    type: "PATCH",
+    url: `api/rewards/${reward.id}`,
+    data: { reward }
+  });
+};

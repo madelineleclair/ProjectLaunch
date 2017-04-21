@@ -7,10 +7,10 @@
 #  title            :string           not null
 #  pledge_amount    :integer          not null
 #  description      :text             not null
-#  deliver_date     :date             not null
 #  number_available :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  delivery_date    :date             not null
 #
 
 class Reward < ActiveRecord::Base

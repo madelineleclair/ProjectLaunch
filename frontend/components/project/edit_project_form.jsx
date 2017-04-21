@@ -30,7 +30,7 @@ class EditProjectForm extends React.Component {
         </section>
         { this.props.children }
       </div>
-    )
+    );
   }
 }
 
