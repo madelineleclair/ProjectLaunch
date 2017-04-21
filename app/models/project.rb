@@ -19,7 +19,7 @@
 
 class Project < ActiveRecord::Base
   validates :category, :user, presence: true
-  validates :category, inclusion: %w(Untitled Technology Food)
+  validates :category, inclusion: %w(Untitled Technology Food Games)
 
   belongs_to :user
   has_one :story
