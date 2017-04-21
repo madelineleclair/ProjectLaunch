@@ -1,0 +1,53 @@
+.edit-project-container {
+  background: #F7F5F2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.edit-project-page-buttons {
+  display: flex;
+  width: 33%;
+  border: 1px solid red;
+  justify-content: center;
+  height: 125px;
+}
+
+.edit-project-page-buttons a, .launch-project-button {
+  display: flex;
+  height: 55px;
+  width: 14%;
+  border: 1px solid #dcdcdb;
+  border-right: none;
+  background: white;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.launch-project-button {
+  height: 57px;
+  border-right: 1px solid #dcdcdb;
+}
+
+.edit-project-page-buttons a:hover, .edit-project-page-buttons button:hover {
+  color: blue;
+}
+
+.basic-caption {
+  height: 100px;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.basic-caption h1 {
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+}
+
+.basic-caption p {
+  font-size: 20px;
+  text-align: center;
+}

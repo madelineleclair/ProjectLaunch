@@ -64,7 +64,7 @@
   text-align: left;
 }
 
-.drop-down button {
+.create-project-drop-down-button {
   border: 1px solid grey;
   border-radius: 4px;
   height: 45px;
@@ -72,7 +72,7 @@
   color: #80809E;
 }
 
-.drop-down button:hover {
+.create-project-drop-down-button:hover {
   border: 1px solid blue;
 }
 
@@ -94,4 +94,12 @@
 
 .create-project-form > button:hover{
   background: #009900;
+}
+
+.selected, .selcted:hover {
+  border: 1px solid green;
+}
+
+.create-project-drop-down-button:selection {
+
 }
