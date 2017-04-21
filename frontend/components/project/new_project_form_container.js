@@ -3,7 +3,6 @@ import { getProject, createProject } from '../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     // currentProject: state.project.basicInfo,
     loggedIn: !!state.session.currentUser

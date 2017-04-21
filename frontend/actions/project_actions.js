@@ -18,9 +18,8 @@ const receiveStory = (story) => {
 };
 
 export const getProject = (id) => (dispatch) => {
-  return ProjectUtil.getProject(id).then((project) => {
-    dispatch(receiveProject(project));
-  });
+  return ProjectUtil.getProject(id).then((project) =>
+    dispatch(receiveProject(project)));
 };
 
 export const createProject = (project) => (dispatch) => (ProjectUtil.createProject(project).then((project) => dispatch(receiveProject(project))));
@@ -28,5 +27,11 @@ export const createProject = (project) => (dispatch) => (ProjectUtil.createProje
 export const fetchStory = (project_id) => (dispatch) => {
   return ProjectUtil.fetchStory(project_id).then((story) => {
     dispatch(receiveStory(story));
+  });
+};
+
+export const updateProject = (project) => (dispatch) => {
+  return ProjectUtil.updateProject(project).then((project) => {
+    dispatch(receiveProject(project));
   });
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 
 class EditProjectForm extends React.Component {
   constructor(props) {
@@ -15,19 +15,20 @@ class EditProjectForm extends React.Component {
     return (
       <div className="edit-project-container">
         <section className="edit-project-page-buttons">
-          <Link>
+          <Link to={`/projects/edit/${this.props.projectId}/basicInfo`}>
             <div>Basics</div>
           </Link>
           <Link>
             <div>Rewards</div>
           </Link>
-          <Link>
+          <Link to={`/projects/edit/${this.props.projectId}/storyInfo`}>
             <div>Story</div>
           </Link>
           <button className="launch-project-button">
             <div>Launch project</div>
           </button>
         </section>
+        { this.props.children }
       </div>
     )
   }

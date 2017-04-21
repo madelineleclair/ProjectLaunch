@@ -13,6 +13,14 @@ export const createProject = (project) => {
   });
 };
 
+export const updateProject = (project) => {
+  return $.ajaxy({
+    type: "PATCH",
+    url: `api/projects/${project.id}`,
+    data: { project }
+  });
+};
+
 export const fetchStory = (project_id) => {
   return $.ajax({
     type: "GET",

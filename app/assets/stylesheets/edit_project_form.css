@@ -51,3 +51,7 @@
   font-size: 20px;
   text-align: center;
 }
+
+.project-image-selector {
+  border: 1px dashed blue
+}
