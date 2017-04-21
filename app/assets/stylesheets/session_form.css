@@ -79,7 +79,7 @@
   border: 1px solid #dad7d4;
 }
 
-.session-form input[type=text] {
+.session-form input[type=text], .session-form input[type=password] {
   padding-left: 8px;
   font-size: 12px;
 }

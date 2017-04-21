@@ -92,7 +92,7 @@ class SessionForm extends React.Component {
             <form className="session-form" onSubmit={this.handleSubmit}>
               { nameField }
               <input onChange={this.handleEmail} type="text" placeholder="Email" value={this.state.email}/>
-              <input onChange={this.handlePassword} type="text" placeholder="Password" value={this.state.password}/>
+              <input onChange={this.handlePassword} type="password" placeholder="Password" value={this.state.password}/>
               <button className="submit-button" >{ submitButton }</button>
             </form>
             <button className="guest-button" onClick={this.handleGuest}>Guest log in</button>
