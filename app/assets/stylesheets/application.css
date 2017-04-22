@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .sign-up-or-log-in, .create-project-container, .edit-project-container {
+ .sign-up-or-log-in, .create-project-container {
   box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
   height: 800px;
  }

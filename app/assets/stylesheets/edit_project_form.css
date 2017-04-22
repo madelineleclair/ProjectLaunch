@@ -1,8 +1,17 @@
 .edit-project-container {
   background: #F7F5F2;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
+}
+
+.basic-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .edit-project-page-buttons {
@@ -39,6 +48,11 @@
   height: 100px;
   width: 100%;
   border: 1px solid red;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .basic-caption h1 {
@@ -53,5 +67,93 @@
 }
 
 .project-image-selector {
-  border: 1px dashed blue
+  border: 1px dashed blue;
+}
+
+.form-and-side-bar {
+  border: 1px solid red;
+  width: 35%;
+  background: white;
+}
+
+.basic-info-form section {
+  width: 88%;
+  background: #F7F7F9;
+}
+
+.form-and-side-bar {
+  padding: 20px;
+}
+
+.form-and-side-bar section {
+  height: 120px;
+  margin: 10px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.form-and-side-bar input, .form-and-side-bar textarea {
+  width: 400px;
+  border-radius: 4px;
+  margin-left: 47px;
+}
+
+.basic-info-form label {
+  margin: 12px 0px 0px 19px;
+  width: 20%;
+  font-weight: bold;
+}
+
+.basic-info-form section p {
+  display: block;
+}
+
+.form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"], .form-and-side-bar textarea {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #d6d6d5;
+  height: 36%;
+  margin-top: 5px;
+  margin-right: 5px;
+  padding-left: 8px;
+}
+
+.form-and-side-bar input[type="text"]:focus, .form-and-side-bar input[type="number"]:focus, .form-and-side-bar textarea:focus {
+  transition: 0.9s;
+  border: 1px solid blue;
+}
+
+.form-and-side-bar textarea {
+  height: 107px;
+  margin-bottom: 5px;
+}
+
+.save-button {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  border: 1px solid #d6d6d5;
+  display: flex;
+  justify-content: center;
+}
+
+.save-button div {
+  width: 711px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-button button {
+  margin: 10px 0 10px 0;
+  background: #25CB68;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+
+.save-button button:hover {
+  background: #009900;
 }

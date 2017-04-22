@@ -1,4 +1,4 @@
-button, h1, h2, div, form, section, main, input, a, ul, li, html, body, ol, p {
+button, h1, h2, div, form, section, main, input, a, ul, li, html, body, ol, p, label, textarea {
   border: none;
   margin: 0;
   padding: 0;
@@ -19,4 +19,12 @@ a:hover, button:hover {
 
 a:active {
   color: black;
+}
+
+textarea {resize: none}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
