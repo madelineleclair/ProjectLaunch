@@ -1,10 +1,11 @@
 import React from 'react';
+import CategoryDropDown from './category_drop_down'
 
 class BasicInfoForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = { project_image: "", title: "",  description: "", category: "",
-      location: "", duration: undefined, goal: 0, save: false };
+      location: "", duration: undefined, goal: 0, save: false, selected: false };
     this.handleTitle = this.handleTitle.bind(this);
     this.handleBlurb = this.handleBlurb.bind(this);
     this.handleLocation = this.handleLocation.bind(this);
@@ -12,6 +13,7 @@ class BasicInfoForm extends React.Component {
     this.handleGoal = this.handleGoal.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.setState = this.setState.bind(this)
     }
 
     componentDidMount() {
@@ -23,13 +25,13 @@ class BasicInfoForm extends React.Component {
         const location = project.location || ""
         const duration = project.duration || 0
         const goal = project.goal || 0
-        const save = false
+        const save = false;
+        const selected = false;
 
         this.setState({ project_image, title, description, category, location,
-          duration, goal, save});
+          duration, goal, save, selected });
       });
     }
-
 
     handleTitle(e) {
       e.preventDefault();
@@ -62,6 +64,7 @@ class BasicInfoForm extends React.Component {
     }
 
     handleUpdate(e) {
+      debugger
       const properties = Object.assign({}, this.state, {id:
         this.props.router.params.projectId})
       this.props.updateProject(properties).then(() => this.setState({save: false}))
@@ -73,9 +76,8 @@ class BasicInfoForm extends React.Component {
     }
 
   render() {
-    //this might take up space, maybe consider chaning if it does if appear when suppose to be empty
     const saveButton = this.state.save ? <button onClick={this.handleUpdate}>Save</button> : <div></div>
-
+    // debugger
     return (
       <div className="basic-info-container">
         <div className="basic-caption">
@@ -107,7 +109,9 @@ class BasicInfoForm extends React.Component {
               </div>
             </section>
             <section>
-              <button>{this.state.category}</button>
+              <div className="drop-down">
+                <CategoryDropDown category={this.state.category} setState={this.setState} selected={this.state.selected}/>
+              </div>
             </section>
             <section className="basic-info-location">
               <div>
