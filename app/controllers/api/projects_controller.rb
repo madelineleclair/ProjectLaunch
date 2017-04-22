@@ -23,15 +23,15 @@ class Api::ProjectsController < ApplicationController
   def destroy
   end
 
-  def edit
-    @project = current_user.projects.includes(:story, :rewards) .find(params[:id])
-
-    if @project
-      render 'api/projects/update.json.jbuilder'
-    else
-      render json: ["Unable to locate project"]
-    end
-  end
+  # def edit
+  #   @project = current_user.projects.includes(:story, :rewards) .find(params[:id])
+  #
+  #   if @project
+  #     render 'api/projects/update.json.jbuilder'
+  #   else
+  #     render json: ["Unable to locate project"]
+  #   end
+  # end
 
   def update
     @project = current_user.projects.find(params[:id])

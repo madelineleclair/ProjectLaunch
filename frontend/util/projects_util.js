@@ -45,12 +45,13 @@ export const updateStory = (story) => {
   });
 };
 
-// export const fetchRewards = (id) => {
-//   return $.ajax({
-//     type: "GET",
-//     url: `api/rewards/${id}`,
-//   });
-// };
+export const fetchRewards = (project_id) => {
+  return $.ajax({
+    type: "GET",
+    url: `api/rewards`,
+    data: {project_id}
+  });
+};
 
 export const createReward = (reward) => {
   return $.ajax({

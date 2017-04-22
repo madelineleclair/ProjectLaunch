@@ -1,10 +1,11 @@
 import RewardsInfoForm from './rewards_info_form';
+import { fetchRewards, createReward, updateReward } from './../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
   return {
     rewards: state.project.rewards,
-    project_id: ownProps.params.projectId
+    projectId: ownProps.params.projectId
   };
 };
 
