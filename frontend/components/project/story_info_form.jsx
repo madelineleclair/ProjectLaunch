@@ -3,10 +3,11 @@ import React from 'react';
 class StoryInfoForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {video_url: "", description: "", risks_and_challenges: ""};
+    this.state = {video_url: "", description: "", risks_and_challenges: "", save: false};
     this.handleDescription = this.handleDescription.bind(this);
     this.handleRisksAndChallenges = this.handleRisksAndChallenges.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
 
   componentDidMount() {
@@ -28,29 +29,53 @@ class StoryInfoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let action;
     if (this.props.action === 'create') {
-      this.props.createStory(this.state);
+      action = this.props.createStory;
     } else {
-      this.props.updateStory(this.state);
+      action = this.props.updateStory;
     }
+    action(this.state).then(() => this.setState({save: false}));
+  }
+
+  handleSave(e) {
+    const save = true
+    this.setState({save})
   }
 
   render() {
+
+    const saveButton = this.state.save ? <button onClick={this.handleUpdate}>Save</button> : <div></div>
+
     return(
-      <div>
-        <form>
-          <section>Project Video
-            <input type="file"></input>
-            <p>Make your project stand out. Projects with videos receive higher amounts of funding.</p>
-          </section>
-          <section>Project Description
-            <textarea>{this.state.description}</textarea>
-          </section>
-          <section>Risks and challenges
-            <p>Every project comes with a unique set of risks and challenges. Let your backers know how you plan to overcome these them.</p>
-            <textarea>{this.state.risks_and_challenges}</textarea>
-          </section>
-        </form>
+      <div className="story-info-container">
+        <div className="story-caption">
+          <h1>Let us know about your project</h1>
+          <p>Spice up you project with videos and exciting details about your project so people can learn more about it</p>
+        </div>
+        <section className="form-and-side-bar">
+          <form className="basic-info-form">
+            <section>
+              <label>Project video</label>
+              <input type="file"></input>
+              <p>Make your project stand out. Projects with videos receive higher amounts of funding.</p>
+            </section>
+            <section>
+              <label>Project description</label>
+              <textarea value={this.state.description}></textarea>
+            </section>
+            <section>
+              <label>Risks and challenges</label>
+              <p>Every project comes with a unique set of risks and challenges. Let your backers know how you plan to overcome these them.</p>
+              <textarea value={this.state.risks_and_challenges}></textarea>
+            </section>
+          </form>
+        </section>
+        <section className="save-button">
+          <div>
+            {saveButton}
+          </div>
+        </section>
       </div>
     );
   }
