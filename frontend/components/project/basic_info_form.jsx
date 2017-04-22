@@ -77,36 +77,69 @@ class BasicInfoForm extends React.Component {
     const saveButton = this.state.save ? <button onClick={this.handleUpdate}>Save</button> : <div></div>
 
     return (
-      <div>
+      <div className="basic-info-container">
         <div className="basic-caption">
           <h1>Let's get started!</h1>
           <p>Make your project stand out with a captivating tite and image</p>
         </div>
-        <form onChange={this.handleSave}>
-          <section>Image
-            <input className="project-image-selector" type='file'></input>
-          </section>
-          <section>Product Title
-            <input onChange={this.handleTitle}type="text" value={this.state.title}></input>
-          </section>
-          <section>Short blurb
-            <textarea onChange={this.handleBlurb} value={this.state.description}/>
-          </section>
-          <section>
-            <button>{this.state.category}</button>
-          </section>
-          <section>Location
-            <input onChange={this.handleLocation}type="text" value={this.state.location}></input>
-          </section>
-          <section>Number of days
-            <input onChange={this.handleDuration} type="number" value={ this.state.duration }></input>
-          </section>
-          <section>Funding goal
-            <input onChange={this.handleGoal} type="number" value={this.state.goal}></input>
-          </section>
-        </form>
-
-        {saveButton}
+        <section className="form-and-side-bar">
+          <form onChange={this.handleSave} className="basic-info-form">
+            <section>
+              <label>Product image</label>
+              <input className="project-image-selector" type='file'></input>
+            </section>
+            <section>
+              <div className="product-title">
+                <label>Prodouct title</label>
+                <input onChange={this.handleTitle}type="text" value={this.state.title}></input>
+              </div>
+              <div className="caption-text">
+                <p>We use the keywords in your title to optimize searchs. Descriptive make it easier for people to find your project</p>
+              </div>
+            </section>
+            <section>
+              <div className="short-blurb">
+                <label>Short blurb</label>
+                <textarea onChange={this.handleBlurb} value={this.state.description}/>
+              </div>
+              <div className="caption-text">
+                <p>Peak people's interest by giving them a sense of what your doing</p>
+              </div>
+            </section>
+            <section>
+              <button>{this.state.category}</button>
+            </section>
+            <section className="basic-info-location">
+              <div>
+                <label>Location</label>
+                <input onChange={this.handleLocation} type="text" placeholder="City and state" value={this.state.location}></input>
+              </div>
+            </section>
+            <section>
+              <div className="duration">
+                <label>Duration</label>
+                <input onChange={this.handleDuration} type="number" placeholder="Number of days"value={ this.state.duration }></input>
+              </div>
+              <div className="caption-text">
+                <p>Projects must have a duration that is fewer than 60 days, but projects that are 30 or less tend to perform the best </p>
+              </div>
+            </section>
+            <section>
+              <div className="funding-goal">
+                <label>Funding goal</label>
+                <input onChange={this.handleGoal} type="number" value={this.state.goal}></input>
+              </div>
+              <div className="caption-text">
+                <p>Funding is all or nothing on Project Launch. Make a goal that  is reasonable and that you think you can achieve</p>
+              </div>
+            </section>
+          </form>
+        </section>
+        <section className="save-button">
+          <div>
+            {saveButton}
+          </div>
+        </section>
       </div>
     );
   }

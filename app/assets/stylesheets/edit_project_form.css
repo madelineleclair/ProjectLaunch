@@ -7,7 +7,7 @@
   box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
 }
 
-.basic-info-container {
+.basic-info-container, .story-info-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,7 @@
   justify-content: center;
   height: 125px;
 }
+
 
 .edit-project-page-buttons a, .launch-project-button {
   display: flex;
@@ -44,7 +45,7 @@
   color: blue;
 }
 
-.basic-caption {
+.basic-caption, .story-caption {
   height: 100px;
   width: 100%;
   border: 1px solid red;
@@ -55,13 +56,13 @@
   justify-content: center;
 }
 
-.basic-caption h1 {
+.basic-caption h1, .story-caption h1 {
   font-weight: bold;
   font-size: 35px;
   text-align: center;
 }
 
-.basic-caption p {
+.basic-caption p, .story-caption p {
   font-size: 20px;
   text-align: center;
 }
@@ -90,6 +91,7 @@
   margin: 10px;
   border-radius: 4px;
   display: flex;
+  flex-direction: column;
 }
 
 .form-and-side-bar input, .form-and-side-bar textarea {
@@ -105,14 +107,16 @@
 }
 
 .basic-info-form section p {
-  display: block;
+  width: 401px;
+  margin-top: 10px;
+  padding-left: 5px;
 }
 
 .form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"], .form-and-side-bar textarea {
   background: white;
   border-radius: 4px;
   border: 1px solid #d6d6d5;
-  height: 36%;
+  height: 40px;
   margin-top: 5px;
   margin-right: 5px;
   padding-left: 8px;
@@ -124,9 +128,11 @@
 }
 
 .form-and-side-bar textarea {
-  height: 107px;
+  height: 55px;
   margin-bottom: 5px;
+  margin-right: 5px;
 }
+
 
 .save-button {
   position: fixed;
@@ -156,4 +162,18 @@
 
 .save-button button:hover {
   background: #009900;
+}
+
+.caption-text {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.product-title, .short-blurb, .funding-goal, .duration {
+  display: flex;
+}
+
+.basic-info-location {
+  height: 50px;
 }
