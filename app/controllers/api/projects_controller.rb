@@ -34,7 +34,7 @@ class Api::ProjectsController < ApplicationController
   # end
 
   def update
-    @project = current_user.projects.find(params[:id])
+    @project = current_user.projects.find(params[:project][:id])
 
     if @project.update(update_project_params)
       render 'api/projects/update'
@@ -50,6 +50,6 @@ class Api::ProjectsController < ApplicationController
 
     def update_project_params
       params.require(:project).permit(:category, :title, :image_url, :description,
-      :location, :goal, :launch, :launch_date, :duration)
+      :location, :goal, :launch, :launch_date, :duration, :image)
     end
 end

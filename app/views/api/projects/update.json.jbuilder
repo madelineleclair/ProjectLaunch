@@ -1,6 +1,7 @@
 
-json.extract! @project, :id, :category, :title, :image_url, :description,
+json.extract! @project, :id, :category, :title, :description,
   :location, :goal, :launch, :launch_date, :duration
+json.image_url asset_path(@project.image.url)
 
 
 # json.story do

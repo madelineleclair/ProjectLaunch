@@ -17,7 +17,9 @@ export const updateProject = (project) => {
   return $.ajax({
     type: "PATCH",
     url: `api/projects/${project.id}`,
-    data: { project }
+    contentType: false,
+    processData: false,
+    data: project
   });
 };
 

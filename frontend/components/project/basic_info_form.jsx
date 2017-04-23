@@ -4,8 +4,8 @@ import CategoryDropDown from './category_drop_down'
 class BasicInfoForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { project_image: "", title: "",  description: "", category: "",
-      location: "", duration: undefined, goal: 0, save: false, selected: false };
+    this.state = { title: "",  description: "", category: "",
+      location: "", duration: undefined, goal: 0, save: false, selected: false, imageFile: null, imageUrl: null };
     this.handleTitle = this.handleTitle.bind(this);
     this.handleBlurb = this.handleBlurb.bind(this);
     this.handleLocation = this.handleLocation.bind(this);
@@ -14,11 +14,11 @@ class BasicInfoForm extends React.Component {
     this.handleSave = this.handleSave.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
     this.setState = this.setState.bind(this)
+    this.updateFile = this.updateFile.bind(this);
     }
 
     componentDidMount() {
       this.props.getProject(this.props.projectId).then(({ project }) => {
-        const project_image = project.project_image || ""
         const title = project.title || ""
         const description = project.description || ""
         const category = project.category || ""
@@ -28,8 +28,8 @@ class BasicInfoForm extends React.Component {
         const save = false;
         const selected = false;
 
-        this.setState({ project_image, title, description, category, location,
-          duration, goal, save, selected });
+        this.setState({title, description, category, location,
+          duration, goal, save, selected, imageFile: null, imageUrl: null });
       });
     }
 
@@ -63,11 +63,30 @@ class BasicInfoForm extends React.Component {
       this.setState({ goal });
     }
 
+    updateFile(e) {
+      var file = e.currentTarget.files[0];
+      var fileReader = new FileReader();
+      fileReader.onloadend = function () {
+        this.setState({ imageFile: file, imageUrl: fileReader.result })
+      }.bind(this)
+      if (file) {
+        fileReader.readAsDataURL(file);
+      }
+    }
+
     handleUpdate(e) {
-      debugger
-      const properties = Object.assign({}, this.state, {id:
-        this.props.router.params.projectId})
-      this.props.updateProject(properties).then(() => this.setState({save: false}))
+      var formData = new FormData();
+      // const properties = Object.assign({}, this.state, {id:
+      //   this.props.router.params.projectId})
+      formData.append("project[title]", this.state.title)
+      formData.append("project[description]", this.state.description)
+      formData.append("project[category]", this.state.category)
+      formData.append("project[location]", this.state.location)
+      formData.append("project[duration]", this.state.duration)
+      formData.append("project[goal]", this.state.goal)
+      formData.append("project[image]", this.state.imageFile)
+      formData.append("project[id]", this.props.router.params.projectId)
+      this.props.updateProject(formData).then(() => this.setState({save: false}))
     }
 
     handleSave(e) {
@@ -88,11 +107,12 @@ class BasicInfoForm extends React.Component {
           <form onChange={this.handleSave} className="basic-info-form">
             <section>
               <label>Product image</label>
-              <input className="project-image-selector" type='file'></input>
+              <input className="project-image-selector" type='file' onChange={this.updateFile}/>
             </section>
+            <img src={this.state.imageUrl}/>
             <section>
               <div className="product-title">
-                <label>Prodouct title</label>
+                <label>Product title</label>
                 <input onChange={this.handleTitle}type="text" value={this.state.title}></input>
               </div>
               <div className="caption-text">
