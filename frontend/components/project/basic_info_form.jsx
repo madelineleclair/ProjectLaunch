@@ -96,7 +96,7 @@ class BasicInfoForm extends React.Component {
 
   render() {
     const saveButton = this.state.save ? <button onClick={this.handleUpdate}>Save</button> : <div></div>
-    // debugger
+
     return (
       <div className="basic-info-container">
         <div className="basic-caption">

@@ -6,7 +6,6 @@ export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
 
 const receiveProject = (project) => {
-  // debugger
   return {
     type: RECEIVE_PROJECT,
     project
@@ -35,7 +34,7 @@ const receiveReward = (reward) => {
 };
 
 export const getProject = (id) => (dispatch) => {
-  // debugger
+
   return ProjectUtil.getProject(id).then((project) =>
     dispatch(receiveProject(project)));
 };
