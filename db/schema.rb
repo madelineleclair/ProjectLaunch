@@ -11,24 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422215114) do
+ActiveRecord::Schema.define(version: 20170423004901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "projects", force: :cascade do |t|
-    t.integer  "user_id",                          null: false
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "title",       default: "untitled"
+    t.integer  "user_id",                                 null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.string   "title",              default: "untitled"
     t.string   "image_url"
     t.text     "description"
     t.string   "location"
     t.integer  "goal"
-    t.boolean  "launch",      default: false
+    t.boolean  "launch",             default: false
     t.date     "launch_date"
     t.integer  "duration"
-    t.string   "category",                         null: false
+    t.string   "category",                                null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "rewards", force: :cascade do |t|
@@ -56,13 +60,17 @@ ActiveRecord::Schema.define(version: 20170422215114) do
   add_index "stories", ["project_id"], name: "index_stories_on_project_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",            null: false
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
+    t.string   "name",               null: false
+    t.string   "email",              null: false
+    t.string   "password_digest",    null: false
     t.string   "session_token"
     t.string   "profile_image"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

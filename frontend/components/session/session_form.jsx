@@ -53,6 +53,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    debugger
     const errors = this.props.errors.map((error, index) => {
       return (<li key={index}>{error}</li>);
     });

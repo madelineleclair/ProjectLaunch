@@ -31,7 +31,7 @@ class NavigationBar extends React.Component {
           <div>Start a project</div>
         </Link>
           <div className="user-image">
-            <img onClick={this.handleUserInfoToggle} src={window.user_image} />
+            <img onClick={this.handleUserInfoToggle} src={this.props.currentUser.image_url} />
           </div>
           { info }
         </div>
