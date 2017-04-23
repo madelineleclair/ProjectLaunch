@@ -5,7 +5,7 @@
 #  id               :integer          not null, primary key
 #  project_id       :integer          not null
 #  title            :string           not null
-#  pledge_amount    :integer          not null
+#  pledge_amount    :integer          default("0"), not null
 #  description      :text             not null
 #  number_available :integer
 #  created_at       :datetime         not null

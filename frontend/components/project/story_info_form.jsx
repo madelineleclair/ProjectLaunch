@@ -29,13 +29,15 @@ class StoryInfoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const story = Object.assign({}, this.state);
+    story.project_id = this.props.projectId;
     let action;
     if (this.props.action === 'create') {
       action = this.props.createStory;
     } else {
       action = this.props.updateStory;
     }
-    action(this.state).then(() => this.setState({save: false}));
+    action(story).then(() => this.setState({save: false}));
   }
 
   handleSave(e) {
@@ -62,12 +64,12 @@ class StoryInfoForm extends React.Component {
             </section>
             <section>
               <label>Project description</label>
-              <textarea value={this.state.description}></textarea>
+              <textarea onChange={ this.handleDescription } value={this.state.description}></textarea>
             </section>
             <section>
               <label>Risks and challenges</label>
               <p>Every project comes with a unique set of risks and challenges. Let your backers know how you plan to overcome these them.</p>
-              <textarea value={this.state.risks_and_challenges}></textarea>
+              <textarea onChange={ this.handleRisksAndChallenges }value={this.state.risks_and_challenges}></textarea>
             </section>
           </form>
         </section>

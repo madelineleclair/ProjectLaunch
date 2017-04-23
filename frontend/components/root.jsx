@@ -6,6 +6,7 @@ import EditProjectContainer from './project/edit_project_form_container'
 import BasicInfoFormContainer from './project/basic_info_form_container'
 import StoryInfoFormContainer from './project/story_info_form_container'
 import RewardsInfoFormContainer from './project/rewards_info_form_container'
+import HomePageContainer from './project/home_page/home_page_container'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import App from './app';
 
@@ -21,6 +22,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
+          <IndexRoute component={ HomePageContainer } />
           <Route path="/signup" onEnter={(store) => _redirectIfLoggedIn} component={ SessionFormContainer } />
           <Route path="/login" onEnter={(store) => _redirectIfLoggedIn} component={ SessionFormContainer } />
           <Route path="/projects/new" component={NewProjectFormContainer} />

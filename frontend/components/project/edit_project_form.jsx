@@ -15,10 +15,10 @@ class EditProjectForm extends React.Component {
     return (
       <div className="edit-project-container">
         <section className="edit-project-page-buttons">
-          <Link to={`/projects/edit/${this.props.projectId}/basicInfo`}>
+          <Link to={ `/projects/edit/${this.props.projectId}/basicInfo` }>
             <div>Basics</div>
           </Link>
-          <Link>
+          <Link to={ `/projects/edit/${this.props.projectId}/rewardsInfo` }>
             <div>Rewards</div>
           </Link>
           <Link to={`/projects/edit/${this.props.projectId}/storyInfo`}>

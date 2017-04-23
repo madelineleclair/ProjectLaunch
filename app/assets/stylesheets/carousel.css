@@ -1,0 +1,37 @@
+/*
+.inner-slider-container {
+}*/
+
+.outer-slider-container {
+  height: 500px;
+  overflow: hidden;
+}
+
+.slick-track img {
+  height: 500px;
+}
+
+/*.slick-initialized {
+  display: flex;
+}*/
+
+.slick-initialized button{
+  position: absolute;
+}
+
+.slick-next {
+  content: ">";
+}
+/*.slick-prev {
+  top: 0;
+}*/
+/*
+.slider-container {
+  margin: auto;
+}*/
+
+/*.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  align-items: center;
+}*/

@@ -7,7 +7,7 @@
   box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
 }
 
-.basic-info-container, .story-info-container {
+.basic-info-container, .story-info-container, .rewards-info-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@
   color: blue;
 }
 
-.basic-caption, .story-caption {
+.basic-caption, .story-caption, .rewards-caption {
   height: 100px;
   width: 100%;
   border: 1px solid red;
@@ -56,13 +56,13 @@
   justify-content: center;
 }
 
-.basic-caption h1, .story-caption h1 {
+.basic-caption h1, .story-caption h1, .rewards-caption h1 {
   font-weight: bold;
   font-size: 35px;
   text-align: center;
 }
 
-.basic-caption p, .story-caption p {
+.basic-caption p, .story-caption p, .rewards-caption h1 {
   font-size: 20px;
   text-align: center;
 }

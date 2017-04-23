@@ -1,12 +1,11 @@
 class Api::StoriesController < ApplicationController
   def show
-    @story = Story.find_by(project_id: params[project_id])
+    @story = Story.find_by(project_id: params[:id])
     render 'api/stories/show.json.jbuilder'
   end
 
   def create
     @story = Story.new(story_params)
-    @story.user_id = current_user.id
 
     if @story.save
         render 'api/stories/show.json.jbuilder'
@@ -29,5 +28,10 @@ class Api::StoriesController < ApplicationController
     end
   end
 
+  private
+
+  def story_params
+    params.require(:story).permit(:project_id, :video_url, :description, :risks_and_challenges)
+  end
 
 end

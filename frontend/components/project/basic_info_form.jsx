@@ -101,15 +101,15 @@ class BasicInfoForm extends React.Component {
       <div className="basic-info-container">
         <div className="basic-caption">
           <h1>Let's get started!</h1>
-          <p>Make your project stand out with a captivating tite and image</p>
+          <p>Make your project stand out with a captivating title and image</p>
         </div>
         <section className="form-and-side-bar">
           <form onChange={this.handleSave} className="basic-info-form">
             <section>
               <label>Product image</label>
               <input className="project-image-selector" type='file' onChange={this.updateFile}/>
+              <img src={this.state.imageUrl}/>
             </section>
-            <img src={this.state.imageUrl}/>
             <section>
               <div className="product-title">
                 <label>Product title</label>
