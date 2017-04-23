@@ -14,8 +14,6 @@
  *= require_self
  */
 
- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
  .sign-up-or-log-in, .create-project-container {
   box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
