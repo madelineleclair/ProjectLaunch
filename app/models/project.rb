@@ -30,4 +30,5 @@ class Project < ActiveRecord::Base
   belongs_to :user
   has_one :story
   has_many :rewards
+  has_many :contributions
 end
