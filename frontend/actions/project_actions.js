@@ -4,6 +4,7 @@ export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
+export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
 
 const receiveProject = (project) => {
   return {
@@ -32,6 +33,13 @@ const receiveReward = (reward) => {
     reward
   };
 };
+
+const receiveAlmostFunded = (projects) => {
+  return {
+    type: RECEIVE_ALMOST_FUNDED,
+    projects
+  }
+}
 
 export const getProject = (id) => (dispatch) => {
 
@@ -79,5 +87,11 @@ export const createReward = (reward) => (dispatch) => {
 export const updateReward = (reward) => (dispatch) => {
   return ProjectUtil.updateReward(reward).then((reward) => {
     dispatch(receiveReward(reward));
+  });
+};
+
+export const fetchAlmostFunded = (fetchType) => (dispatch) => {
+  return ProjectUtil.fetchAlmostFunded(fetchType).then((projects) => {
+    dispatch(receiveAlmostFunded(projects))
   });
 };

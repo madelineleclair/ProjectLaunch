@@ -86,7 +86,8 @@ class BasicInfoForm extends React.Component {
       formData.append("project[goal]", this.state.goal)
       formData.append("project[image]", this.state.imageFile)
       formData.append("project[id]", this.props.router.params.projectId)
-      this.props.updateProject(formData).then(() => this.setState({save: false}))
+
+      this.props.updateProject(formData).then(() => this.setState({ save: false }))
     }
 
     handleSave(e) {

@@ -70,3 +70,11 @@ export const updateReward = (reward) => {
     data: { reward }
   });
 };
+
+export const fetchAlmostFunded = (fetchType) => {
+  return $.ajax({
+    type: "GET",
+    url: 'api/projects',
+    data: {fetchType}
+  });
+};

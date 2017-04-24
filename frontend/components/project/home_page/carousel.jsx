@@ -52,7 +52,7 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    arrows: true,
+    arrows: false,
     infinite: true,
   };
 

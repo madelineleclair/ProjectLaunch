@@ -2,6 +2,22 @@ class Api::ProjectsController < ApplicationController
   # before_action :require_log_in, only: [:edit, :update, :destroy]
 
   def index
+    #this query is not right. Need to rework it
+    query_type = params[:fetchType]
+    case(query_type)
+      when 'almostFunded'
+        @projects = Project.joins(:contributions)
+          .select('*', 'sum(amount) as total_contributions')
+          .where('launch = true')
+          .group('projects.id')
+          .having('goal < sum(amount)')
+          .order('sum(amount) desc')
+          .limit(3)
+      else
+        @projects = Project.all
+      end
+
+      render 'api/projects/index.json.jbuilder'
   end
 
   def show
