@@ -52,15 +52,16 @@ column name          | data type | details
 ---------------------|-----------|-----------
 id                   | integer   | not null, primary key
 project_id           | integer   | not null, indexed
-video_url            | string    | 
+video_url            | string    |
 description          | text      | not null
 risks_and_challenges | text      |
 
 
-## pledges
+## contributions
 column name | data type | details
 ------------|-----------|-----------
 id          | integer   | not null, primary key
 project_id  | integer   | not null, indexed
 user_id     | integer   | not null, indexed
 amount      | integer   | not null  
+reward_id   | integer   |
