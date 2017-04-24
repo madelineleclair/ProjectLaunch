@@ -1,7 +1,7 @@
 .navigation-bar {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0px 10px;
   height: 60px;
   border-bottom: 1px solid #dad7d4;
@@ -25,14 +25,11 @@
 
 .user-image {
   height: 100%;
-  width: 3%;
   background: #F7F7F9;
-  display: flex;
   position: relative;
 }
 
 .user-image img {
-  margin: auto;
   height: 95%;
 }
 
@@ -57,10 +54,42 @@
 .user-info-box button {
   margin-left: 5px;
   font-size: 14px;
-  color: blue
+  color: blue;
 }
 
 .user-info-box div {
   font-weight: bold;
   padding-left: 5px;
 }
+
+.logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+
+.project-logo {
+  color: black;
+}
+
+.launch-logo {
+  color: green;
+}
+
+.login-logout-container, .user-image {
+  width: 235px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.explore-and-start {
+  width: 235px;
+  display: flex;
+  justify-content: flex-start;
+}
+/*.project-logo:hover, .launch-logo:hover {
+  border-bottom: none;
+}*/

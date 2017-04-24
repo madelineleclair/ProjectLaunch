@@ -21,33 +21,50 @@ class NavigationBar extends React.Component {
   }
 
   render() {
+      let info;
+      if (this.state.displayInfo) {
+        info = <UserInfo userInfo={ this.props } />;
+      }
 
-  const info = this.state.displayInfo ? <UserInfo userInfo={ this.props } /> : <div />
 
     if (this.props.loggedIn) {
       return(
         <div className="navigation-bar">
-        <Link to="/projects/new">
-          <div>Start a project</div>
-        </Link>
-          <div className="user-image">
-            <img onClick={this.handleUserInfoToggle} src={this.props.currentUser.image_url} />
+          <div className="explore-and-start">
+            <Link to="/projects/new">
+              <div>Start a project</div>
+            </Link>
           </div>
-          { info }
+          <Link className="logo" to="/">
+            <section className="project-logo">PROJECT</section>
+            <section className="launch-logo">LAUNCH</section>
+          </Link>
+            <div className="user-image">
+              <img onClick={this.handleUserInfoToggle} src={this.props.currentUser.image_url} />
+            </div>
+            { info }
         </div>
       );
     } else {
       return (
         <div className="navigation-bar">
-        <Link to="/projects/new">
-          <div>Start a project</div>
+          <div className="explore-and-start">
+            <Link to="/projects/new">
+              <div>Start a project</div>
+            </Link>
+          </div>
+        <Link className="logo" to="/">
+          <section className="project-logo">PROJECT</section>
+          <section className="launch-logo">LAUNCH</section>
         </Link>
-          <Link to="/login">
-            <div>Log in</div>
-          </Link>
-          <Link to='/signup'>
-            <div>Sign up</div>
-          </Link>
+          <div className="login-logout-container">
+            <Link to="/login">
+              <div>Log in</div>
+            </Link>
+            <Link to='/signup'>
+              <div>Sign up</div>
+            </Link>
+          </div>
         </div>
       );
     }
