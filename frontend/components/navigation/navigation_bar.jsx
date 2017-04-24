@@ -8,6 +8,7 @@ class NavigationBar extends React.Component {
     super(props);
     this.state = {displayInfo: false};
     this.handleUserInfoToggle = this.handleUserInfoToggle.bind(this);
+    this.setState = this.setState.bind(this)
   }
 
   handleUserInfoToggle () {
@@ -23,7 +24,7 @@ class NavigationBar extends React.Component {
   render() {
       let info;
       if (this.state.displayInfo) {
-        info = <UserInfo userInfo={ this.props } />;
+        info = <UserInfo userInfo={ this.props } setState={this.setState}/>;
       }
 
 

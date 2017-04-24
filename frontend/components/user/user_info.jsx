@@ -2,7 +2,10 @@ import React from 'react';
 import { hashHistory } from 'react-router';
 
 const logOut = (props) => (e) => {
-  props.userInfo.logOut().then(() => {hashHistory.push('/');});
+  props.userInfo.logOut().then(() => {
+    props.setState({displayInfo: false});
+    hashHistory.push('/');
+  });
 };
 
 const UserInfo = (props) => {
