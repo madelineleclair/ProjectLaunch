@@ -33,7 +33,6 @@ class StoryInfoForm extends React.Component {
     story.project_id = this.props.projectId;
     let action;
 
-    debugger
     if (this.props.action === 'create') {
       action = this.props.createStory;
     } else {
@@ -43,7 +42,7 @@ class StoryInfoForm extends React.Component {
   }
 
   handleSave(e) {
-    debugger
+
     const save = true
     this.setState({save})
   }
