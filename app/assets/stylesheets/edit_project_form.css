@@ -12,12 +12,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 100px;
 }
 
 .edit-project-page-buttons {
   display: flex;
   width: 33%;
-  border: 1px solid red;
   justify-content: center;
   height: 125px;
 }
@@ -48,8 +48,7 @@
 .basic-caption, .story-caption, .rewards-caption {
   height: 100px;
   width: 100%;
-  border: 1px solid red;
-  margin: 20px;
+  margin: 0 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +71,7 @@
 }
 
 .form-and-side-bar {
-  border: 1px solid red;
+  border: 1px solid #dcdcdb;
   width: 35%;
   background: white;
 }
@@ -80,6 +79,12 @@
 .basic-info-form section {
   width: 88%;
   background: #F7F7F9;
+  height: auto;
+  padding: 10px;
+}
+
+.project-image img {
+  display: block;
 }
 
 .form-and-side-bar {
@@ -87,21 +92,26 @@
 }
 
 .form-and-side-bar section {
-  height: 120px;
+  /*height: 120px;*/
   margin: 10px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
 }
 
-.form-and-side-bar input, .form-and-side-bar textarea {
+.basic-info-location div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-and-side-bar input, .form-and-side-bar textarea, .category-drop-down-button {
   width: 400px;
   border-radius: 4px;
   margin-left: 47px;
 }
 
 .basic-info-form label {
-  margin: 12px 0px 0px 19px;
+  margin-left: 19px;
   width: 20%;
   font-weight: bold;
 }
@@ -112,12 +122,12 @@
   padding-left: 5px;
 }
 
-.form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"], .form-and-side-bar textarea {
+.form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"], .form-and-side-bar textarea, .category-drop-down-button {
   background: white;
   border-radius: 4px;
   border: 1px solid #d6d6d5;
   height: 40px;
-  margin-top: 5px;
+  /*margin-top: 5px;*/
   margin-right: 5px;
   padding-left: 8px;
 }
@@ -176,4 +186,48 @@
 
 .basic-info-location {
   height: 50px;
+}
+
+.project-image img {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.basic-info-drop-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category-drop-down-button {
+  position: relative;
+}
+
+.category-drop-down-button:hover {
+  border: 1px solid blue;
+}
+
+.drop-down-toggle {
+  background: white;
+  position: absolute;
+  /*height: 100px;*/
+  width: 400px;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-left: 50px;
+  border: 1px solid #d6d6d5;
+  text-align: left;
+  top: 43px;
+  left: -53px;
+}
+
+.drop-down-toggle ul {
+  top: 42px;
+  left: -53px;
+}
+
+.drop-down-toggle li {
+  margin: 10px;
 }

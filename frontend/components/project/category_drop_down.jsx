@@ -36,7 +36,7 @@ class CategoryDropDown extends React.Component {
 
     if (this.props.selected) {
       dropDown = (
-        <ul onClick={ this.selectCategory }>
+        <ul className="drop-down-toggle" onClick={ this.selectCategory }>
           <li>Food</li>
           <li>Technology</li>
           <li>Games</li>

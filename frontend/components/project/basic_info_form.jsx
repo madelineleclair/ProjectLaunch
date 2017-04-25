@@ -96,6 +96,10 @@ class BasicInfoForm extends React.Component {
     }
 
   render() {
+    let image;
+    if(this.state.imageUrl) {
+      image = <img src={this.state.imageUrl}/>
+    }
     const saveButton = this.state.save ? <button onClick={this.handleUpdate}>Save</button> : <div></div>
 
     return (
@@ -106,10 +110,12 @@ class BasicInfoForm extends React.Component {
         </div>
         <section className="form-and-side-bar">
           <form onChange={this.handleSave} className="basic-info-form">
-            <section>
-              <label>Product image</label>
-              <input className="project-image-selector" type='file' onChange={this.updateFile}/>
-              <img src={this.state.imageUrl}/>
+            <section className="project-image">
+              <div>
+                <label>Product image</label>
+                <input className="project-image-selector" type='file' onChange={this.updateFile}/>
+              </div>
+              { image }
             </section>
             <section>
               <div className="product-title">
@@ -130,8 +136,11 @@ class BasicInfoForm extends React.Component {
               </div>
             </section>
             <section>
-              <div className="drop-down">
-                <CategoryDropDown category={this.state.category} setState={this.setState} selected={this.state.selected}/>
+              <div className="basic-info-drop-down">
+                <label>Category</label>
+                <div className="basic-info-drop-down-contaier">
+                  <CategoryDropDown category={this.state.category} setState={this.setState} selected={this.state.selected}/>
+                </div>
               </div>
             </section>
             <section className="basic-info-location">
