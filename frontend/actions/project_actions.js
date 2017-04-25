@@ -63,7 +63,15 @@ export const fetchStory = (project_id) => (dispatch) => {
 };
 
 export const updateProject = (project) => (dispatch) => {
+  debugger
   return ProjectUtil.updateProject(project).then((project) => {
+    dispatch(receiveProject(project));
+  });
+};
+
+export const launchProject = (project) => (dispatch) => {
+  debugger
+  return ProjectUtil.launchProject(project).then((project) => {
     dispatch(receiveProject(project));
   });
 };

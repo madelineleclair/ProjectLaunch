@@ -24,6 +24,14 @@ export const updateProject = (project) => {
   });
 };
 
+export const launchProject = (project) => {
+  return $.ajax({
+    type: "PATCH",
+    url: `api/projects/${project.id}`,
+    data: { project },
+  });
+}
+
 export const fetchStory = (project_id) => {
   return $.ajax({
     type: "GET",

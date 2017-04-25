@@ -1,5 +1,5 @@
 import EditProjectForm from './edit_project_form';
-import { getProject } from '../../actions/project_actions';
+import { getProject, launchProject } from '../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,6 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getProject: (id) => dispatch(getProject(id)),
+    launchProject: (project) => dispatch(launchProject(project))
   };
 };
 
