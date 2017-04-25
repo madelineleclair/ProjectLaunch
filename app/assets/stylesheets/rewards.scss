@@ -1,3 +1,35 @@
 // Place all the styles related to the rewards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.rewards-and-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rewards-and-form div {
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.add-reward-button {
+  width: 591.484px;
+  border: 1px dashed #dcdcdb;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-reward-button p {
+  margin: 3px;
+}
+
+.add-reward-button p:first-child {
+  font-weight: 900;
+}
+
+.add-reward-button:hover {
+  background: #F7F7F9;
+  color: blue;
+}

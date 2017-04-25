@@ -58,34 +58,41 @@ class RewardsInfoForm extends React.Component {
           <h1>Create great rewards for your supporters</h1>
           <p>Entice backers to contribute to your cause by offering exclusive products and experiences</p>
         </div>
-        <ul>
-          { rewards }
-        </ul>
-        <form className="add-reward-form">
-          <label>Title
-            <input type="text" value={this.state.title} />
-          </label>
-
-          <label>Pledge amount
-            <input type="number" value={ this.state.pledge_amount } />
-          </label>
-          <label>Description
+        <div className="rewards-and-form">
+          <ul>
+            { rewards }
+          </ul>
+          <form className="add-reward-form">
+            <div className="create-reward-title">
+              <label>Title</label>
+              <input type="text" value={this.state.title} />
+            </div>
+            <div className="create-reward-amount">
+              <label>Pledge amount</label>
+              <input type="number" value={ this.state.pledge_amount } />
+            </div>
+            <div className="create-reward-description">
+              <label>Description</label>
               <textarea value={this.state.description} />
-          </label>
-          <label>Estimated delivery or date
-            <input type="date" />
-          </label>
-          <label>Limited availability
-            <button onClick={this.enableRewardLimit}>Enable reward limit</button>
-            { rewardLimit }
-          </label>
-        </form>
-        <button onClick={this.handleSave}>Add a new reward</button>
-        <section className="save-button">
-          <div>
-            {saveButton}
-          </div>
-        </section>
+            </div>
+            <div className="create-reward-delivery-date">
+              <label>Estimated delivery</label>
+              <input type="date" />
+            </div>
+            <div className="limited-availability">
+              <label>Limited availability</label>
+              <button onClick={this.enableRewardLimit}>Enable reward limit</button>
+              { rewardLimit }
+            </div>
+          </form>
+          <button className="add-reward-button" onClick={this.handleSave}>
+            <p>+</p>
+            <p>Add a new reward</p>
+          </button>
+            <div className="save-button">
+              {saveButton}
+            </div>
+        </div>
       </div>
     )
   }

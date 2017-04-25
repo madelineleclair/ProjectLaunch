@@ -70,13 +70,13 @@
   border: 1px dashed blue;
 }
 
-.form-and-side-bar {
+.form-and-side-bar, .rewards-and-form {
   border: 1px solid #dcdcdb;
   width: 35%;
   background: white;
 }
 
-.basic-info-form section {
+.basic-info-form section, .rewards-and-form div {
   width: 88%;
   background: #F7F7F9;
   height: auto;
@@ -87,7 +87,7 @@
   display: block;
 }
 
-.form-and-side-bar {
+.form-and-side-bar, .rewards-and-form {
   padding: 20px;
 }
 
@@ -104,13 +104,13 @@
   justify-content: space-between;
 }
 
-.form-and-side-bar input, .form-and-side-bar textarea, .category-drop-down-button {
+.form-and-side-bar input, .form-and-side-bar textarea, .category-drop-down-button, .add-reward-form input, .add-reward-form textarea {
   width: 400px;
   border-radius: 4px;
   margin-left: 47px;
 }
 
-.basic-info-form label {
+.basic-info-form label, .add-reward-form label {
   margin-left: 19px;
   width: 20%;
   font-weight: bold;
@@ -122,7 +122,8 @@
   padding-left: 5px;
 }
 
-.form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"], .form-and-side-bar textarea, .category-drop-down-button {
+.form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"], .form-and-side-bar textarea, .category-drop-down-button,
+.add-reward-form input[type="text"], .add-reward-form input[type="textarea"], .add-reward-form input[type="date"], .add-reward-form input[type="number"], .add-reward-form textarea {
   background: white;
   border-radius: 4px;
   border: 1px solid #d6d6d5;
@@ -180,7 +181,8 @@
 }
 
 
-.product-title, .short-blurb, .funding-goal, .duration, .story-description, .risks-and-challenges, .project-image-label-and-input, .project-video-label-and-input {
+.product-title, .short-blurb, .funding-goal, .duration, .story-description, .risks-and-challenges, .project-image-label-and-input, .project-video-label-and-input,
+ .create-reward-title, .create-reward-amount, .create-reward-description, .create-reward-delivery-date, .limited-availability {
   display: flex;
 }
 
