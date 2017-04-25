@@ -20,7 +20,11 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    render 'api/projects/update.json.jbuilder'
+    if @project
+      render 'api/projects/update.json.jbuilder'
+    else
+      render json: ["Project does not exist"]
+    end
   end
 
   def create
