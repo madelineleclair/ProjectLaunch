@@ -22,7 +22,7 @@ class StoryInfoForm extends React.Component {
     this.setState({description})
   }
 
-  handleRisksAndChallenges() {
+  handleRisksAndChallenges(e) {
     const risks_and_challenges = e.target.value;
     this.setState({risks_and_challenges});
   }
@@ -32,6 +32,8 @@ class StoryInfoForm extends React.Component {
     const story = Object.assign({}, this.state);
     story.project_id = this.props.projectId;
     let action;
+
+    debugger
     if (this.props.action === 'create') {
       action = this.props.createStory;
     } else {
@@ -41,13 +43,14 @@ class StoryInfoForm extends React.Component {
   }
 
   handleSave(e) {
+    debugger
     const save = true
     this.setState({save})
   }
 
   render() {
 
-    const saveButton = this.state.save ? <button onClick={this.handleUpdate}>Save</button> : <div></div>
+    const saveButton = this.state.save ? <button onClick={this.handleSubmit}>Save</button> : <div></div>
 
     return(
       <div className="story-info-container">
@@ -56,7 +59,7 @@ class StoryInfoForm extends React.Component {
           <p>Spice up you project with videos and exciting details about your project so people can learn more about it</p>
         </div>
         <section className="form-and-side-bar">
-          <form className="basic-info-form">
+          <form onChange={this.handleSave} className="basic-info-form">
             <section className="project-video">
               <div className="project-video-label-and-input">
                 <label>Project video</label>

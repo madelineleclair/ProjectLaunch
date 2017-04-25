@@ -1,5 +1,5 @@
 import StoryInfoForm from './story_info_form';
-import { fetchStory, updateStory } from '../../actions/project_actions';
+import { fetchStory, updateStory, createStory } from '../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
