@@ -111,7 +111,7 @@ class BasicInfoForm extends React.Component {
         <section className="form-and-side-bar">
           <form onChange={this.handleSave} className="basic-info-form">
             <section className="project-image">
-              <div>
+              <div className="project-image-label-and-input">
                 <label>Product image</label>
                 <input className="project-image-selector" type='file' onChange={this.updateFile}/>
               </div>

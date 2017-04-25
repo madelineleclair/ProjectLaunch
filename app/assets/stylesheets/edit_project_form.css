@@ -66,7 +66,7 @@
   text-align: center;
 }
 
-.project-image-selector {
+.project-image-selector, .project-video-selector {
   border: 1px dashed blue;
 }
 
@@ -180,7 +180,7 @@
 }
 
 
-.product-title, .short-blurb, .funding-goal, .duration {
+.product-title, .short-blurb, .funding-goal, .duration, .story-description, .risks-and-challenges, .project-image-label-and-input, .project-video-label-and-input {
   display: flex;
 }
 

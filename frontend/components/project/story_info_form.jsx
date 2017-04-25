@@ -57,19 +57,29 @@ class StoryInfoForm extends React.Component {
         </div>
         <section className="form-and-side-bar">
           <form className="basic-info-form">
-            <section>
-              <label>Project video</label>
-              <input type="file"></input>
-              <p>Make your project stand out. Projects with videos receive higher amounts of funding.</p>
+            <section className="project-video">
+              <div className="project-video-label-and-input">
+                <label>Project video</label>
+                <input className="project-video-selector" type="file" />
+              </div>
+              <div className="caption-text">
+                <p>Make your project stand out. Projects with videos receive higher amounts of funding.</p>
+              </div>
             </section>
             <section>
-              <label>Project description</label>
-              <textarea onChange={ this.handleDescription } value={this.state.description}></textarea>
+              <div className="story-description">
+                <label>Project description</label>
+                <textarea onChange={ this.handleDescription } value={this.state.description}></textarea>
+              </div>
             </section>
             <section>
-              <label>Risks and challenges</label>
-              <p>Every project comes with a unique set of risks and challenges. Let your backers know how you plan to overcome these them.</p>
-              <textarea onChange={ this.handleRisksAndChallenges }value={this.state.risks_and_challenges}></textarea>
+              <div className="risks-and-challenges">
+                <label>Risks and challenges</label>
+                <textarea onChange={ this.handleRisksAndChallenges }value={this.state.risks_and_challenges}></textarea>
+              </div>
+              <div className="caption-text">
+                <p>Every project comes with a unique set of risks and challenges. Let your backers know how you plan to overcome these them.</p>
+              </div>
             </section>
           </form>
         </section>
