@@ -50,9 +50,6 @@ class NavigationBar extends React.Component {
       return (
         <div className="navigation-bar">
           <div className="explore-and-start">
-            <Link to="/projects/new">
-              <div>Start a project</div>
-            </Link>
           </div>
         <Link className="logo" to="/">
           <section className="project-logo">PROJECT</section>
@@ -72,4 +69,7 @@ class NavigationBar extends React.Component {
   }
 }
 
+// <Link to="/projects/new">
+//   <div>Start a project</div>
+// </Link>
 export default NavigationBar;
