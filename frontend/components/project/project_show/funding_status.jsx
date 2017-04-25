@@ -5,7 +5,7 @@ const FundingStatus = (props) => {
   const goal = props.basicInfo.goal
 
   const funding = props.contributionsInfo.total_contributions || 0;
-  debugger
+  
   return (
     <div className="funding-status-container">
       <ProgressBar goal={goal} funding={funding} />

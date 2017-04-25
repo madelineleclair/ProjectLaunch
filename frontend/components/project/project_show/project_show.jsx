@@ -23,17 +23,20 @@ class ProjectShow extends React.Component {
     return (
       <div>
         <section className="project-intro">
-          <div className="owner-info">
-            <img src={this.props.basicInfo.owner_image} />
-            <span>By
-              <p>{this.props.basicInfo.owner}</p>
-            </span>
+          <div className="owner-and-title">
+            <div className="owner-info">
+              <img src={this.props.basicInfo.owner_image} />
+              <span>
+                <p>By</p>
+                <p>{this.props.basicInfo.owner}</p>
+              </span>
+            </div>
+            <section className="title-and-description">
+              <h2>{this.props.basicInfo.title}</h2>
+              <h3>{this.props.basicInfo.description}</h3>
+            </section>
           </div>
-          <section className="title-and-description">
-            <h2>{this.props.basicInfo.title}</h2>
-            <h3>{this.props.basicInfo.description}</h3>
-          </section>
-          <section>
+          <section className="main-video-and-funding">
             <img src={this.props.basicInfo.image_url} />
             { fundingStatus }
           </section>
@@ -44,3 +47,27 @@ class ProjectShow extends React.Component {
 }
 
 export default ProjectShow;
+
+
+
+
+
+
+
+
+//   <div>
+//     <section className="project-intro">
+//       <div className="owner-icon-and-title">
+//         <img src={this.props.basicInfo.owner_image} />
+//         <h2>{this.props.basicInfo.title}</h2>
+//       </div>
+//       <div className="owner-name-and-description">
+//         <span>
+//           <p>By</p>
+//           <p>{this.props.basicInfo.owner}</p>
+//         </span>
+//         <h3>{this.props.basicInfo.description}</h3>
+//       </div>
+//     </section>
+//   </div>
+// )
