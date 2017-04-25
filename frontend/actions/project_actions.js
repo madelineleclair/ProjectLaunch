@@ -86,9 +86,9 @@ export const fetchRewards = (project_id) => (dispatch) => {
 };
 
 export const createReward = (reward) => (dispatch) => {
-  return ProjectUtil.createReward(reward).then((reward) => {
-    dispatch(receiveReward(reward));
-  });
+  return ProjectUtil.createReward(reward).then((reward) =>
+    dispatch(receiveReward(reward))
+  );
 };
 
 export const updateReward = (reward) => (dispatch) => {

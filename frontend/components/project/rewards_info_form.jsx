@@ -4,10 +4,16 @@ import RewardInfo from './reward_info'
 class RewardsInfoForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {rewards: [], title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", limitedAvailability: false, save: false};
+    this.state = {rewards: [], title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", project_id: this.props.projectId,
+      limitedAvailability: false };
     this.enableRewardLimit = this.enableRewardLimit.bind(this);
-    this.handleSave = this.handleSave.bind(this);
     this.handleCreate = this.handleCreate.bind(this);
+    this.handleTitle = this.handleTitle.bind(this);
+    this.handlePledgeAmount = this.handlePledgeAmount.bind(this);
+    this.handleDescription = this.handleDescription.bind(this);
+    this.handleDeliverDate = this.handleDeliverDate.bind(this);
+    this.handleRewardLimit = this.handleRewardLimit.bind(this);
+    this.setState = this.setState.bind(this)
   }
 
   componentDidMount() {
@@ -17,40 +23,70 @@ class RewardsInfoForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    debugger
     const rewards = nextProps.rewards
     this.setState({ rewards })
   }
 
   enableRewardLimit() {
-    if (limitedAvailability) {
+    if (this.state.limitedAvailability) {
       this.setState({limitedAvailability: false});
     } else {
       this.setState({limitedAvailability: true});
     }
   }
 
-  handleSave(e) {
-    const save = true
-    this.setState({save})
+
+  handleTitle(e) {
+
+    const title = e.target.value
+    this.setState({title})
   }
 
+  handlePledgeAmount(e) {
+    const pledge_amount = e.target.value;
+    this.setState({pledge_amount});
+  }
+
+  handleDescription(e) {
+    const description = e.target.value;
+    this.setState({description});
+  }
+
+  handleDeliverDate(e) {
+    const delivery_date = e.target.value
+    this.setState({delivery_date})
+  }
+
+  handleRewardLimit(e) {
+    const number_available = e.target.value;
+    this.setState({number_available})
+  }
+
+  //not causing a rerender of rewards...why??? Component will receive props will automatically update it but it is not hitting component will receive props until refresh
   handleCreate(e) {
-    _defaultState = {rewards: [], title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", limitedAvailability: false, save: false};
+    const _defaultState = { title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", limitedAvailability: false };
 
     e.preventDefault()
-    this.props.createReward(this.state).then(() => {
-      this.setState(_defaultState)
-    })
+    this.props.createReward(this.state).then((action) => {
+      this.setState({_defaultState})
+    });
   }
 
   render() {
+
     const rewards = this.props.rewards.map((reward, index) => {
       return <RewardInfo key={reward.id} reward={ reward } number={ index }/>
     })
+    let rewardLimit;
 
-    const rewardLimit = this.state.limitedAvailability ? <input type="number" value={this.state.number_available} /> : <div />
+    if (this.state.limitedAvailability) {
+      rewardLimit = <input onChange={this.handleRewardLimit} type="number" value={this.state.number_available || 0} />
+    } else {
+      rewardLimit = <button onClick={this.enableRewardLimit}>Enable reward limit</button>
+    };
 
-  const saveButton = this.state.save ? <button onClick={this.handleCreate}>Save</button> : <div></div>
+  // const saveButton = this.state.save ? <button onClick={this.handleCreate}>Save</button> : <div></div>
 
     return(
       <div className="rewards-info-container">
@@ -65,33 +101,29 @@ class RewardsInfoForm extends React.Component {
           <form className="add-reward-form">
             <div className="create-reward-title">
               <label>Title</label>
-              <input type="text" value={this.state.title} />
+              <input onChange={this.handleTitle} type="text" value={this.state.title} />
             </div>
             <div className="create-reward-amount">
               <label>Pledge amount</label>
-              <input type="number" value={ this.state.pledge_amount } />
+              <input onChange={this.handlePledgeAmount} type="number" value={ this.state.pledge_amount } />
             </div>
             <div className="create-reward-description">
               <label>Description</label>
-              <textarea value={this.state.description} />
+              <textarea onChange={this.handleDescription} value={this.state.description} />
             </div>
             <div className="create-reward-delivery-date">
               <label>Estimated delivery</label>
-              <input type="date" />
+              <input onChange={this.handleDeliverDate} type="date" />
             </div>
             <div className="limited-availability">
               <label>Limited availability</label>
-              <button onClick={this.enableRewardLimit}>Enable reward limit</button>
               { rewardLimit }
             </div>
+            <button className="add-reward-button" onClick={this.handleCreate}>
+              <p>+</p>
+              <p>Add a new reward</p>
+            </button>
           </form>
-          <button className="add-reward-button" onClick={this.handleSave}>
-            <p>+</p>
-            <p>Add a new reward</p>
-          </button>
-            <div className="save-button">
-              {saveButton}
-            </div>
         </div>
       </div>
     )
@@ -99,3 +131,7 @@ class RewardsInfoForm extends React.Component {
 }
 
 export default RewardsInfoForm;
+
+// <div className="save-button">
+//   {saveButton}
+// </div>

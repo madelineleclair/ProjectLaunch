@@ -58,7 +58,7 @@ export const fetchRewards = (project_id) => {
 
 export const createReward = (reward) => {
   return $.ajax({
-    type: "GET",
+    type: "POST",
     url: 'api/rewards',
     data: { reward }
   });

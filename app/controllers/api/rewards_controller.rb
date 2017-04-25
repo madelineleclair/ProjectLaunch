@@ -14,7 +14,7 @@ class Api::RewardsController < ApplicationController
     @reward = Reward.new(reward_params)
 
     if @reward.save
-        render 'api/rewards/index.json.jbuilder'
+        render 'api/rewards/create.json.jbuilder'
     else
       render json: @reward.errors.full_messages, status: 422
     end
@@ -24,7 +24,7 @@ class Api::RewardsController < ApplicationController
     @reward = current_user.projects.rewards.find(params[rewards][:id])
 
     if @reward.update(reward_params)
-      render 'api/rewards/index.json.jbuilder'
+      render 'api/rewards/create.json.jbuilder'
     else
       render json: @reward.errors.full_messages
     end
@@ -36,6 +36,6 @@ class Api::RewardsController < ApplicationController
   private
 
   def reward_params
-    params.require(:rewards).permit(:project_id, :title, :pledge_amount, :description, :number_available, :delivery_date)
+    params.require(:reward).permit(:project_id, :title, :pledge_amount, :description, :number_available, :delivery_date)
   end
 end
