@@ -38,11 +38,11 @@ class StoryInfoForm extends React.Component {
     } else {
       action = this.props.updateStory;
     }
+
     action(story).then(() => this.setState({save: false}));
   }
 
   handleSave(e) {
-
     const save = true
     this.setState({save})
   }
