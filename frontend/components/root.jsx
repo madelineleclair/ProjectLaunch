@@ -10,26 +10,34 @@ import HomePageContainer from './project/home_page/home_page_container'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import App from './app';
 
-const _redirectIfLoggedIn = (nextState, replace) => {
-  const currentUser = store.getState().session.currentUser
-  if(currentUser) {
-    replace('/')
-  }
-}
-
 const Root = ({ store }) => {
+
+  const _redirectIfLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser
+    if(currentUser) {
+      replace('/')
+    }
+  }
+
+  const _redirectIfNotLoggedIn = (nextState, replace ) => {
+    const currentUser = store.getState().session.currentUser
+    if(!currentUser) {
+      replace('/signup')
+    }
+  }
+
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
           <IndexRoute component={ HomePageContainer } />
-          <Route path="/signup" onEnter={(store) => _redirectIfLoggedIn} component={ SessionFormContainer } />
-          <Route path="/login" onEnter={(store) => _redirectIfLoggedIn} component={ SessionFormContainer } />
-          <Route path="/projects/new" component={NewProjectFormContainer} />
-          <Route path="/projects/edit/:projectId" component={EditProjectContainer}>
-            <Route path="/projects/edit/:projectId/basicInfo" component={BasicInfoFormContainer} />
-            <Route path="/projects/edit/:projectId/storyInfo" component={StoryInfoFormContainer} />
-            <Route path="/projects/edit/:projectId/rewardsInfo" component={RewardsInfoFormContainer} />
+          <Route path="/signup" component = { SessionFormContainer } onEnter = { _redirectIfLoggedIn } />
+          <Route path="/login"  component = { SessionFormContainer } onEnter = { _redirectIfLoggedIn } />
+          <Route path="/projects/new" onEnter = { _redirectIfNotLoggedIn } component = { NewProjectFormContainer } />
+          <Route path="/projects/edit/:projectId" component = { EditProjectContainer }>
+            <Route path="/projects/edit/:projectId/basicInfo" onEnter = { _redirectIfNotLoggedIn } component = { BasicInfoFormContainer } />
+            <Route path="/projects/edit/:projectId/storyInfo" onEnter = { _redirectIfNotLoggedIn } component = { StoryInfoFormContainer } />
+            <Route path="/projects/edit/:projectId/rewardsInfo" onEnter = { _redirectIfNotLoggedIn } component = { RewardsInfoFormContainer } />
           </Route>
         </Route>
       </Router>
