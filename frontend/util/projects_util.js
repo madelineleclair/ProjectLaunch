@@ -1,7 +1,8 @@
-export const getProject = (id) => {
+export const getProject = (id, pageType) => {
   return $.ajax({
     type: "GET",
     url: `api/projects/${id}`,
+    data: { pageType }
   });
 };
 
@@ -78,3 +79,11 @@ export const fetchAlmostFunded = (fetchType) => {
     data: {fetchType}
   });
 };
+
+export const fetchContributions = (project_id) => {
+  return $.ajax({
+    type: "GET",
+    url: 'api/contributions',
+    data: {project_id}
+  });
+}

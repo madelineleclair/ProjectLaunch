@@ -5,6 +5,7 @@ export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
 export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
+export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS"
 
 const receiveProject = (project) => {
   return {
@@ -41,9 +42,15 @@ const receiveAlmostFunded = (projects) => {
   }
 }
 
-export const getProject = (id) => (dispatch) => {
+const receiveContributions = (contributions) => {
+  return {
+    type: RECEIVE_CONTRIBUTIONS,
+    contributions
+  }
+}
 
-  return ProjectUtil.getProject(id).then((project) =>
+export const getProject = (id, pageType = false) => (dispatch) => {
+  return ProjectUtil.getProject(id, pageType).then((project) =>
     dispatch(receiveProject(project)));
 };
 
@@ -95,3 +102,9 @@ export const fetchAlmostFunded = (fetchType) => (dispatch) => {
     dispatch(receiveAlmostFunded(projects))
   });
 };
+
+export const fetchContributions = (project_id) => (dispatch) => {
+  return ProjectUtil.fetchContributions(project_id).then((contributions) => {
+    dispatch(receiveContributions(contributions))
+  });
+}

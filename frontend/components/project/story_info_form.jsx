@@ -3,7 +3,7 @@ import React from 'react';
 class StoryInfoForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {video_url: "", description: "", risks_and_challenges: "", save: false};
+    this.state = {video_url: "", description: "", risks_and_challenges: "", save: false, project_id: this.props.projectId};
     this.handleDescription = this.handleDescription.bind(this);
     this.handleRisksAndChallenges = this.handleRisksAndChallenges.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,8 +29,8 @@ class StoryInfoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const story = Object.assign({}, this.state);
-    story.project_id = this.props.projectId;
+    // const story = Object.assign({}, this.state);
+    // story.project_id = this.props.projectId;
     let action;
 
     if (this.props.action === 'create') {
@@ -39,7 +39,7 @@ class StoryInfoForm extends React.Component {
       action = this.props.updateStory;
     }
 
-    action(story).then(() => this.setState({save: false}));
+    action(this.state).then(() => this.setState({save: false}));
   }
 
   handleSave(e) {
