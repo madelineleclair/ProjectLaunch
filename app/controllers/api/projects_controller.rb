@@ -6,19 +6,11 @@ class Api::ProjectsController < ApplicationController
     query_type = params[:fetchType]
     case(query_type)
       when 'almostFunded'
-
-         @projects = Project.select(:id, :title, :description, :location, :goal, 'name as owner', 'sum(amount) as funding')
+         @projects = Project.select(:id, :title, :description, :location, :goal, :launch_date, :duration, 'name as owner', 'sum(amount) as funding', :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
          .group('projects.id', 'users.name')
          .where('launch = true', 'goal > funding')
          .order('funding').limit(3)
-        # @projects = Project.joins(:contributions)
-        #   .where('launch = true')
-        #   .group('projects.id')
-        #   .having('goal < sum(amount)')
-        #   .order('sum(amount) desc')
-        #   .limit(3)
-          # .select('*', 'sum(amount) as total_contributions')
       else
         @projects = Project.all
       end

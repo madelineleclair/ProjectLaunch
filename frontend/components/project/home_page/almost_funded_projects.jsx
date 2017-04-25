@@ -11,13 +11,16 @@ class AlmostFunded extends React.Component {
   }
 
   render() {
+    const projects =  this.props.almostFunded.map((project) => {
+        return <MiniProjectItem key={project.id} project={project} />;
+      });
+
     return (
-      <div className="mini-project-container">
-        {
-          this.props.almostFunded.map((project) => {
-            return <MiniProjectItem project={project} />;
-          })
-        }
+      <div className="almost-funded-container">
+        <h3>Nearly funded</h3>
+        <ul>
+          {projects}
+        </ul>
       </div>
     );
   }

@@ -1,0 +1,12 @@
+.almost-funded-container {
+  width: 332px;
+  margin: auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.almost-funded-container > h3 {
+  font-size: 24px;
+  margin: 18px 0;
+}

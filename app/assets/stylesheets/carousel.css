@@ -5,6 +5,7 @@
 .outer-slider-container {
   height: 500px;
   overflow: hidden;
+  border-bottom: 1px solid #DCDEDD;
 }
 
 .slick-track img {

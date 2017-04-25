@@ -1,0 +1,75 @@
+.mini-project-container {
+  /*height: 430px;*/
+  width: 322px;
+  background: yellow;
+  border: 1px solid #F1EEEA;
+  border-radius: 6px;
+}
+
+.mini-project-image {
+  height: 180px;
+  display: block;
+  overflow: hidden;
+}
+
+
+.mini-project-image img {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+
+.mini-project-text {
+  margin: 10px;
+}
+
+.mini-project-text h4 {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.mini-project-text p {
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 6px;
+  background: #F1EEEA;
+}
+
+.percentage-pledged {
+  height: 100%;
+  background: #2BDE73;
+  max-width: 300px;
+}
+
+.location-and-funding {
+  margin-left: 10px;
+  margin-top: 45px;
+}
+
+.mini-project-location {
+  display: flex;
+}
+
+.mini-project-location img {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
+.percentage-funded, .pledged, .days-to-go {
+  align-items: baseline;
+  display: inline-block;
+  margin: 11px 5px;
+
+}
+
+.percentage-funded div:first-child, .pledged div:first-child, .days-to-go div:first-child{
+  font-weight: bold;
+}
+
+.location-and-funding p {
+  margin-bottom: 5px;
+}

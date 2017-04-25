@@ -21,7 +21,7 @@ user1 = User.create!(name: "Guest", email: "guest@gmail.com", password: "passwor
 project1 = Project.create!(user_id: user1.id, title: "Living Forever",
 image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/cute_dog.jpg",
 description: "I am reseraching how to live forever so I finally have time to do all the things I want to do.",
-location: "New York City, NY", goal: 50000, launch: true, launch_date: Date.new(), category: "Technology")
+location: "New York City, NY", goal: 50000, launch: true, launch_date: Date.new(), category: "Technology", duration: 30, launch_date: DateTime.new())
 
 reward1 = Reward.create!(project_id: project1.id,
 title: "Spend a day hanging out with me",

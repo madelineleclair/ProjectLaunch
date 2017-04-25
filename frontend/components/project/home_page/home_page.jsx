@@ -10,14 +10,7 @@ const HomePage = (props) => {
         <Carousel />
       </div>
       <div className='home-page-categories-container'>
-        <div className='projects-we-love'>
-          Projects We Love
-        </div>
-        <div className="home-page-categories">
-          <Categories />
-        </div>
         <div className="home-page-almost-funded">
-          <h3>Almost funded</h3>
           <AlmostFundedContainer />
         </div>
       </div>
@@ -26,3 +19,12 @@ const HomePage = (props) => {
 };
 
 export default HomePage;
+
+
+
+// <div className='projects-we-love'>
+//   Projects We Love
+// </div>
+// <div className="home-page-categories">
+//   <Categories />
+// </div>
