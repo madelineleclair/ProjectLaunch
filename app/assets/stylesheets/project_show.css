@@ -130,33 +130,41 @@
 
 .rewards-list-item {
   /*position: relative;*/
-  background: #F7F7F9;
+  background-color: #F7F7F9;
   font-weight: 400;
   border: 1px solid #e0e4fb;
   border-radius: 6px;
   margin-bottom: 20px;
   padding: 10px;
+  position: relative;
 }
 
 .rewards-list-item:hover{
   cursor: pointer;
-  background: #05AF3C;
-  width: 100%;
-  height: 100%;
-  .rewards-list-item div:first-child {
-    display:block;
-  }
+  background: #14ce50;
 }
+
+.rewards-list-item:hover h2, .rewards-list-item:hover h3,
+.rewards-list-item:hover h3, .rewards-list-item:hover p {
+  visibility: hidden;
+}
+
 
 .rewards-list-item div:first-child {
   display: none;
+  text-align: center;
+  align-content: center;
 }
 
 .rewards-list-item:hover div:first-child {
-  position: absolute;
   display: block;
+  position: absolute;
   z-index: 2;
   color: white;
+  opacity: 9;
+  font-size: 20px;
+  top: 75px;
+  left: 110px;
 }
 
 /*.rewards-list-item-hover-cover {
