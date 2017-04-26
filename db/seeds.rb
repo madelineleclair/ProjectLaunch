@@ -33,7 +33,7 @@ location: "New York City, NY", goal: 2000, launch: true, launch_date: DateTime.n
 project3 = Project.create!(user_id: user2.id, title: "Super Smash Bros Tournament",
 image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/super_smash_brothers_tournament.jpg",
 description: "The worlds largest Super Smash Bros Tournament is coming to
-New York. Get your tickets nows.", goal: 50000, location: "New York City, NY" launch: true, launch_date: DateTime.new(), category: "Games", duration: 60 )
+New York. Get your tickets nows.", goal: 50000, location: "New York City, NY", launch: true, launch_date: DateTime.new(), category: "Games", duration: 60 )
 
 reward1 = Reward.create!(project_id: project1.id,
 title: "Spend a day hanging out with me",
