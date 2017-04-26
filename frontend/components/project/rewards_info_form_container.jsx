@@ -1,5 +1,5 @@
 import RewardsInfoForm from './rewards_info_form';
-import { fetchRewards, createReward, updateReward, clearErrors } from './../../actions/project_actions';
+import { fetchRewards, createReward, updateReward, clearErrors, deleteReward } from './../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => {
     createReward: (reward) => dispatch(createReward(reward)),
     updateReward: (reward_id) => dispatch(updateReward(reward_id)),
     clearErrors: () => dispatch(clearErrors()),
+    deleteReward: (id) => dispatch(deleteReward(id))
   };
 };
 

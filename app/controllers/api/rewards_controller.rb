@@ -31,6 +31,9 @@ class Api::RewardsController < ApplicationController
   end
 
   def destory
+    @reward = Reward.find(params[:id])
+    @reward.destroy
+    render json: @reward.id
   end
 
   private

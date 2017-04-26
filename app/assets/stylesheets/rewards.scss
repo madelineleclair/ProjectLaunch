@@ -49,6 +49,7 @@
   padding-left: 10px;
   width: 400px;
   border: 1px solid #dcdcdb;
+  position: relative;
 }
 
 .current-reward-info h3 {
@@ -90,4 +91,13 @@
 
 .title-and-inputs {
   display: flex;
+}
+
+.current-reward-info img {
+  position: absolute;
+  width: 10px;
+  height: auto;
+  left: 389px;
+  top: 3px;
+  cursor:pointer;
 }

@@ -4,6 +4,7 @@ export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
+export const REMOVE_REWARD = "REMOVE_REWARD";
 export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
 export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
@@ -35,6 +36,13 @@ const receiveReward = (reward) => {
     reward
   };
 };
+
+const removeReward = (reward) => {
+  return {
+    type: REMOVE_REWARD
+    reward
+  }
+}
 
 const receiveAlmostFunded = (projects) => {
   return {
@@ -112,6 +120,10 @@ export const createReward = (reward) => (dispatch) => {
     dispatch(receiveReward(reward)), (errors) => dispatch(receiveErrors(errors.responseJSON))
   );
 };
+
+export const deleteReward = (id) => (dispatch) => {
+  return ProjectUtil.deleteReward(id).then((reward) =>
+    dispatch(removeReward(reward)))};
 
 export const updateReward = (reward) => (dispatch) => {
   return ProjectUtil.updateReward(reward).then((reward) => {
