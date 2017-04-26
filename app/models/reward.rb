@@ -16,6 +16,7 @@
 class Reward < ActiveRecord::Base
   validates :project, :title, :pledge_amount, :description, :delivery_date,
     presence: true
+    validates :title, uniqueness: true
 
   belongs_to :project
 end
