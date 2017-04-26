@@ -76,7 +76,7 @@
   background: white;
 }
 
-.basic-info-form section, .rewards-and-form div, {
+.basic-info-form section, .rewards-and-form div {
   /*width: 88%;*/
   background: #F7F7F9;
   height: auto;

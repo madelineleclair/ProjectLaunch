@@ -7,6 +7,7 @@ const RewardInfo = (props) => {
           <label>Reward #{props.number + 1}</label>
         </section>
         <section className="current-reward-info">
+          <img src="" />
           <h3>Pledge ${props.reward.pledge_amount} or more</h3>
           <h4>{props.reward.title}</h4>
           <p>{props.reward.description}</p>
