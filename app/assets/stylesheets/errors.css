@@ -1,4 +1,24 @@
-.errors > li{
-  color: #fd003b;
-  list-style: circle;
+
+.errors {
+  margin: auto;
+  width: 330px;
+  background: #fd003b;
+  border-radius: 4px;
+}
+
+.errors li {
+  color: white;
+  padding: 4px 21px;
+  font-size: 15px;
+  border-collapse: collapse;
+}
+
+.errors li:first-child {
+  border-top: 4px solid #fd003b;
+  border-radius: 4px;
+}
+
+.errors li:last-child {
+  border-bottom: 4px solid #fd003b;
+  border-radius: 4px;
 }
