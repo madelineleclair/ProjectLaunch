@@ -16,6 +16,7 @@ const _defaultState = {
 
 //might want to return the state, not the default state.
 const ProjectReducer = (state = _defaultState, action) => {
+
   Object.freeze(state);
   switch(action.type) {
     case(RECEIVE_PROJECT): {

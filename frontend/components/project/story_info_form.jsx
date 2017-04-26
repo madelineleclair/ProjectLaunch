@@ -19,7 +19,7 @@ class StoryInfoForm extends React.Component {
   }
 
   componentWillUnmount() {
-    debugger
+
     this.props.clearErrors();
   }
 

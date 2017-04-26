@@ -76,7 +76,7 @@
   background: white;
 }
 
-.basic-info-form section, .rewards-and-form div {
+.basic-info-form section, .rewards-and-form div, .current-rewards {
   /*width: 88%;*/
   background: #F7F7F9;
   height: auto;
@@ -182,7 +182,7 @@
 
 
 .product-title, .short-blurb, .funding-goal, .duration, .story-description, .risks-and-challenges, .project-image-label-and-input, .project-video-label-and-input,
- .create-reward-title, .create-reward-amount, .create-reward-description, .create-reward-delivery-date, .limited-availability {
+ .create-reward-title, .create-reward-amount, .create-reward-description, .create-reward-delivery-date, .limited-availability, .current-rewards{
   display: flex;
   justify-content: space-between;
 }

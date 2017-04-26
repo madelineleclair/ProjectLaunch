@@ -53,7 +53,7 @@ class Api::ProjectsController < ApplicationController
   # end
 
   def update
-    debugger
+
     @project = current_user.projects.find(params[:project][:id])
 
     if @project.update(update_project_params)

@@ -33,3 +33,42 @@
   background: #F7F7F9;
   color: blue;
 }
+
+.current-rewards {
+  margin-bottom: 5px;
+}
+
+.reward-number label {
+  font-weight: bold;
+  margin-right: 70px;
+}
+
+.current-reward-info {
+  background: white;
+  padding-left: 10px;
+  width: 400px;
+  border: 1px solid #dcdcdb;
+}
+
+.current-reward-info h3 {
+  color: #586BE9;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 17px;
+}
+
+.current-reward-info h4 {
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.current-reward-info p {
+  color: #80809E;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.current-reward-info h5 {
+  margin-top: 0;
+}
