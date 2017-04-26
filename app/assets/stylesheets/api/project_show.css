@@ -44,7 +44,7 @@
 }*/
 
 .project-intro {
-  width: 50%;
+  width: 75%;
   border: 1px solid red;
   margin: auto;
   margin-top: 55px
@@ -96,10 +96,10 @@
 
 .main-video-and-funding {
   display: flex;
+  margin-top: 25px;
 }
 
 .main-video-and-funding img {
-  width: 100%;
+  width: 65%;
   height: auto;
-  padding-right: 18px;
 }
