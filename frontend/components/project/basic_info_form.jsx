@@ -5,7 +5,7 @@ class BasicInfoForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = { title: "",  description: "", category: "",
-      location: "", duration: undefined, goal: 0, save: false, selected: false, imageFile: null, imageUrl: null };
+      location: "", duration: undefined, goal: 0, save: false, selected: false, imageFile: "", imageUrl: null };
     this.handleTitle = this.handleTitle.bind(this);
     this.handleBlurb = this.handleBlurb.bind(this);
     this.handleLocation = this.handleLocation.bind(this);
@@ -29,7 +29,7 @@ class BasicInfoForm extends React.Component {
         const selected = false;
 
         this.setState({title, description, category, location,
-          duration, goal, save, selected, imageFile: null, imageUrl: null });
+          duration, goal, save, selected, imageFile: "", imageUrl: null });
       });
     }
 
