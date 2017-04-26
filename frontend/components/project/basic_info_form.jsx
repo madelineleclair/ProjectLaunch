@@ -138,7 +138,7 @@ class BasicInfoForm extends React.Component {
                 <textarea onChange={this.handleBlurb} value={this.state.description}/>
               </div>
               <div className="caption-text">
-                <p>Peak people's interest by giving them a sense of what your doing</p>
+                <p>Pique people's interest by giving them a sense of what your doing</p>
               </div>
             </section>
             <section>
