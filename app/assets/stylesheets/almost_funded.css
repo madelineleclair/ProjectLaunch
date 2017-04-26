@@ -1,12 +1,21 @@
 .almost-funded-container {
-  width: 332px;
-  margin: auto;
+  /*width: 332px;
+  margin: auto;*/
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .almost-funded-container > h3 {
   font-size: 24px;
   margin: 18px 0;
+}
+
+.almost-funded-container ul {
+  display: flex;
+}
+
+.almost-funded-container ul li {
+  margin-right: 40px;
 }
