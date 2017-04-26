@@ -76,7 +76,7 @@
   background: white;
 }
 
-.basic-info-form section, .rewards-and-form div, .current-rewards {
+.basic-info-form section, .rewards-and-form div, {
   /*width: 88%;*/
   background: #F7F7F9;
   height: auto;
@@ -104,7 +104,7 @@
   justify-content: space-between;
 }
 
-.form-and-side-bar input, .form-and-side-bar textarea, .category-drop-down-button, .add-reward-form input, .add-reward-form textarea {
+.form-and-side-bar input, .form-and-side-bar textarea, .category-drop-down-button {
   width: 400px;
   border-radius: 4px;
   /*margin-left: 47px;*/
@@ -182,7 +182,7 @@
 
 
 .product-title, .short-blurb, .funding-goal, .duration, .story-description, .risks-and-challenges, .project-image-label-and-input, .project-video-label-and-input,
- .create-reward-title, .create-reward-amount, .create-reward-description, .create-reward-delivery-date, .limited-availability, .current-rewards{
+.current-rewards {
   display: flex;
   justify-content: space-between;
 }

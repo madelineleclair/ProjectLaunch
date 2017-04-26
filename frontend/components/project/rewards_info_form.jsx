@@ -103,31 +103,36 @@ class RewardsInfoForm extends React.Component {
             { rewards }
           </ul>
           <form className="add-reward-form">
-            {<DisplayErrors errors={this.props.errors} />}
-            <div className="create-reward-title">
-              <label>Title</label>
-              <input onChange={this.handleTitle} type="text" value={this.state.title} />
+            <div className="title-and-inputs">
+              <label>Reward #{rewards.length + 1}</label>
+              <section className="create-rewards-input-fields">
+                {<DisplayErrors errors={this.props.errors} />}
+                <div className="create-reward-title">
+                  <label>Title</label>
+                  <input onChange={this.handleTitle} type="text" value={this.state.title} />
+                </div>
+                <div className="create-reward-amount">
+                  <label>Pledge amount</label>
+                  <input onChange={this.handlePledgeAmount} type="number" value={ this.state.pledge_amount } />
+                </div>
+                <div className="create-reward-description">
+                  <label>Description</label>
+                  <textarea onChange={this.handleDescription} value={this.state.description} />
+                </div>
+                <div className="create-reward-delivery-date">
+                  <label>Estimated delivery</label>
+                  <input onChange={this.handleDeliverDate} type="date" />
+                </div>
+                <div className="limited-availability">
+                  <label>Limited availability</label>
+                  { rewardLimit }
+                </div>
+              </section>
             </div>
-            <div className="create-reward-amount">
-              <label>Pledge amount</label>
-              <input onChange={this.handlePledgeAmount} type="number" value={ this.state.pledge_amount } />
-            </div>
-            <div className="create-reward-description">
-              <label>Description</label>
-              <textarea onChange={this.handleDescription} value={this.state.description} />
-            </div>
-            <div className="create-reward-delivery-date">
-              <label>Estimated delivery</label>
-              <input onChange={this.handleDeliverDate} type="date" />
-            </div>
-            <div className="limited-availability">
-              <label>Limited availability</label>
-              { rewardLimit }
-            </div>
-            <button className="add-reward-button" onClick={this.handleCreate}>
-              <p>+</p>
-              <p>Add a new reward</p>
-            </button>
+              <button className="add-reward-button" onClick={this.handleCreate}>
+                <p>+</p>
+                <p>Add a new reward</p>
+              </button>
           </form>
         </div>
       </div>

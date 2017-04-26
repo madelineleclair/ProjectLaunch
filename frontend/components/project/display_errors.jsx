@@ -7,11 +7,9 @@ const DisplayErrors = (props) => {
   });
 
   return(
-    <ul>
-      <span>
-        {errors}
-      </span>
-    </ul>
+        <ul className="errors">
+          {errors}
+        </ul>
   )
 }
 
