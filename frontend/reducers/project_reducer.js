@@ -1,9 +1,10 @@
-import { RECEIVE_PROJECT, RECEIVE_STORY, RECEIVE_REWARDS, REMOVE_REWARD, RECEIVE_ALMOST_FUNDED, RECEIVE_CONTRIBUTIONS, RECEIVE_ERRORS } from '../actions/project_actions';
+import { RECEIVE_PROJECT, RECEIVE_STORY, RECEIVE_REWARDS, RECEIVE_REWARD, REMOVE_REWARD, RECEIVE_ALMOST_FUNDED, RECEIVE_CONTRIBUTIONS, RECEIVE_ERRORS } from '../actions/project_actions';
 import merge from 'lodash/merge';
 
 const _defaultState = {
   basicInfo: {},
-  rewards: [],
+  // rewards: [],
+  rewards: {},
   story: null,
   errors: [],
   contributions: null,
@@ -28,12 +29,20 @@ const ProjectReducer = (state = _defaultState, action) => {
     }
 
     case(RECEIVE_REWARDS): {
-      const newState = Object.assign({}, state, action.rewards);
-      return newState;
+      // const newState = Object.assign({}, state, {rewards: action.rewards});
+      return merge({}, state, { rewards: action.rewards });
     }
 
-    case(REMOVE_REWARD) {
+    case(RECEIVE_REWARD): {
+      const newState = Object.assign({}, state)
+      newState.rewards[action.reward.id] = action.reward;
+      return newState
+    }
 
+    case(REMOVE_REWARD): {
+      const newState = Object.assign({}, state)
+      delete newState.rewards[action.reward]
+      return newState
     }
 
     case(RECEIVE_CONTRIBUTIONS): {

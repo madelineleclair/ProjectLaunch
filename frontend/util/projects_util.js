@@ -83,8 +83,7 @@ export const updateReward = (reward) => {
 export const deleteReward = (id) => {
   return $.ajax({
     type: "DELETE",
-    url: "api/rewards"
-    data: {id}
+    url: `api/rewards/${id}`,
   })
 }
 

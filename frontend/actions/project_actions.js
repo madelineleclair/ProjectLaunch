@@ -39,7 +39,7 @@ const receiveReward = (reward) => {
 
 const removeReward = (reward) => {
   return {
-    type: REMOVE_REWARD
+    type: REMOVE_REWARD,
     reward
   }
 }
@@ -116,6 +116,7 @@ export const fetchRewards = (project_id) => (dispatch) => {
 };
 
 export const createReward = (reward) => (dispatch) => {
+
   return ProjectUtil.createReward(reward).then((reward) =>
     dispatch(receiveReward(reward)), (errors) => dispatch(receiveErrors(errors.responseJSON))
   );

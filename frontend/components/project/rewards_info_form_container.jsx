@@ -3,8 +3,9 @@ import { fetchRewards, createReward, updateReward, clearErrors, deleteReward } f
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
+
   return {
-    rewards: state.project.rewards,
+    rewards: Object.values(state.project.rewards),
     projectId: ownProps.params.projectId,
     errors: state.project.errors,
   };

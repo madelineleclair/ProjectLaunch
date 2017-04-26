@@ -30,7 +30,7 @@ class Api::RewardsController < ApplicationController
     end
   end
 
-  def destory
+  def destroy
     @reward = Reward.find(params[:id])
     @reward.destroy
     render json: @reward.id
