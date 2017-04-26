@@ -47,7 +47,9 @@
   width: 75%;
   border: 1px solid red;
   margin: auto;
-  margin-top: 55px
+  margin-top: 55px;
+  background: #FBFBFA;
+  height: 50%;
 }
 
 .owner-and-title {
@@ -102,4 +104,66 @@
 .main-video-and-funding img {
   width: 65%;
   height: auto;
+}
+
+.about-and-support-project {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about-project {
+  background: blue;
+  /*display: block;*/
+  width: 42%;
+}
+
+.rewards-show-list {
+  background: green;
+  width: 20%;
+}
+
+.rewards-show-list h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.rewards-list-item {
+  background: #F7F7F9;
+  font-weight: 400;
+  border: 1px solid #e0e4fb;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+
+.rewards-list-item h2 {
+  color: #586BE9;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.rewards-list-item h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rewards-list-item p {
+  color: #626369;
+}
+
+.delivery-info {
+  margin-top: 25px;
+}
+
+.delivery-info p:first-of-type{
+  font-size: 12px;
+}
+
+.delivery-info p:last-of-type{
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
 }

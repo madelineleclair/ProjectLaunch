@@ -3,3 +3,21 @@
   width: 35%;
   margin-left: 10px;
 }
+
+.funding-status-container div {
+  background: yellow;
+  margin-bottom: 20px;
+}
+
+.funding-status-container h2 {
+  font-size: 24px;
+}
+
+.funding-status-container h4 {
+  color: #626369;
+  font-size: 18px;
+}
+
+.funding-raised h2 {
+  color: #05AF3C;
+}
