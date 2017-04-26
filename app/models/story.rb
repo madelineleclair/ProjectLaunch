@@ -4,11 +4,14 @@
 #
 #  id                   :integer          not null, primary key
 #  project_id           :integer          not null
-#  video_url            :string           not null
 #  description          :text             not null
 #  risks_and_challenges :text
 #  created_at           :datetime
 #  updated_at           :datetime
+#  video_file_name      :string
+#  video_content_type   :string
+#  video_file_size      :integer
+#  video_updated_at     :datetime
 #
 
 class Story < ActiveRecord::Base

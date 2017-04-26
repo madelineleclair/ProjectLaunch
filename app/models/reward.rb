@@ -19,4 +19,5 @@ class Reward < ActiveRecord::Base
     validates :title, uniqueness: true
 
   belongs_to :project
+  has_many :contributions
 end

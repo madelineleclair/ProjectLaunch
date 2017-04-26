@@ -84,8 +84,8 @@ export const deleteReward = (id) => {
   return $.ajax({
     type: "DELETE",
     url: `api/rewards/${id}`,
-  })
-}
+  });
+};
 
 export const fetchAlmostFunded = (fetchType) => {
   return $.ajax({
@@ -101,4 +101,12 @@ export const fetchContributions = (project_id) => {
     url: 'api/contributions',
     data: {project_id}
   });
-}
+};
+
+export const fetchContribution = (contribution) => {
+  return $.ajax({
+    type: "POST",
+    url: 'api/contributions',
+    data: {contribution}
+  });
+};

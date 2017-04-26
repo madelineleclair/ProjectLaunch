@@ -55,11 +55,15 @@ class Api::ProjectsController < ApplicationController
   def update
 
     @project = current_user.projects.find(params[:project][:id])
-
+    # debugger
     if @project.update(update_project_params)
-      render 'api/projects/update'
+      # if @project.valid?
+        render 'api/projects/update'
+      # else
+      #   render json: @project.errors.full_messages
+      # end
     else
-      render json: @project.errors.full_messages
+      render json: @project.errors.full_messages, status: 422
     end
   end
 

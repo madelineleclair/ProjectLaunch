@@ -4,21 +4,20 @@
 #
 #  id                 :integer          not null, primary key
 #  user_id            :integer          not null
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#  title              :string           default("untitled")
-#  image_url          :string
+#  title              :string           not null
 #  description        :text
 #  location           :string
-#  goal               :integer
-#  launch             :boolean          default("false")
-#  launch_date        :date
+#  goal               :integer          default("1")
 #  duration           :integer
 #  category           :string           not null
+#  launch             :boolean          default("false")
+#  created_at         :datetime
+#  updated_at         :datetime
 #  image_file_name    :string
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  launch_date        :datetime
 #
 
 require 'test_helper'

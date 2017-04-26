@@ -8,6 +8,7 @@ export const REMOVE_REWARD = "REMOVE_REWARD";
 export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
 export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_CONTRIBUTION = "RECEIVE_CONTRIBUTION";
 
 const receiveProject = (project) => {
   return {
@@ -41,22 +42,29 @@ const removeReward = (reward) => {
   return {
     type: REMOVE_REWARD,
     reward
-  }
-}
+  };
+};
 
 const receiveAlmostFunded = (projects) => {
   return {
     type: RECEIVE_ALMOST_FUNDED,
     projects
-  }
-}
+  };
+};
 
 const receiveContributions = (contributions) => {
   return {
     type: RECEIVE_CONTRIBUTIONS,
     contributions
-  }
-}
+  };
+};
+
+const receiveContribution = (contribution) => {
+  return {
+    type: RECEIVE_CONTRIBUTION,
+    contribution
+  };
+};
 
 const receiveErrors = (errors) => {
   return {
@@ -130,18 +138,24 @@ export const updateReward = (reward) => (dispatch) => {
   return ProjectUtil.updateReward(reward).then((reward) => {
     dispatch(receiveReward(reward));
   }, (errors) => {
-    dispatch(receiveErrors(errors.responseJSON))
+    dispatch(receiveErrors(errors.responseJSON));
   });
 };
 
 export const fetchAlmostFunded = (fetchType) => (dispatch) => {
   return ProjectUtil.fetchAlmostFunded(fetchType).then((projects) => {
-    dispatch(receiveAlmostFunded(projects))
+    dispatch(receiveAlmostFunded(projects));
   });
 };
 
 export const fetchContributions = (project_id) => (dispatch) => {
   return ProjectUtil.fetchContributions(project_id).then((contributions) => {
-    dispatch(receiveContributions(contributions))
+    dispatch(receiveContributions(contributions));
   });
-}
+};
+
+export const createContribution = (contribution) => (dispatch) => {
+  return ProjectUtil.createContribution(project_id).then((contribution) => {
+    dispatch(receiveContribution(contribution));
+  });
+};
