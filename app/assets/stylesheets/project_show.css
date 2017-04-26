@@ -128,35 +128,38 @@
   margin-bottom: 10px;
 }
 
-.rewards-list-item {
+.rewards-list-item-not-selected, .rewards-list-item-selected {
   /*position: relative;*/
   background-color: #F7F7F9;
   font-weight: 400;
-  border: 1px solid #e0e4fb;
   border-radius: 6px;
   margin-bottom: 20px;
   padding: 10px;
   position: relative;
 }
 
-.rewards-list-item:hover{
+.rewards-list-item-not-selected {
+  border: 1px solid #e0e4fb;
+}
+
+.rewards-list-item-not-selected:hover{
   cursor: pointer;
   background: #14ce50;
 }
 
-.rewards-list-item:hover h2, .rewards-list-item:hover h3,
-.rewards-list-item:hover h3, .rewards-list-item:hover p {
+.rewards-list-item-not-selected:hover h2, .rewards-list-item-not-selected:hover h3,
+.rewards-list-item-not-selected:hover h3, .rewards-list-item-not-selected:hover p {
   visibility: hidden;
 }
 
 
-.rewards-list-item div:first-child {
+.rewards-list-item-not-selected div:first-child {
   display: none;
   text-align: center;
   align-content: center;
 }
 
-.rewards-list-item:hover div:first-child {
+.rewards-list-item-not-selected:hover div:first-child {
   display: block;
   position: absolute;
   z-index: 2;
@@ -167,28 +170,28 @@
   left: 110px;
 }
 
-/*.rewards-list-item-hover-cover {
+/*.rewards-list-item-not-selected-hover-cover {
   display: none;
 }*/
 
-.rewards-list-item-hover-cover {
+.rewards-list-item-not-selected-hover-cover {
   /*position: absolute;*/
   /*opacity: 0.2;*/
 }
 
-.rewards-list-item h2 {
+.rewards-list-item-not-selected h2, .rewards-list-item-selected h2 {
   color: #586BE9;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
-.rewards-list-item h3 {
+.rewards-list-item-not-selected h3, .rewards-list-item-selected h3 {
   text-transform: uppercase;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.rewards-list-item p {
+.rewards-list-item-not-selected p, .rewards-list-item-selected p {
   color: #626369;
 }
 
@@ -196,12 +199,43 @@
   margin-top: 25px;
 }
 
-.delivery-info p:first-of-type{
+.delivery-info p:first-of-type {
   font-size: 12px;
 }
 
-.delivery-info p:last-of-type{
+.delivery-info p:last-of-type {
   font-size: 14px;
   font-weight: bold;
   color: black;
+}
+
+.contribute {
+  border-top: 1px dashed #dadada;
+  margin-top: 21px;
+}
+
+.contribution-count p {
+  margin-right: 4px;
+}
+
+.rewards-list-item-selected input {
+  /*width: 100%;*/
+  display: block;
+  margin: 10px 0;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #F1EEEA;
+}
+
+.rewards-list-item-selected button {
+  background: #14ce50;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.rewards-list-item-selected {
+  border: 1px solid blue
 }

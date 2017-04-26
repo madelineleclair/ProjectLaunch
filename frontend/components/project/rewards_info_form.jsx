@@ -14,7 +14,7 @@ class RewardsInfoForm extends React.Component {
     this.handleDescription = this.handleDescription.bind(this);
     this.handleDeliverDate = this.handleDeliverDate.bind(this);
     this.handleRewardLimit = this.handleRewardLimit.bind(this);
-    // this.setState = this.setState.bind(this)
+    // this.setState = this.setState.bind(this);
   }
 
   componentDidMount() {
@@ -72,7 +72,7 @@ class RewardsInfoForm extends React.Component {
     const _defaultState = { title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", limitedAvailability: false, project_id: this.props.projectId };
 
     e.preventDefault()
-    this.props.createReward(this.state).then((action) => {
+    this.props.createReward(this.state).then(({reward}) => {
       //this is not the rewards, so this.setState is not happening
       this.setState({_defaultState})
     });

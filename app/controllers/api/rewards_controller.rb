@@ -6,7 +6,7 @@ class Api::RewardsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.includes(rewards: :contributions).find(params[:id])
     render 'api/rewards/show.json.jbuilder'
   end
 

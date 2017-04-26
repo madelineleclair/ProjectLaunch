@@ -5,4 +5,8 @@ class Api::ContributionsController < ApplicationController
     .where("project_id = #{params[:project_id]}")
     render 'api/contributions/index.json.jbuilder'
   end
+
+  def create
+    
+  end
 end
