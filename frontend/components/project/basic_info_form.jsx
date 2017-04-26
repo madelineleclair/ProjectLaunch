@@ -1,5 +1,6 @@
 import React from 'react';
-import CategoryDropDown from './category_drop_down'
+import CategoryDropDown from './category_drop_down';
+import DisplayErrors from './display_errors';
 
 class BasicInfoForm extends React.Component {
   constructor(props) {
@@ -114,6 +115,7 @@ class BasicInfoForm extends React.Component {
         </div>
         <section className="form-and-side-bar">
           <form onChange={this.handleSave} className="basic-info-form">
+            <DisplayErrors errors={this.props.errors} />
             <section className="project-image">
               <div className="project-image-label-and-input">
                 <label>Product image</label>
