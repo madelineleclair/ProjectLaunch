@@ -1,4 +1,4 @@
-import { RECEIVE_PROJECT, RECEIVE_STORY, RECEIVE_REWARDS, RECEIVE_ALMOST_FUNDED, RECEIVE_CONTRIBUTIONS } from '../actions/project_actions';
+import { RECEIVE_PROJECT, RECEIVE_STORY, RECEIVE_REWARDS, RECEIVE_ALMOST_FUNDED, RECEIVE_CONTRIBUTIONS, RECEIVE_ERRORS } from '../actions/project_actions';
 import merge from 'lodash/merge';
 
 const _defaultState = {
@@ -33,7 +33,11 @@ const ProjectReducer = (state = _defaultState, action) => {
     case(RECEIVE_CONTRIBUTIONS): {
       return merge({}, state, { contributions: action.contributions });
     }
-
+    case(RECEIVE_ERRORS): {
+      const newState = Object.assign({}, state);
+      newState.errors = action.errors;
+      return newState;
+    }
     default: {
       return state;
     }

@@ -1,11 +1,12 @@
 import RewardsInfoForm from './rewards_info_form';
-import { fetchRewards, createReward, updateReward } from './../../actions/project_actions';
+import { fetchRewards, createReward, updateReward, clearErrors } from './../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
   return {
     rewards: state.project.rewards,
-    projectId: ownProps.params.projectId
+    projectId: ownProps.params.projectId,
+    errors: state.project.errors,
   };
 };
 
@@ -14,6 +15,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchRewards: (project_id) => dispatch(fetchRewards(project_id)),
     createReward: (reward) => dispatch(createReward(reward)),
     updateReward: (reward_id) => dispatch(updateReward(reward_id)),
+    clearErrors: () => dispatch(clearErrors()),
   };
 };
 

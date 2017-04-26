@@ -5,7 +5,8 @@ export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
 export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
-export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS"
+export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 const receiveProject = (project) => {
   return {
@@ -49,6 +50,21 @@ const receiveContributions = (contributions) => {
   }
 }
 
+const receiveErrors = (errors) => {
+  return {
+    type: RECEIVE_ERRORS,
+    errors
+  };
+};
+
+export const clearErrors = () => {
+  return {
+    type: RECEIVE_ERRORS,
+    errors: []
+  };
+};
+
+
 export const getProject = (id, pageType = false) => (dispatch) => {
   return ProjectUtil.getProject(id, pageType).then((project) =>
     dispatch(receiveProject(project)));
@@ -58,19 +74,17 @@ export const createProject = (project) => (dispatch) => (ProjectUtil.createProje
 
 export const fetchStory = (project_id) => (dispatch) => {
   return ProjectUtil.fetchStory(project_id).then((story) =>
-    dispatch(receiveStory(story))
+    dispatch(receiveStory(story)), (errors) => dispatch(receiveErrors(errors.responseJSON))
   );
 };
 
 export const updateProject = (project) => (dispatch) => {
-  debugger
   return ProjectUtil.updateProject(project).then((project) => {
     dispatch(receiveProject(project));
-  });
+  }, (errors) => dispatch(receiveErrors(errors.responseJSON)));
 };
 
 export const launchProject = (project) => (dispatch) => {
-  debugger
   return ProjectUtil.launchProject(project).then((project) => {
     dispatch(receiveProject(project));
   });
@@ -79,13 +93,13 @@ export const launchProject = (project) => (dispatch) => {
 export const createStory = (story) => (dispatch) => {
   return ProjectUtil.createStory(story).then((story) => {
     dispatach(receiveStory(story));
-  });
+  }, (errors) => dispatch(receiveErrors(errors.responseJSON)));
 };
 
 export const updateStory = (story) => (dispatch) => {
   return ProjectUtil.updateStory(story).then((story) => {
     dispatch(receiveStory(story));
-  });
+  }, (errors) => dispatch(receiveErrors(errors.responseJSON)));
 };
 
 export const fetchRewards = (project_id) => (dispatch) => {
@@ -95,13 +109,15 @@ export const fetchRewards = (project_id) => (dispatch) => {
 
 export const createReward = (reward) => (dispatch) => {
   return ProjectUtil.createReward(reward).then((reward) =>
-    dispatch(receiveReward(reward))
+    dispatch(receiveReward(reward)), (errors) => dispatch(receiveErrors(errors.responseJSON))
   );
 };
 
 export const updateReward = (reward) => (dispatch) => {
   return ProjectUtil.updateReward(reward).then((reward) => {
     dispatch(receiveReward(reward));
+  }, (errors) => {
+    dispatch(receiveErrors(errors.responseJSON))
   });
 };
 

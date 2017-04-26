@@ -1,4 +1,5 @@
 import React from 'react';
+import DisplayErrors from './display_errors';
 
 class StoryInfoForm extends React.Component {
   constructor(props) {
@@ -15,6 +16,11 @@ class StoryInfoForm extends React.Component {
     if (story) {
       this.props.fetchStory(story.id).then(({ story }) => this.setState({story}))
     }
+  }
+
+  componentWillUnmount() {
+    debugger
+    this.props.clearErrors();
   }
 
   handleDescription(e) {
@@ -59,6 +65,7 @@ class StoryInfoForm extends React.Component {
         </div>
         <section className="form-and-side-bar">
           <form onChange={this.handleSave} className="basic-info-form">
+            <DisplayErrors errors={this.props.errors} />
             <section className="project-video">
               <div className="project-video-label-and-input">
                 <label>Project video</label>

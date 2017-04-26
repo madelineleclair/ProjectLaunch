@@ -1,12 +1,12 @@
 import BasicInfoForm from './basic_info_form';
-import { getProject, updateProject } from '../../actions/project_actions';
+import { getProject, updateProject, clearErrors } from '../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
   return {
     story: state.project.story,
     projectId: ownProps.params.projectId,
-    errors: state.errors,
+    errors: state.project.errors,
   };
 };
 
@@ -14,6 +14,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getProject: (id) => dispatch(getProject(id)),
     updateProject: (project) => dispatch(updateProject(project)),
+    clearErrors: () => dispatch(clearErrors()),
   };
 };
 

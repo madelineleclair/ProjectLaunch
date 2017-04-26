@@ -1,5 +1,6 @@
 import React from "react";
 import RewardInfo from './reward_info'
+import DisplayErrors from './display_errors';
 
 class RewardsInfoForm extends React.Component {
   constructor(props) {
@@ -22,8 +23,11 @@ class RewardsInfoForm extends React.Component {
     })
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   componentWillReceiveProps(nextProps) {
-    debugger
     const rewards = nextProps.rewards
     this.setState({ rewards })
   }
@@ -99,6 +103,7 @@ class RewardsInfoForm extends React.Component {
             { rewards }
           </ul>
           <form className="add-reward-form">
+            {<DisplayErrors errors={this.props.errors} />}
             <div className="create-reward-title">
               <label>Title</label>
               <input onChange={this.handleTitle} type="text" value={this.state.title} />

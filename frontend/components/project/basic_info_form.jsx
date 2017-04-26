@@ -33,6 +33,11 @@ class BasicInfoForm extends React.Component {
       });
     }
 
+    componentWillUnmount() {
+      debugger
+      this.props.clearErrors();
+    }
+
     handleTitle(e) {
       e.preventDefault();
       const title = e.target.value

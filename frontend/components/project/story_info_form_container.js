@@ -1,5 +1,5 @@
 import StoryInfoForm from './story_info_form';
-import { fetchStory, updateStory, createStory } from '../../actions/project_actions';
+import { fetchStory, updateStory, createStory, clearErrors } from '../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
     story: state.project.story,
     action,
     projectId: ownProps.params.projectId,
-    errors: state.errors,
+    errors: state.project.errors,
   };
 };
 
@@ -24,6 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchStory: (project_id) => dispatch(fetchStory(project_id)),
     createStory: (story) => dispatch(createStory(story)),
     updateStory: (story) => dispatch(updateStory(story)),
+    clearErrors: () => dispatch(clearErrors()),
   };
 };
 
