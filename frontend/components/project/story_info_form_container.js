@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state, ownProps) => {
     let action;
 
-    if (state.project.story) {
+    if (state.project.story.id) {
       action = 'update';
     } else {
       action = "create";

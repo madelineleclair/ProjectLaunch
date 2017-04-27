@@ -13,8 +13,9 @@ class StoryInfoForm extends React.Component {
   }
 
   componentDidMount() {
+
     const story = this.props.story;
-    if (story) {
+    if (story.id) {
       this.props.fetchStory(story.id).then(({ story }) => this.setState({story}))
     }
   }

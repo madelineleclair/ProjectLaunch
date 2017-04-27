@@ -1,5 +1,6 @@
 class Api::StoriesController < ApplicationController
   def show
+    
     @story = Story.find_by(project_id: params[:id])
 
     render 'api/stories/show.json.jbuilder'
@@ -23,7 +24,7 @@ class Api::StoriesController < ApplicationController
     #make sure id is not blank in params. maybe not sending it up right in component or controller
 
     @story = current_user.stories.find_by(project_id: params[:id])
-    if @story.update(update_project_params)
+    if @story.update(story_params)
       render 'api/projects/update'
     else
       render json: @story.errors.full_messages
