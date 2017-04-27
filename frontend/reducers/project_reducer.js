@@ -21,6 +21,7 @@ const _defaultState = {
 const ProjectReducer = (state = _defaultState, action) => {
 
   Object.freeze(state);
+
   switch(action.type) {
     case(RECEIVE_PROJECT): {
       return merge({}, state, { basicInfo: action.project });

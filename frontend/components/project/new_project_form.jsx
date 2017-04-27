@@ -63,11 +63,20 @@ class NewProjectForm extends React.Component {
       const $dbutton = $(".create-project-drop-down-button").addClass("selected");
     }
 
+    const errors = this.props.errors.map((error, index) => {
+      return (<li key={ index }>{ error }</li>);
+    });
+
     return(
       <div className="create-project-container">
         <div className="create-project-form-container">
           <h1>Get started</h1>
           <form className="create-project-form">
+
+          <ul className="new-project-errors">
+            { errors }
+          </ul>
+
             <ol>
               <li className="drop-down">
                 <p>Choose a category:</p>

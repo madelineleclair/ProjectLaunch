@@ -99,6 +99,19 @@
   border: 1px solid green;
 }
 
-.create-project-drop-down-button:selection {
+/*.create-project-drop-down-button:selection {
 
+}*/
+
+.new-project-errors {
+  margin-bottom: 10px;
+  width: 330px;
+  background: #fd003b;
+  border-radius: 4px;
+  color: white;
+}
+
+.new-project-errors li {
+  padding: 4px 21px;
+  font-size: 15px;
 }

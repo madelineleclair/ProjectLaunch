@@ -94,7 +94,11 @@ export const getProject = (id, pageType = false) => (dispatch) => {
     dispatch(receiveProject(project)));
 };
 
-export const createProject = (project) => (dispatch) => (ProjectUtil.createProject(project).then((project) => dispatch(receiveProject(project))));
+export const createProject = (project) => (dispatch) => (
+  ProjectUtil.createProject(project).then((project) =>
+  dispatch(receiveProject(project)), (errors) => dispatch(receiveErrors(errors.responseJSON))
+  )
+);
 
 export const fetchStory = (project_id) => (dispatch) => {
   return ProjectUtil.fetchStory(project_id).then((story) =>

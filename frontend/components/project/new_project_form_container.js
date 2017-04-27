@@ -3,9 +3,11 @@ import { getProject, createProject } from '../../actions/project_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
+
   return {
     // currentProject: state.project.basicInfo,
-    loggedIn: !!state.session.currentUser
+    loggedIn: !!state.session.currentUser,
+    errors: state.project.errors,
   };
 };
 
