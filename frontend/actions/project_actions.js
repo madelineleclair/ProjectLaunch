@@ -9,6 +9,7 @@ export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
 export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const RECEIVE_CONTRIBUTION = "RECEIVE_CONTRIBUTION";
+export const CLEAR_REWARDS = "CLEAR_REWARDS"
 
 const receiveProject = (project) => {
   return {
@@ -42,6 +43,13 @@ const removeReward = (reward) => {
   return {
     type: REMOVE_REWARD,
     reward
+  };
+};
+
+export const clearRewards = () => {
+  return {
+    type: CLEAR_REWARDS,
+    reward: {}
   };
 };
 

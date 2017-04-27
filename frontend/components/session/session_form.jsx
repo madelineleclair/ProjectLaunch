@@ -19,6 +19,10 @@ class SessionForm extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   handleName(e) {
     const name = e.target.value;
     this.setState({ name });

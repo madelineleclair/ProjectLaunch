@@ -41,7 +41,7 @@ export const fetchStory = (project_id) => {
 };
 
 export const createStory = (story) => {
-  debugger
+
   return $.ajax({
     type: "POST",
     url: 'api/stories',

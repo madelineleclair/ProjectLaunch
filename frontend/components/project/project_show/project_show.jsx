@@ -15,6 +15,10 @@ class ProjectShow extends React.Component {
     this.props.fetchContributions(projectId);
   }
 
+  componentWillUnmount() {
+    this.props.clearRewards()
+  }
+
   render() {
     let fundingStatus;
 
@@ -50,11 +54,16 @@ class ProjectShow extends React.Component {
         </section>
         <section className="about-and-support-project">
           <section className="about-project">
-            Info about project hahdfhfklsafdhksah
+            <h2>About this project</h2>
+            <p>
+              {this.props.story.description}
+            </p>
+            <h2>Risks and Challengs</h2>
+            <p>{this.props.story.risks_and_challenges}</p>
           </section>
           <section className="rewards-show-list">
             <h1>Support this project</h1>
-            <ul>
+            <ul id="support-project">
               {rewards}
             </ul>
           </section>

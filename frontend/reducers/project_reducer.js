@@ -1,13 +1,13 @@
 import { RECEIVE_PROJECT, RECEIVE_STORY, RECEIVE_REWARDS, RECEIVE_REWARD,
   REMOVE_REWARD, RECEIVE_ALMOST_FUNDED, RECEIVE_CONTRIBUTIONS,
-  RECEIVE_ERRORS, RECEIVE_CONTRIBUTION } from '../actions/project_actions';
+  RECEIVE_ERRORS, RECEIVE_CONTRIBUTION, CLEAR_REWARDS } from '../actions/project_actions';
 import merge from 'lodash/merge';
 
 const _defaultState = {
   basicInfo: {},
   // rewards: [],
   rewards: {},
-  story: null,
+  story: {},
   errors: [],
   contributions: {},
 };
@@ -44,6 +44,12 @@ const ProjectReducer = (state = _defaultState, action) => {
     case(REMOVE_REWARD): {
       const newState = Object.assign({}, state);
       delete newState.rewards[action.reward];
+      return newState;
+    }
+
+    case(CLEAR_REWARDS): {
+      const newState = Object.assign({}, state);
+      newState.rewards = {};
       return newState;
     }
 
