@@ -59,7 +59,8 @@ const ProjectReducer = (state = _defaultState, action) => {
 
     case(RECEIVE_CONTRIBUTION): {
       const newState = Object.assign({}, state);
-      newState.contributions[action.contribution.id] = action.contribution;
+      newState.contributions.amount += action.contribution;
+      newState.contributions.backers ++;
       return newState;
     };
 

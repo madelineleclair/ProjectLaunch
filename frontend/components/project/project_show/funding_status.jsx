@@ -25,6 +25,7 @@ const FundingStatus = (props) => {
         <h2>{remainingTime}</h2>
         <h4>left to go</h4>
       </div>
+      <button>Back this project</button>
     </div>
   );
 };

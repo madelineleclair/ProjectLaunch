@@ -7,6 +7,13 @@ class Api::ContributionsController < ApplicationController
   end
 
   def create
-    
+    @contribution = Contribution.create(contribution_params)
+    @contribution.save
+    render json: "#{@contribution.amount}"
+  end
+
+  private
+  def contribution_params
+    params.require(:contribution).permit(:id, :amount, :project_id)
   end
 end

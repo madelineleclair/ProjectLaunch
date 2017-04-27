@@ -4,8 +4,8 @@ import moment from 'moment';
 class RewardsShowList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: false, amount: 0 };
     this.reward = props.reward;
+    this.state = { selected: false, amount: 0, id: reward.id, project_id: props.projectId };
     this.deliveryDate = moment(this.reward.delivery_date).format('MM-YYYY');
     this.contribution_count = this.reward.contribution_count;
     this.backers = this.contribution_count === 1 ? "backer" : "backers";
@@ -24,6 +24,7 @@ class RewardsShowList extends React.Component {
   }
 
   handleSubmit(e) {
+    props.createContribution(this.state)
     //this is for submitting contributions. I don't think you need to be a user to contribute. Oh, well, check anyway
   }
 
