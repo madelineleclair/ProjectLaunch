@@ -4,7 +4,8 @@
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 57%;
+  margin: auto;
 }
 
 .almost-funded-container > h3 {
@@ -14,6 +15,7 @@
 
 .almost-funded-container ul {
   display: flex;
+  margin: auto;
 }
 
 .almost-funded-container ul li {

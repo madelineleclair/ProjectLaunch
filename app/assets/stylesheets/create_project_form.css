@@ -22,7 +22,7 @@
 }
 
 .create-project-form {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   display: flex;
   flex-direction: row;
   /*justify-content: center;*/
@@ -50,7 +50,7 @@
 
 .drop-down ul {
   position: absolute;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   background: white;
   top: 90px;
   left: 25px;

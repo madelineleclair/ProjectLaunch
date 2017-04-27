@@ -1,51 +1,6 @@
-/*
-.project-intro {
-  width: 50%;
-  border: 1px solid red;
-  margin: auto;
-  margin-top: 55px
-}
-
-.owner-icon-and-title img {
-  width: 50px;
-  height: auto;
-  padding: 5px 0;
-}
-
-.owner-icon-and-title h2 {
-  display: inline;
-  font-size: 42px;
-  vertical-align: top;
-}
-
-.owner-name-and-description {
-  display: flex;
-}
-
-.owner-name-and-description span p {
-  display: inline;
-}
-
-.owner-icon-and-title img {
-  margin-right: 25px;
-}
-
-.owner-name-and-description span {
-  margin-right: 17px;
-}
-
-.owner-name-and-description h3, .owner-icon-and-title h2 {
-  margin-left: 25px;
-}
-
-.owner-name-and-description span p:last-child {
-  font-weight: bold;
-  padding-left: 5px;
-}*/
 
 .project-intro {
   width: 65%;
-  border: 1px solid red;
   margin: auto;
   margin-top: 55px;
   background: #FBFBFA;
@@ -54,7 +9,6 @@
 
 .owner-and-title {
   display: flex;
-  border: 1px solid red;
 }
 
 .owner-and-title span {
@@ -77,19 +31,17 @@
 }
 
 .owner-info {
-  /*background: green;*/
+
   padding-right: 25px;
 }
 
 .title-and-description {
-  /*background: yellow;*/
   padding-left: 25px;
 }
 
 .title-and-description h2 {
   font-size: 42px;
   font-weight: bold;
-  /*margin-bottom: 14px;*/
 }
 
 .title-and-description h3 {
@@ -111,17 +63,13 @@
   padding: 50px 0;
   display: flex;
   justify-content: center;
-  /*border: 1px solid #FBFBFA;*/
 }
 
 .about-project {
-  /*background: blue;*/
-  /*display: block;*/
   width: 42%;
 }
 
 .rewards-show-list {
-  /*background: green;*/
   width: 20%;
 }
 
@@ -131,7 +79,6 @@
 }
 
 .rewards-list-item-not-selected, .rewards-list-item-selected {
-  /*position: relative;*/
   background-color: #F7F7F9;
   font-weight: 400;
   border-radius: 6px;
@@ -170,15 +117,6 @@
   font-size: 20px;
   top: 75px;
   left: 110px;
-}
-
-/*.rewards-list-item-not-selected-hover-cover {
-  display: none;
-}*/
-
-.rewards-list-item-not-selected-hover-cover {
-  /*position: absolute;*/
-  /*opacity: 0.2;*/
 }
 
 .rewards-list-item-not-selected h2, .rewards-list-item-selected h2 {
@@ -221,7 +159,6 @@
 }
 
 .rewards-list-item-selected input {
-  /*width: 100%;*/
   display: block;
   margin: 10px 0;
   background: white;

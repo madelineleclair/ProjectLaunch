@@ -6,7 +6,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def create
-    debugger
+
     @story = Story.new(story_params)
 
     if @story.save
@@ -21,7 +21,7 @@ class Api::StoriesController < ApplicationController
 
   def update
     #make sure id is not blank in params. maybe not sending it up right in component or controller
-    debugger
+
     @story = current_user.stories.find_by(project_id: params[:id])
     if @story.update(update_project_params)
       render 'api/projects/update'

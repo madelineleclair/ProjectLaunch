@@ -71,7 +71,7 @@ class BasicInfoForm extends React.Component {
     updateFile(e) {
       var file = e.currentTarget.files[0];
       var fileReader = new FileReader();
-      debugger
+
       fileReader.onloadend = function () {
         this.setState({ imageFile: file, imageUrl: fileReader.result })
       }.bind(this)

@@ -1,5 +1,5 @@
 
-json.extract! @project, :title, :description,
+json.extract! @project, :id, :title, :description,
   :location, :goal, :launch_date, :duration
 json.image_url asset_path(@project.image.url)
 json.owner @project.user.name

@@ -3,7 +3,7 @@ import { getProject, updateProject, clearErrors } from '../../actions/project_ac
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
+
   return {
     story: state.project.story,
     projectId: ownProps.params.projectId,

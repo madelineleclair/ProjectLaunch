@@ -37,9 +37,9 @@ class StoryInfoForm extends React.Component {
   updateFile(e) {
     var file = e.currentTarget.files[0];
     var fileReader = new FileReader();
-    debugger
+
     fileReader.onloadend = function () {
-      debugger
+
       this.setState({ imageFile: file, imageUrl: fileReader.result })
     }.bind(this)
     if (file) {
@@ -49,7 +49,7 @@ class StoryInfoForm extends React.Component {
 
 
   handleSubmit(e) {
-    debugger
+
     e.preventDefault();
     // const story = Object.assign({}, this.state);
     // story.project_id = this.props.projectId;
@@ -94,7 +94,7 @@ class StoryInfoForm extends React.Component {
               </div>
               <div className="caption-text">
                 <p>This picture will be displayed on the main portion of your funding page. Make your project
-                stand out and give users and idea of what you're doing</p>
+                stand out and give users and idea of what you're doing.</p>
               </div>
             </section>
             <section>

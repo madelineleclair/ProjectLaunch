@@ -55,7 +55,7 @@ class Api::ProjectsController < ApplicationController
   def update
 
     @project = current_user.projects.find(params[:project][:id])
-    # debugger
+
     if @project.update(update_project_params)
       # if @project.valid?
         render 'api/projects/update'
