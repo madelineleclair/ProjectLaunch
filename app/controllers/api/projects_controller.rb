@@ -2,11 +2,17 @@ class Api::ProjectsController < ApplicationController
   # before_action :require_log_in, only: [:edit, :update, :destroy]
 
   def index
-    #this query is not right. Need to rework it
-    query_type = params[:fetchType]
+    debugger
+    query_type = params[:fetch][:fetchType]
     case(query_type)
       when 'almostFunded'
          @projects = Project.select(:id, :title, :description, :location, :goal, :launch_date, :duration, 'name as owner', 'sum(amount) as funding', :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+         .joins(:contributions, :user)
+         .group('projects.id', 'users.name')
+         .where('launch = true', 'goal > funding')
+         .order('funding').limit(3)
+       when 'search'
+         @projects = Project.search_for(params[:search_input]).select(:id, :title, :description, :location, :goal, :launch_date, :duration, 'name as owner', 'sum(amount) as funding', :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
          .group('projects.id', 'users.name')
          .where('launch = true', 'goal > funding')

@@ -7,7 +7,7 @@ class AlmostFunded extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAlmostFunded('almostFunded');
+    this.props.fetchAlmostFunded({fetchType: 'almostFunded'});
   }
 
   render() {

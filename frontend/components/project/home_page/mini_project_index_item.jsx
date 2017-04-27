@@ -11,6 +11,7 @@ class MiniProjectItem extends React.Component {
   }
 
   render() {
+
     return (
         <li className="mini-project-container">
           <div className='mini-project-image'>

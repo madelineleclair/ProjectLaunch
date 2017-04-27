@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
 
   // Object.keys(state.projects.almostFunded).map(id => projects[id])
     return {
-      almostFunded: state.projects.almostFunded
+      almostFunded: Object.values(state.projects.almostFunded)
     };
     // if (state.projects.almostFunded.projects) {
     //   return {

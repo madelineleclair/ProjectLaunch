@@ -18,6 +18,14 @@ const receiveProject = (project) => {
   };
 };
 
+const receiveProjects = (projects) => {
+  return {
+    type: RECEIVE_PROJECT,
+    projects
+  };
+};
+
+
 const receiveStory = (story) => {
   return {
     type: RECEIVE_STORY,
@@ -154,8 +162,14 @@ export const updateReward = (reward) => (dispatch) => {
   });
 };
 
-export const fetchAlmostFunded = (fetchType) => (dispatch) => {
-  return ProjectUtil.fetchAlmostFunded(fetchType).then((projects) => {
+export const fetchProjects = (fetch) => (dispatch) => {
+  return ProjectUtil.fetchProjects(fetch).then((projects) => {
+    dispatch(receiveProjects(projects));
+  });
+};
+
+export const fetchAlmostFunded = (fetch) => (dispatch) => {
+  return ProjectUtil.fetchProjects(fetch).then((projects) => {
     dispatch(receiveAlmostFunded(projects));
   });
 };

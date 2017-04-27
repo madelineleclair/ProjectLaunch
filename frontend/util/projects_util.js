@@ -14,6 +14,16 @@ export const createProject = (project) => {
   });
 };
 
+
+
+export const fetchProjects = (fetch) => {
+  return $.ajax({
+    type: "GET",
+    url: 'api/projects',
+    data: { fetch }
+  });
+};
+
 export const updateProject = (project) => {
   return $.ajax({
     type: "PATCH",
@@ -92,13 +102,6 @@ export const deleteReward = (id) => {
   });
 };
 
-export const fetchAlmostFunded = (fetchType) => {
-  return $.ajax({
-    type: "GET",
-    url: 'api/projects',
-    data: {fetchType}
-  });
-};
 
 export const fetchContributions = (project_id) => {
   return $.ajax({
