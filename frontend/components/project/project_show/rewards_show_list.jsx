@@ -1,17 +1,18 @@
 import React from 'react';
 import moment from 'moment';
+import { Link } from 'react-router'
 
 class RewardsShowList extends React.Component {
   constructor(props) {
     super(props);
     this.reward = props.reward;
-    this.state = { selected: false, amount: 0, id: this.reward.id, project_id: props.projectId };
+    this.state = { selected: false, amount: 0, id: this.reward.id, project_id: this.props.projectId };
     this.deliveryDate = moment(this.reward.delivery_date).format('MM-YYYY');
     this.contribution_count = this.reward.contribution_count;
     this.backers = this.contribution_count === 1 ? "backer" : "backers";
     this.handleSelect = this.handleSelect.bind(this);
     this.updateContribution = this.updateContribution.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSelect(e) {
@@ -22,14 +23,14 @@ class RewardsShowList extends React.Component {
     const amount = e.target.value;
     this.setState({ amount });
   }
-
-  handleSubmit(e) {
-    this.props.createContribution(this.state)
-    //this is for submitting contributions. I don't think you need to be a user to contribute. Oh, well, check anyway
-  }
+  //
+  // handleSubmit(e) {
+  //   this.props.createContribution(this.state)
+  //   //this is for submitting contributions. I don't think you need to be a user to contribute. Oh, well, check anyway
+  // }
 
   render() {
-
+    debugger
     if (!this.state.selected) {
       return (
         <li key={ this.reward.id } onClick={this.handleSelect} className="rewards-list-item-not-selected">
@@ -63,7 +64,9 @@ class RewardsShowList extends React.Component {
           </div>
           <form className="contribute">
             <input type="number" onChange={this.updateContribution} value={ this.reward.pledge_amount } />
-            <button onClick={this.handleSubmit} >Contribute</button>
+            <Link to={`projects/${this.props.projectId}/contribution/new`}>
+              <button>Contribute</button>
+            </Link>
           </form>
         </li>
       );

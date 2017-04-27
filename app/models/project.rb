@@ -21,15 +21,16 @@
 #
 
 class Project < ActiveRecord::Base
+  include PgSearch
+
+  pg_search_scope :search_for, against: [:title, :description, :location, :category], using: :tsearch
   validates :category, :user, presence: true
   validates :category, inclusion: %w(Untitled Technology Food Games)
-  # validates :duration, :numericality => { less_than: 61 }
   has_attached_file :image, default_url: "missing_picture.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-  # validates :description, presence: true, on: :update
   validates_presence_of :description, :location, :goal, :duration, :image,  on: :update
-  # before_update :validate_description, :validate_location, :validate_goal,
-  #   :validate_duration, :validate_image
+  validates :duration, :numericality => { less_than: 61 }, on: :update
+
 
   belongs_to :user
   has_one :story
