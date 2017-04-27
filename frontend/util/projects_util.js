@@ -41,10 +41,13 @@ export const fetchStory = (project_id) => {
 };
 
 export const createStory = (story) => {
+  debugger
   return $.ajax({
     type: "POST",
     url: 'api/stories',
-    data: { story }
+    contentType: false,
+    processData: false,
+    data: story
   });
 };
 
@@ -52,7 +55,9 @@ export const updateStory = (story) => {
   return $.ajax({
     type: "PATCH",
     url: `api/stories/${story.id}`,
-    data: { story }
+    contentType: false,
+    processData: false,
+    data: story
   });
 };
 

@@ -108,7 +108,7 @@ export const launchProject = (project) => (dispatch) => {
 
 export const createStory = (story) => (dispatch) => {
   return ProjectUtil.createStory(story).then((story) => {
-    dispatach(receiveStory(story));
+    dispatch(receiveStory(story));
   }, (errors) => dispatch(receiveErrors(errors.responseJSON)));
 };
 
