@@ -12,13 +12,11 @@ class Api::ProjectsController < ApplicationController
          .where('launch = true', 'goal > funding')
          .order('funding').limit(3)
        when 'search'
-         @projects = Project.search_for(params[:search_input]).select(:id, :title, :description, :location, :goal, :launch_date, :duration, 'name as owner', 'sum(amount) as funding', :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+         @projects = Project.search_for(params[:fetch][:searchTerm]).select(:id, :title, :description, :location, :goal, :launch_date, :duration, 'name as owner', 'sum(amount) as funding', :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
          .group('projects.id', 'users.name')
          .where('launch = true', 'goal > funding')
          .order('funding').limit(3)
-      else
-        @projects = Project.all
       end
 
       render 'api/projects/index.json.jbuilder'

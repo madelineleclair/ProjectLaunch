@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 import UserInfo from '../user/user_info';
+// import NavigationBar from './NavigationBar'
 
 
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {displayInfo: false};
+    this.state = {displayInfo: false, search: false };
     this.handleUserInfoToggle = this.handleUserInfoToggle.bind(this);
     this.setState = this.setState.bind(this);
   }
@@ -26,6 +27,7 @@ class NavigationBar extends React.Component {
       if (this.state.displayInfo) {
         info = <UserInfo userInfo={ this.props } setState={this.setState}/>;
       }
+
 
 
     if (this.props.loggedIn) {
