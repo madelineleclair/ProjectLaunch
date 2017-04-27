@@ -249,5 +249,5 @@
 }
 
 .create-rewards-input-fields input, .create-rewards-input-fields textarea {
-  width: 100%
+  width: 400px;
 }

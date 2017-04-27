@@ -14,6 +14,7 @@ class RewardsInfoForm extends React.Component {
     this.handleDescription = this.handleDescription.bind(this);
     this.handleDeliverDate = this.handleDeliverDate.bind(this);
     this.handleRewardLimit = this.handleRewardLimit.bind(this);
+    this.clearForm = this.clearForm.bind(this);
     // this.setState = this.setState.bind(this);
   }
 
@@ -67,15 +68,17 @@ class RewardsInfoForm extends React.Component {
     this.setState({number_available})
   }
 
+  clearForm() {
+
+    const _defaultState = { title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", limitedAvailability: false, project_id: this.props.projectId };
+    this.setState(_defaultState)
+  }
+
   //not causing a rerender of rewards...why??? Component will receive props will automatically update it but it is not hitting component will receive props until refresh
   handleCreate(e) {
-    const _defaultState = { title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", limitedAvailability: false, project_id: this.props.projectId };
 
     e.preventDefault()
-    this.props.createReward(this.state).then(({reward}) => {
-      //this is not the rewards, so this.setState is not happening
-      this.setState({_defaultState})
-    });
+    this.props.createReward(this.state).then(this.clearForm)
   }
 
   render() {
