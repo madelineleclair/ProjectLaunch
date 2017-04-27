@@ -44,7 +44,7 @@
 }*/
 
 .project-intro {
-  width: 75%;
+  width: 65%;
   border: 1px solid red;
   margin: auto;
   margin-top: 55px;
@@ -77,12 +77,12 @@
 }
 
 .owner-info {
-  background: green;
+  /*background: green;*/
   padding-right: 25px;
 }
 
 .title-and-description {
-  background: yellow;
+  /*background: yellow;*/
   padding-left: 25px;
 }
 
@@ -99,6 +99,7 @@
 .main-video-and-funding {
   display: flex;
   margin-top: 25px;
+  height: 450px;
 }
 
 .main-video-and-funding img {
@@ -107,19 +108,20 @@
 }
 
 .about-and-support-project {
-  margin: 50px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
+  /*border: 1px solid #FBFBFA;*/
 }
 
 .about-project {
-  background: blue;
+  /*background: blue;*/
   /*display: block;*/
   width: 42%;
 }
 
 .rewards-show-list {
-  background: green;
+  /*background: green;*/
   width: 20%;
 }
 
@@ -238,4 +240,22 @@
 
 .rewards-list-item-selected {
   border: 1px solid blue
+}
+
+.about-project {
+  padding-right: 15px;
+}
+
+.about-project h2 {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-project h2:last-of-type {
+  margin-top: 30px;
+}
+
+.about-project p {
+  line-height: 150%;
 }

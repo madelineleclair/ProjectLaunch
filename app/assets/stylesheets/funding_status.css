@@ -5,7 +5,6 @@
 }
 
 .funding-status-container div {
-  background: yellow;
   margin-bottom: 20px;
 }
 
@@ -20,4 +19,21 @@
 
 .funding-raised h2 {
   color: #05AF3C;
+}
+
+.funding-status-container button{
+  width: 96.2%;
+  height: 50px;
+  background: #24ca66;
+  border: 1px solid #05AF3C;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.funding-status-container button:hover {
+  transition: 0.9s;
+  background: #0dbf47;
+  box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
