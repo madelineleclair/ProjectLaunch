@@ -1,12 +1,13 @@
 import React from 'react';
+import moment from 'moment';
 
 const RewardInfo = (props) => {
 
   const deleteReward = () => {
-    // debugger
     props.deleteReward(props.reward.id)
   }
 
+  const date = moment(props.reward.delivery_date).format('MM-YYYY');
   return (
     <li className="current-rewards">
         <section className="reward-number">
@@ -18,7 +19,7 @@ const RewardInfo = (props) => {
           <h4>{props.reward.title}</h4>
           <p>{props.reward.description}</p>
           <p>ESTIMATED DELIVERY</p>
-          <h5>{props.reward.delivery_date}</h5>
+          <h5>{date}</h5>
         </section>
     </li>
   );

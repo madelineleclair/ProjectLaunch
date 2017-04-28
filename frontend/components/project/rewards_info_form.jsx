@@ -72,7 +72,8 @@ class RewardsInfoForm extends React.Component {
   clearForm() {
 
     const _defaultState = { title: "", pledge_amount: 0, description: "", number_available: null, delivery_date: "", limitedAvailability: false, project_id: this.props.projectId };
-    this.setState(_defaultState)
+    this.setState(_defaultState);
+    this.props.clearErrors();
   }
 
   //not causing a rerender of rewards...why??? Component will receive props will automatically update it but it is not hitting component will receive props until refresh
@@ -126,7 +127,7 @@ class RewardsInfoForm extends React.Component {
                 </div>
                 <div className="create-reward-delivery-date">
                   <label>Estimated delivery</label>
-                  <input onChange={this.handleDeliverDate} type="date" />
+                  <input onChange={this.handleDeliverDate} type="date" value={this.state.delivery_date}/>
                 </div>
                 <div className="limited-availability">
                   <label>Limited availability</label>
