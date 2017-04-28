@@ -35,7 +35,6 @@ class Api::RewardsController < ApplicationController
   def destroy
 
     @reward = Reward.find(params[:id])
-    debugger
     @reward.destroy
 
     render json: @reward.id
