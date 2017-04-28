@@ -32,11 +32,13 @@ const ProjectReducer = (state = _defaultState, action) => {
     }
 
     case(RECEIVE_REWARDS): {
+
       // const newState = Object.assign({}, state, {rewards: action.rewards});
       return merge({}, state, { rewards: action.rewards });
     }
 
     case(RECEIVE_REWARD): {
+
       const newState = Object.assign({}, state);
       newState.rewards[action.reward.id] = action.reward;
       return newState;
@@ -49,8 +51,10 @@ const ProjectReducer = (state = _defaultState, action) => {
     }
 
     case(CLEAR_REWARDS): {
+
       const newState = Object.assign({}, state);
       newState.rewards = {};
+
       return newState;
     }
 

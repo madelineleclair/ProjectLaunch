@@ -11,22 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427205211) do
+ActiveRecord::Schema.define(version: 20170428045021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contributions", force: :cascade do |t|
-    t.integer  "project_id", null: false
-    t.integer  "user_id",    null: false
-    t.integer  "amount",     null: false
+    t.integer  "project_id",    null: false
+    t.integer  "amount",        null: false
     t.integer  "reward_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name",          null: false
+    t.string   "email_address", null: false
   end
 
   add_index "contributions", ["project_id"], name: "index_contributions_on_project_id", using: :btree
-  add_index "contributions", ["user_id"], name: "index_contributions_on_user_id", using: :btree
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"

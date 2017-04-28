@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import createContribution from '../../../actions/project_actions';
+import { createContribution } from '../../../actions/project_actions';
 import ContributionPayment from "./contribution_payment";
 
 const mapStateToProps = (state, ownProps) => {
@@ -11,10 +11,12 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (state, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
+
   return {
-    createContribution: (contribution) => { dispatch(createContribution(contribution));},
+    createContribution: (contribution) => dispatch(createContribution(contribution))
   };
+
 };
 
 export default connect(

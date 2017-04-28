@@ -111,7 +111,7 @@ export const fetchContributions = (project_id) => {
   });
 };
 
-export const fetchContribution = (contribution) => {
+export const createContribution = (contribution) => {
   return $.ajax({
     type: "POST",
     url: 'api/contributions',

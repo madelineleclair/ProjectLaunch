@@ -8,7 +8,7 @@ class Api::ProjectsController < ApplicationController
       when 'almostFunded'
          @projects = Project.select(:id, :title, :description,
          :location, :goal, :launch_date, :duration,
-         'name as owner', 'sum(amount) as funding',
+         'users.name as owner', 'sum(amount) as funding',
          :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
          .group("projects.id", 'users.name')
@@ -17,7 +17,7 @@ class Api::ProjectsController < ApplicationController
        when 'search'
          searches = Project.search_for(params[:fetch][:searchTerm])
          @projects = searches.select(:id, :title, :description, :location, :goal, :launch_date,
-          :duration, 'name as owner', 'sum(amount) as funding',
+          :duration, 'users.name as owner', 'sum(amount) as funding',
           :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
          .group('projects.id', "#{PgSearch::Configuration.alias('projects')}.rank", 'users.name')

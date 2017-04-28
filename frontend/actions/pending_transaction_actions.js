@@ -8,7 +8,7 @@ export const receivePendingPayment = (amount) => {
   };
 };
 
-export const reviewPendingReward = (rewardId) => {
+export const receivePendingReward = (rewardId) => {
   return {
     type: RECEIVE_PENDING_REWARD,
     rewardId

@@ -69,7 +69,7 @@ title: "VIP tickets", pledge_amount: 200,
 description: "Tickets include early admission into events and meeting the game designers",
 delivery_date: Time.new())
 
-contribution1 = Contribution.create!(user_id: user1.id, project_id: project1.id, amount: 500, reward_id: reward1.id)
-contribution2 = Contribution.create!(user_id: user1.id, project_id: project2.id, amount: 500, reward_id: reward2.id)
-contribution3 = Contribution.create!(user_id: user1.id, project_id: project3.id, amount: 200, reward_id: reward3.id)
-contribution4 = Contribution.create!(user_id: user2.id, project_id: project3.id, amount: 250, reward_id: reward3.id)
+contribution1 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project1.id, amount: 500, reward_id: reward1.id)
+contribution2 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project2.id, amount: 500, reward_id: reward2.id)
+contribution3 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 200, reward_id: reward3.id)
+contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 250, reward_id: reward3.id)

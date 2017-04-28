@@ -28,8 +28,9 @@ class ProjectShow extends React.Component {
     }
 
     const rewards = Object.values(this.props.rewards).map((reward) => {
-      return <RewardsShowList reward={ reward } createContribution={ this.props.createContribution }
-        projectId={ this.props.projectId }/>;
+
+      return <RewardsShowList reward={ reward } receivePendingPayment={ this.props.receivePendingPayment }
+        receivePendingReward = { this.props.receivePendingReward } projectId={ this.props.projectId }/>;
     });
 
     return (

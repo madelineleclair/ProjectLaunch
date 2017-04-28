@@ -12,6 +12,7 @@ class RewardsShowList extends React.Component {
     this.backers = this.contribution_count === 1 ? "backer" : "backers";
     this.handleSelect = this.handleSelect.bind(this);
     this.updateContribution = this.updateContribution.bind(this);
+    this.handlePendingTransaction = this.handlePendingTransaction.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -22,6 +23,11 @@ class RewardsShowList extends React.Component {
   updateContribution(e) {
     const amount = e.target.value;
     this.setState({ amount });
+  }
+
+  handlePendingTransaction(e) {
+    this.props.receivePendingReward(this.state.id);
+    this.props.receivePendingPayment(this.state.amount);
   }
   //
   // handleSubmit(e) {
@@ -64,7 +70,7 @@ class RewardsShowList extends React.Component {
           </div>
           <form className="contribute">
             <input type="number" onChange={this.updateContribution} value={ this.reward.pledge_amount } />
-            <Link to={`projects/${this.props.projectId}/contribution/new`}>
+            <Link onClick={ this.handlePendingTransaction } to={`projects/${this.props.projectId}/contribution/new`}>
               <button>Contribute</button>
             </Link>
           </form>
