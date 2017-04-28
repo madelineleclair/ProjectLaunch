@@ -13,6 +13,7 @@ class CreateContribution extends React.Component {
     this.handleSecurityCode = this.handleSecurityCode.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   handleCardNumber(e) {
@@ -46,7 +47,7 @@ class CreateContribution extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger
+
     e.preventDefault();
     this.props.createContribution(this.state).then(() => {
       hashHistory.push(`/projects/${this.state.project_id}`);

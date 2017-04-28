@@ -6,7 +6,7 @@ class RewardsShowList extends React.Component {
   constructor(props) {
     super(props);
     this.reward = props.reward;
-    this.state = { selected: false, amount: 0, id: this.reward.id, project_id: this.props.projectId };
+    this.state = { selected: false, amount: 0, id: this.reward.reward_id, project_id: this.reward.reward_id };
     this.deliveryDate = moment(this.reward.delivery_date).format('MM-YYYY');
     this.contribution_count = this.reward.contribution_count;
     this.backers = this.contribution_count === 1 ? "backer" : "backers";
@@ -26,6 +26,7 @@ class RewardsShowList extends React.Component {
   }
 
   handlePendingTransaction(e) {
+
     this.props.receivePendingReward(this.state.id);
     this.props.receivePendingPayment(this.state.amount);
   }

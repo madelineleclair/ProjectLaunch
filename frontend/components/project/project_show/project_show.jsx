@@ -60,7 +60,7 @@ class ProjectShow extends React.Component {
             <p>
               {this.props.story.description}
             </p>
-            <h2>Risks and Challengs</h2>
+            <h2>Risks and Challenges</h2>
             <p>{this.props.story.risks_and_challenges}</p>
           </section>
           <section className="rewards-show-list">

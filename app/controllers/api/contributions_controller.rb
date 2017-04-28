@@ -8,7 +8,7 @@ class Api::ContributionsController < ApplicationController
 
   def create
     @contribution = Contribution.create(contribution_params)
-    debugger
+
     @contribution.save
     render json: "#{@contribution.amount}"
   end
