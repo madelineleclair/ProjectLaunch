@@ -30,7 +30,7 @@ class RewardsShowList extends React.Component {
   // }
 
   render() {
-    debugger
+
     if (!this.state.selected) {
       return (
         <li key={ this.reward.id } onClick={this.handleSelect} className="rewards-list-item-not-selected">

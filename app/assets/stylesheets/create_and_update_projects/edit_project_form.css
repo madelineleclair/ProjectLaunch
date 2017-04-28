@@ -1,0 +1,253 @@
+.edit-project-container {
+  background: #F7F5F2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
+}
+
+.basic-info-container, .story-info-container, .rewards-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.edit-project-page-buttons {
+  display: flex;
+  width: 33%;
+  justify-content: center;
+  height: 125px;
+}
+
+
+.edit-project-page-buttons a, .launch-project-button {
+  display: flex;
+  height: 55px;
+  width: 14%;
+  border: 1px solid #dcdcdb;
+  border-right: none;
+  background: white;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.launch-project-button {
+  height: 57px;
+  border-right: 1px solid #dcdcdb;
+}
+
+.edit-project-page-buttons a:hover, .edit-project-page-buttons button:hover {
+  color: blue;
+}
+
+.basic-caption, .story-caption, .rewards-caption {
+  height: 100px;
+  width: 100%;
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.basic-caption h1, .story-caption h1, .rewards-caption h1 {
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+}
+
+.basic-caption p, .story-caption p, .rewards-caption h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.project-image-selector, .project-video-selector {
+  border: 1px dashed blue;
+}
+
+.form-and-side-bar, .rewards-and-form {
+  border: 1px solid #dcdcdb;
+  width: 35%;
+  background: white;
+}
+
+.basic-info-form section, .rewards-and-form div {
+  /*width: 88%;*/
+  background: #F7F7F9;
+  height: auto;
+  padding: 10px;
+}
+
+.project-image img {
+  display: block;
+}
+
+.form-and-side-bar, .rewards-and-form {
+  padding: 20px;
+}
+
+.form-and-side-bar section {
+  /*height: 120px;*/
+  margin: 10px;
+  border-radius: 4px;
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+.basic-info-location div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-and-side-bar input, .form-and-side-bar textarea, .category-drop-down-button, .limited-availability button {
+  width: 400px;
+  border-radius: 4px;
+  /*margin-left: 47px;*/
+}
+
+.basic-info-form label, .add-reward-form label {
+  margin-left: 19px;
+  width: 20%;
+  font-weight: bold;
+}
+
+.basic-info-form section p {
+  width: 401px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"],
+.form-and-side-bar textarea, .category-drop-down-button, .add-reward-form input[type="text"],
+.add-reward-form input[type="date"], .add-reward-form input[type="number"],
+.add-reward-form textarea, .limited-availability button {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #d6d6d5;
+  height: 40px;
+  /*margin-top: 5px;*/
+  margin-right: 5px;
+  padding-left: 8px;
+}
+
+
+
+.form-and-side-bar input[type="text"]:focus,
+.form-and-side-bar input[type="number"]:focus, .form-and-side-bar textarea:focus,
+.create-rewards-input-fields textarea:focus, .create-rewards-input-fields input {
+  transition: 0.9s;
+  border: 1px solid blue;
+}
+
+.form-and-side-bar textarea, .add-reward-form textarea, .story-description textarea, .risks-and-challenges textarea {
+  height: 55px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+}
+
+
+.save-button {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  border: 1px solid #d6d6d5;
+  display: flex;
+  justify-content: center;
+}
+
+.save-button div {
+  width: 711px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-button button {
+  margin: 10px 0 10px 0;
+  background: #25CB68;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+
+.save-button button:hover {
+  background: #009900;
+}
+
+.caption-text {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.product-title, .short-blurb, .funding-goal, .duration, .story-description, .risks-and-challenges, .project-image-label-and-input, .project-video-label-and-input,
+.current-rewards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basic-info-location {
+  height: 50px;
+}
+
+.project-image img {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.basic-info-drop-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category-drop-down-button {
+  position: relative;
+}
+
+.category-drop-down-button:hover, .limited-availability button:hover {
+  border: 1px solid blue;
+}
+
+.drop-down-toggle {
+  background: white;
+  position: absolute;
+  /*height: 100px;*/
+  width: 400px;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-left: 50px;
+  border: 1px solid #d6d6d5;
+  text-align: left;
+  top: 43px;
+  left: -53px;
+}
+
+.drop-down-toggle ul {
+  top: 42px;
+  left: -53px;
+}
+
+.drop-down-toggle li {
+  margin: 10px;
+}
+
+.create-rewards-input-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-rewards-input-fields input, .create-rewards-input-fields textarea {
+  width: 400px;
+}

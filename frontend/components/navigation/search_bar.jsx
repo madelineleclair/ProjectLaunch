@@ -18,8 +18,9 @@ class SearchBar extends React.Component {
     this.props.fetchProjects({ fetchType: "search",
     searchTerm: this.state.search_term })
     .then((() => {
-      this.setState({ search_term: "" })
       hashHistory.push('/projects/search-results');}).bind(this));
+      this.props.changeSearchBarStatus(false)
+      this.setState({ search_term: "" })
   }
 
   render() {

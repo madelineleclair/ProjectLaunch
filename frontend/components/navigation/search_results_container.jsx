@@ -4,7 +4,7 @@ import SearchResults from './search_results';
 
 
 const mapStateToProps = (state) => {
-  debugger
+
   return {
     projects: Object.values(state.projects.projects)
   };

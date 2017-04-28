@@ -7,11 +7,15 @@ import SearchBarContainer from './search_bar_container';
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {displayInfo: false, search: false };
+    this.state = {displayInfo: false, search: this.props.search };
     this.handleUserInfoToggle = this.handleUserInfoToggle.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.setState = this.setState.bind(this);
   }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ search: nextProps.search });
+  };
 
   handleUserInfoToggle () {
     var displayInfo;
@@ -24,10 +28,12 @@ class NavigationBar extends React.Component {
   }
 
   handleSearch() {
-    this.setState({ search: true });
+    this.props.changeSearchBarStatus(true)
   }
 
   render() {
+
+
       let info;
       if (this.state.displayInfo) {
         info = <UserInfo userInfo={ this.props } setState={this.setState}/>;

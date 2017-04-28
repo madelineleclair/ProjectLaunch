@@ -1,0 +1,117 @@
+.create-project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
+  background: #fdfdfd;
+  color: #80809E;
+}
+
+.create-project-form-container {
+  width: 29%;
+}
+
+.create-project-container h1 {
+  color: #2752ff;
+  font-size: 45px;
+  margin: 60px 0;
+  padding-left: 50px;
+}
+
+.create-project-form {
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.create-project-form ol {
+  width: 100%;
+}
+
+.create-project-form ol li {
+  list-style-type: decimal;
+  padding: 0 0 40px 50px;
+
+}
+
+.create-project-form p {
+  padding-bottom: 12px;
+}
+
+.drop-down {
+  position: relative;
+}
+
+.drop-down ul {
+  position: absolute;
+  /*border: 1px solid red;*/
+  background: white;
+  top: 90px;
+  left: 25px;
+  width: 49%;
+  border-radius: 4px;
+}
+
+.drop-down ul li {
+  list-style: none;
+  padding: 5px 0px 5px 25px;
+  text-align: left;
+}
+
+.create-project-drop-down-button {
+  border: 1px solid grey;
+  border-radius: 4px;
+  height: 45px;
+  width: 45%;
+  color: #80809E;
+}
+
+.create-project-drop-down-button:hover {
+  border: 1px solid blue;
+}
+
+.create-project-form ol li input {
+  border-bottom: 1px solid black;
+  width: 100%;
+  font-size: 23px;
+}
+
+.create-project-form > button {
+  background: #25CB68;
+  border-radius: 4px;
+  color: white;
+  height: 50px;
+  width: 35%;
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+.create-project-form > button:hover{
+  background: #009900;
+}
+
+.selected, .selcted:hover {
+  border: 1px solid green;
+}
+
+/*.create-project-drop-down-button:selection {
+
+}*/
+
+.new-project-errors {
+  margin-bottom: 10px;
+  width: 330px;
+  background: #fd003b;
+  border-radius: 4px;
+  color: white;
+}
+
+.new-project-errors li {
+  padding: 4px 21px;
+  font-size: 15px;
+}
