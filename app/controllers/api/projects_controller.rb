@@ -13,7 +13,7 @@ class Api::ProjectsController < ApplicationController
          .joins(:contributions, :user)
          .group("projects.id", 'users.name')
          .where('launch = true', 'goal > funding')
-         .order('funding').limit(3)
+         .order('funding DESC').limit(3)
        when 'search'
          searches = Project.search_for(params[:fetch][:searchTerm])
          @projects = searches.select(:id, :title, :description, :location, :goal, :launch_date,
@@ -22,7 +22,6 @@ class Api::ProjectsController < ApplicationController
          .joins(:contributions, :user)
          .group('projects.id', "#{PgSearch::Configuration.alias('projects')}.rank", 'users.name')
          .where('launch = true', 'goal > funding')
-         .order('funding').limit(3)
       end
 
       render 'api/projects/index.json.jbuilder'
