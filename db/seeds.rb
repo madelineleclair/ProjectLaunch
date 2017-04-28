@@ -13,6 +13,8 @@ Contribution.destroy_all
 user1 = User.create!(name: "Guest", email: "guest@gmail.com", password: "password")
 
 user2 = User.create(name: "Frank", email: "frank@gmail.com", password: "password")
+
+  user3 = User.create(name: Faker::Name.name, email: Faker::Internet.email, password: Faker::Pokemon.name)
 #
 # 15.times do
 #   User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: Faker::Pokemon.name )
@@ -35,6 +37,10 @@ image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/super_smash_
 description: "The worlds largest Super Smash Bros Tournament is coming to
 New York. Get your tickets nows.", goal: 50000, location: "New York City, NY", launch: true, launch_date: Time.new(), category: "Games", duration: 60 )
 
+project4 = Project.create(user_id: user3.id, title: "A Dog a Day",
+image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/westie.jpg", description: "A Dog a Day if a web service that will send you a picture
+of a new cute dog every day.", goal: 2000, location: "New York City, NY", launch: true, launch_date: Time.new(), category: "Technology", duration: 2)
+
 story1 = Story.create(project_id: project1.id, description:
 "When Liz Blackburn, who won a Nobel Prize for her work in genetics, took questions, Goldie Hawn, regal on a comfy sofa, purred, “I have a question about the mitochondria. I’ve been told about a molecule called glutathione that helps the health of the cell?” Glutathione is a powerful antioxidant that protects cells and their mitochondria, which provide energy; some in Hollywood call it “the God molecule.” But taken in excess it can muffle a number of bodily repair mechanisms, leading to liver and kidney problems or even the rapid and potentially fatal sloughing of your skin. Blackburn gently suggested that a varied, healthy diet was best, and that no single molecule was the answer to the puzzle of aging.
 
@@ -54,6 +60,11 @@ story3 = Story.create(project_id: project3.id, description: "Super Smash Bros. i
 The gameplay objective differs from that of traditional fighters by aiming to knock opponents off of the stage instead of depleting life bars. The original Super Smash Bros., released in 1999 for the Nintendo 64, had a small budget and was originally a Japan-only release, but its domestic success led to a worldwide release. The series achieved even greater success with the release of Super Smash Bros. Melee, which was released in 2001 for the GameCube and became the best-selling game on that system. A third installment, Super Smash Bros. Brawl, was released in 2008 for the Wii. Although HAL Laboratory has been the developer of the first two titles, the third game was developed through the collaboration of several companies. The fourth and fifth installments,[1] Super Smash Bros. for Nintendo 3DS and Wii U, were released in 2014 for the Nintendo 3DS and Wii U, respectively. The 3DS installment was the first series title to be released on a handheld platform.",
 risks_and_challenges: "None to think of. Everyone loves Super Smash Bros.")
 
+story4 = Story.create(project_id: project4.id, description: "A dog a day is a web service dedicated to providing usings the cuteness of dogs, even if they do not own one.
+Each day, a user will receive a new picture of a cute dog. Pictures will be based off of users' individual preferences and each user will receive unique photos.", risks_and_challenges: "
+We are a young company and the online space can be extremely competitive. Our team has experience in marketing, dog walking, retail sales of dog related products, breeding, e-commerce. We
+believe that our diverse background makes us able to overcome the challenges of the competitive market.")
+
 reward1 = Reward.create!(project_id: project1.id,
 title: "Spend a day hanging out with me",
 pledge_amount: 50, description: "You get to hang out with me for a day, lucky you",
@@ -69,7 +80,21 @@ title: "VIP tickets", pledge_amount: 200,
 description: "Tickets include early admission into events and meeting the game designers",
 delivery_date: Time.new())
 
+reward4 = Reward.create(project_id: project4.id, title: "VIP access", pledge_amount: 20, description: "Receive special access to our website to view more cute dogs
+and post your own cute dog related pictures", delivery_date: Time.new())
+
+reward5 = Reward.create(project_id: project4.id, title: "Spend a day with a dog", pledge_amount: 150, description: "Spend an entire day handing out with our
+cute dogs. Watch them frolic around in the dog park, relax with them on the couch, or take them for a walk", delivery_date: Time.new())
+
+reward6 = Reward.create(project_id: project4.id, title: "The ultimate cute dog experience", pledge_amount: 300, description: "OD on the cuteness of our cute dogs. The
+cutre dog experience is a complete myster except for those who sign up for it.", delivery_date: Time.new())
+
+
 contribution1 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project1.id, amount: 500, reward_id: reward1.id)
 contribution2 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project2.id, amount: 500, reward_id: reward2.id)
 contribution3 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 200, reward_id: reward3.id)
 contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 250, reward_id: reward3.id)
+contribution5 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 300, reward_id: reward6.id)
+contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
+contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
+contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 500, reward_id: reward6.id)
