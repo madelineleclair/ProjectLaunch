@@ -8,7 +8,7 @@
 .navigation-bar {
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  /*align-items: center;*/
   padding: 0px 10px;
 }
 
@@ -21,6 +21,7 @@
   height: 62%;
   font-size: 13px;
   font-weight: 500;
+  padding-top: 20px
 }
 
 .navigation-bar a div:hover {
@@ -98,4 +99,5 @@
 .search-bar-logo {
   height: 45px;
   width: 45px;
+  padding-top: 6px;
 }
