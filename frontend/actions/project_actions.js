@@ -182,7 +182,7 @@ export const fetchContributions = (project_id) => (dispatch) => {
 };
 
 export const createContribution = (contribution) => (dispatch) => {
-  return ProjectUtil.createContribution(project_id).then((contribution) => {
+  return ProjectUtil.createContribution(contribution).then((contribution) => {
     dispatch(receiveContribution(contribution));
   });
 };

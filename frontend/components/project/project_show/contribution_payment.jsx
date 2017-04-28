@@ -1,12 +1,50 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 
 class CreateContribution extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { card_number: "", name: "", experation_day:"", experation_year: "", security_code: "" };
+    this.state = { card_number: "", name: "", experation_day:"", experation_year: "",
+      security_code: "", project_id: this.props.basicInfo.projectId, reward_id: this.props.reward };
+    this.handleCardNumber = this.handleCardNumber.bind(this);
+    this.handleName = this.handleName.bind(this);
+    this.handleExperationDay = this.handleExperationDay.bind(this);
+    this.handleExperationYear = this.handleExperationYear.bind(this);
+    this.handleSecurityCode = this.handleSecurityCode.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //make a call to componentDidMount that fetches a slice of state to hold contribution.
+  handleCardNumber(e) {
+    const card_number = e.target.value ;
+    this.setState({ card_number });
+  }
+
+  handleName(e) {
+    const name = e.target.value;
+    this.setState({ name });
+  }
+
+  handleExperationDay(e) {
+    const experation_day = e.target.value;
+    this.setState({ experation_day });
+  }
+
+  handleExperationYear(e) {
+    const experation_year = e.target.value;
+    this.setState({ experation_year });
+  }
+
+  handleSecurityCode(e) {
+    const security_code = e.target.value;
+    this.setState({ security_code });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createContribution(this.state).then(() => {
+      hashHistory.push(`/projects/${this.state.project_id}`);
+    });
+  }
 
   render() {
     const years = []
