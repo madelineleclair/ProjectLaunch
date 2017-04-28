@@ -4,8 +4,8 @@
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width: 57%;
-  margin: auto;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .almost-funded-container > h3 {
@@ -15,9 +15,11 @@
 
 .almost-funded-container ul, .search-results{
   display: flex;
-  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .almost-funded-container ul li, .search-results li {
-  margin-right: 40px;
+  /*margin-right: 40px;*/
+  margin-bottom: 40px;
 }
