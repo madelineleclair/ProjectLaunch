@@ -26,6 +26,10 @@ body {
   box-sizing: content-box;
 }
 
+a {
+  color: black;
+}
+
 a:active {
   color: black;
 }

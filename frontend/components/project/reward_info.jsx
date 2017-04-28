@@ -3,6 +3,7 @@ import React from 'react';
 const RewardInfo = (props) => {
 
   const deleteReward = () => {
+    // debugger
     props.deleteReward(props.reward.reward_id)
   }
 

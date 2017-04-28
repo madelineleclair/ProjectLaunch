@@ -11,6 +11,7 @@ class Api::RewardsController < ApplicationController
   end
 
   def create
+
     @reward = Reward.new(reward_params)
 
     if @reward.save
@@ -21,6 +22,7 @@ class Api::RewardsController < ApplicationController
   end
 
   def update
+
     @reward = current_user.projects.rewards.find(params[rewards][:id])
 
     if @reward.update(reward_params)
@@ -31,8 +33,11 @@ class Api::RewardsController < ApplicationController
   end
 
   def destroy
+
     @reward = Reward.find(params[:id])
+    debugger
     @reward.destroy
+
     render json: @reward.id
   end
 

@@ -45,6 +45,7 @@ const ProjectReducer = (state = _defaultState, action) => {
     }
 
     case(REMOVE_REWARD): {
+
       const newState = Object.assign({}, state);
       delete newState.rewards[action.reward];
       return newState;
