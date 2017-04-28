@@ -77,4 +77,20 @@ Product Launch is a full stack web application inspired by Kickstarter for peopl
   .where('launch = true', 'goal > funding')
   .order('funding DESC').limit(3)
   ```
-  All information about almost funded projects is held in the projects slice of state in redux under the subcategory of almost funded. Visitors also have the ability to search for projects by key words in the title, location, and category. Searching is accomplished using pg_search. Once a user inputs the search term and hits enter, he/she is redirected to the search results page. 
+  All information about almost funded projects is held in the projects slice of state in redux under the subcategory of almost funded. Visitors also have the ability to search for projects by key words in the title, location, and category. Searching is accomplished using pg_search. Once a user inputs the search term and hits enter, he/she is redirected to the search results page.
+
+  ## Future Features For Production
+    ### Contributions
+      Allow users to contribute to a project via a specific reward and allow them to select multiple rewards to contribute to a project.
+
+    ### Categories
+      Make a list of categories on the front page that links to a page with all the projects in a category and shows the top project per category on the home page.
+
+    ### Most popular projects
+      Display most popular projects, by number of contributions on home page
+
+    ### User projects
+      Allow users to see all of their projects
+
+    ### Videos
+      Replace the main image on the project show page with a video
