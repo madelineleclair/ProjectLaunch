@@ -14,7 +14,6 @@ class RewardsShowList extends React.Component {
     this.updateContribution = this.updateContribution.bind(this);
     this.handlePendingTransaction = this.handlePendingTransaction.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
-    debugger
   }
 
   handleSelect(e) {
