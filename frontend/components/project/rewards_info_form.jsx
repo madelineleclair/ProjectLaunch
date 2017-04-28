@@ -26,6 +26,7 @@ class RewardsInfoForm extends React.Component {
 
   componentWillUnmount() {
     this.props.clearErrors();
+    this.props.clearRewards();
   }
 
   componentWillReceiveProps(nextProps) {
