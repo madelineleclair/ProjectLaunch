@@ -4,7 +4,7 @@ const RewardInfo = (props) => {
 
   const deleteReward = () => {
     // debugger
-    props.deleteReward(props.reward.reward_id)
+    props.deleteReward(props.reward.id)
   }
 
   return (

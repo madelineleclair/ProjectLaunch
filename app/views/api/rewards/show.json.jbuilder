@@ -1,7 +1,7 @@
 
 @project.rewards.each do |reward|
   json.set! reward.id do
-    json.reward_id reward.id
+    json.id reward.id
     json.project_id reward.project_id
     json.title reward.title
     json.pledge_amount reward.pledge_amount
