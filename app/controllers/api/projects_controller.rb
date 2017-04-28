@@ -2,19 +2,25 @@ class Api::ProjectsController < ApplicationController
   # before_action :require_log_in, only: [:edit, :update, :destroy]
 
   def index
-    debugger
     query_type = params[:fetch][:fetchType]
+
     case(query_type)
       when 'almostFunded'
-         @projects = Project.select(:id, :title, :description, :location, :goal, :launch_date, :duration, 'name as owner', 'sum(amount) as funding', :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+         @projects = Project.select(:id, :title, :description,
+         :location, :goal, :launch_date, :duration,
+         'name as owner', 'sum(amount) as funding',
+         :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
-         .group('projects.id', 'users.name')
+         .group("projects.id", 'users.name')
          .where('launch = true', 'goal > funding')
          .order('funding').limit(3)
        when 'search'
-         @projects = Project.search_for(params[:fetch][:searchTerm]).select(:id, :title, :description, :location, :goal, :launch_date, :duration, 'name as owner', 'sum(amount) as funding', :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+         searches = Project.search_for(params[:fetch][:searchTerm])
+         @projects = searches.select(:id, :title, :description, :location, :goal, :launch_date,
+          :duration, 'name as owner', 'sum(amount) as funding',
+          :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
-         .group('projects.id', 'users.name')
+         .group('projects.id', "#{PgSearch::Configuration.alias('projects')}.rank", 'users.name')
          .where('launch = true', 'goal > funding')
          .order('funding').limit(3)
       end

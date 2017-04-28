@@ -1,0 +1,14 @@
+.search-length h1:last-of-type {
+  margin-left: 10px;
+  color: #2BDE73;
+}
+
+.search-length {
+  display: flex;
+  font-size: 32px;
+  margin: 18px 0;
+}
+
+.search-results {
+  background: red;
+}

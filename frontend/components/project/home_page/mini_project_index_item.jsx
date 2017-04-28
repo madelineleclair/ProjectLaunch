@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 class MiniProjectItem extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.project = props.project;
     this.remainingTime = moment(this.project.launch_date).add(this.project.duration, 'days').fromNow(true);
   }

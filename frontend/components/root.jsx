@@ -1,5 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import App from './app';
 import SessionFormContainer from './session/session_form_container';
 import NewProjectFormContainer from './project/new_project_form_container';
 import EditProjectContainer from './project/edit_project_form_container';
@@ -9,8 +11,7 @@ import RewardsInfoFormContainer from './project/rewards_info_form_container';
 import HomePageContainer from './project/home_page/home_page_container';
 import ProjectShowContainer from './project/project_show/project_show_container';
 import CreateContributionContainer from './project/project_show/payment_container';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import App from './app';
+import SearchResultsConttainer from './navigation/search_results_container';
 
 const Root = ({ store }) => {
 
@@ -36,6 +37,7 @@ const Root = ({ store }) => {
           <Route path="/signup" component = { SessionFormContainer } onEnter = { _redirectIfLoggedIn } />
           <Route path="/login"  component = { SessionFormContainer } onEnter = { _redirectIfLoggedIn } />
           <Route path="/projects/new" onEnter = { _redirectIfNotLoggedIn } component = { NewProjectFormContainer } />
+          <Route path="projects/search-results" component= { SearchResultsConttainer }/>
           <Route path='projects/:projectId' component = { ProjectShowContainer } />
           <Route path="/projects/:projectId/contribution/new" component = { CreateContributionContainer } />
           <Route path="/projects/edit/:projectId" component = { EditProjectContainer }>

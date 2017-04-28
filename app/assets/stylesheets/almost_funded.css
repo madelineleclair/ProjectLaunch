@@ -1,4 +1,4 @@
-.almost-funded-container {
+.almost-funded-container, .search-results-container {
   /*width: 332px;
   margin: auto;*/
   margin-bottom: 30px;
@@ -13,11 +13,11 @@
   margin: 18px 0;
 }
 
-.almost-funded-container ul {
+.almost-funded-container ul, .search-results{
   display: flex;
   margin: auto;
 }
 
-.almost-funded-container ul li {
+.almost-funded-container ul li, .search-results li {
   margin-right: 40px;
 }

@@ -1,0 +1,29 @@
+
+.search-bar-container {
+  align-items: center;
+}
+
+.search-form {
+  height: 100%;
+  width: 15%;
+}
+
+.search-bar-container img {
+  width: 45px;
+  height: 45px;
+  margin: 0 20px 0 50px;
+}
+
+.search-form input[type="text"] {
+  height: 100%;
+  width: 100%;
+  width: 100%;
+  align-self: center;
+  padding-left: 25px;
+  color: black;
+  font-size: 24px;
+}
+
+.search-form input[type="submit"] {
+  display: none;
+}

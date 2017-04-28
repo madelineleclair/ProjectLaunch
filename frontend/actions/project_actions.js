@@ -1,6 +1,7 @@
 import * as ProjectUtil from '../util/projects_util';
 
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
+export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS"
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
@@ -20,7 +21,7 @@ const receiveProject = (project) => {
 
 const receiveProjects = (projects) => {
   return {
-    type: RECEIVE_PROJECT,
+    type: RECEIVE_PROJECTS,
     projects
   };
 };

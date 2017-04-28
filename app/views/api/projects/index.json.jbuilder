@@ -8,6 +8,7 @@
     json.image_url asset_path(project.image.url)
     json.location project.location
     json.goal project.goal
+    json.launch_date project.launch_date
   end
 end
 
