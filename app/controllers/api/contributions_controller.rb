@@ -8,9 +8,12 @@ class Api::ContributionsController < ApplicationController
 
   def create
     @contribution = Contribution.create(contribution_params)
-
-    @contribution.save
-    render json: "#{@contribution.amount}"
+    debugger
+    if @contribution.save
+      render json: "#{@contribution.amount}"
+    else
+      render json: @contribution.errors.full_messages, status: 422
+    end
   end
 
   private

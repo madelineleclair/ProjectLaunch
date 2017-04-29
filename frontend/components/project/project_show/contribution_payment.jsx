@@ -1,11 +1,15 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
+import TransactionInfo from './payment_show';
 
 class CreateContribution extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { card_number: "", name: "", email_address: "", experation_day:"", experation_year: "",
-      security_code: "", project_id: this.props.basicInfo.projectId, reward_id: this.props.reward };
+    this.state = { card_number: "", name: "", email_address: "",
+      experation_day:"", experation_year: "", security_code: "",
+      project_id: this.props.basicInfo.id,
+      reward_id: this.props.reward,
+      amount: this.props.amount };
     this.handleCardNumber = this.handleCardNumber.bind(this);
     this.handleName = this.handleName.bind(this);
     this.handleExperationMonth = this.handleExperationMonth.bind(this);
@@ -27,8 +31,8 @@ class CreateContribution extends React.Component {
   }
 
   handleEmail(e) {
-    const email = e.target.value;
-    this.setState({ email })
+    const email_address = e.target.value;
+    this.setState({ email_address })
   }
 
   handleExperationMonth(e) {
@@ -67,45 +71,50 @@ class CreateContribution extends React.Component {
           </div>
           <div className="card-form-and-caption">
             <h3>Add card information</h3>
-            <form>
-              <label>
-                <h4>Card number</h4>
-                <input onChange={ this.handleCardNumber } value={this.state.card_number}/>
-              </label>
-              <label>
-                <h4>Name</h4>
-                <input onChange={ this.handleName } value={this.state.name} />
-              </label>
-              <label>
-                <h4>Email</h4>
-                <input onChange={ this.handleEmail } value={ this.state.email } />
-              </label>
-              <label>
-                <h4>Experation</h4>
-                <select onChange={ this.handleExperationMonth}>
-                 <option value="01">01</option>
-                 <option value="02">02</option>
-                 <option value="03">03</option>
-                 <option value="04">04</option>
-                 <option value="05">05</option>
-                 <option value="06">06</option>
-                 <option value="07">07</option>
-                 <option value="08">08</option>
-                 <option value="09">09</option>
-                 <option value="10">10</option>
-                 <option value="11">11</option>
-                 <option value="12">12</option>
-                </select>
-                <select onChange={ this.handleExperationYear}>
-                  {years}
-                </select>
-              </label>
-              <label>
-              <h4>Security Code</h4>
-              <input onChange={ this.handleSecurityCode } value={ this.state.security_code } />
-              </label>
-              <button onClick={this.handleSubmit}>Pledge</button>
-            </form>
+            <div className="card-form-and-transaction-info">
+              <form className="payment-info-form">
+                <label>
+                  <h4>Card number</h4>
+                  <input onChange={ this.handleCardNumber } value={this.state.card_number}/>
+                </label>
+                <label>
+                  <h4>Name</h4>
+                  <input onChange={ this.handleName } value={this.state.name} />
+                </label>
+                <label>
+                  <h4>Email</h4>
+                  <input onChange={ this.handleEmail } value={ this.state.email } />
+                </label>
+                <label>
+                  <h4>Experation</h4>
+                  <select onChange={ this.handleExperationMonth}>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select onChange={ this.handleExperationYear}>
+                    {years}
+                  </select>
+                </label>
+                <label>
+                  <h4>Security Code</h4>
+                  <input onChange={ this.handleSecurityCode } value={ this.state.security_code } />
+                </label>
+                <div className="button-container">
+                  <button onClick={this.handleSubmit}>Pledge</button>
+                </div>
+              </form>
+              <TransactionInfo amount = {this.props.amount}/>
+            </div>
           </div>
         </div>
     );

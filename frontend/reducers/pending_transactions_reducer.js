@@ -6,7 +6,7 @@ const _defaultState = {
 };
 
 const PendingTransactionsReducer = (state = _defaultState, action) => {
-
+  
   Object.freeze(state);
   switch(action.type) {
     case(RECEIVE_PENDING_REWARD): {
@@ -16,6 +16,7 @@ const PendingTransactionsReducer = (state = _defaultState, action) => {
     }
 
     case(RECEIVE_PENDING_AMOUNT): {
+
       const newState = Object.assign({}, state);
       newState.amount += action.amount;
       return newState;
