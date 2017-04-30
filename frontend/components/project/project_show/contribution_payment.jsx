@@ -69,52 +69,54 @@ class CreateContribution extends React.Component {
             <h1>{this.props.basicInfo.title}</h1>
             <h3>by {this.props.basicInfo.owner}</h3>
           </div>
-          <div className="card-form-and-caption">
-            <h3>Add card information</h3>
-            <div className="card-form-and-transaction-info">
+          <div className="card-form-and-transaction-info">
+            <div className="card-form-and-caption">
+              <h3>Add card information</h3>
               <form className="payment-info-form">
-                <label>
+                <div>
                   <h4>Card number</h4>
-                  <input onChange={ this.handleCardNumber } value={this.state.card_number}/>
-                </label>
-                <label>
+                  <input type="number" onChange={ this.handleCardNumber } value={this.state.card_number}/>
+                </div>
+                <div>
                   <h4>Name</h4>
                   <input onChange={ this.handleName } value={this.state.name} />
-                </label>
-                <label>
+                </div>
+                <div>
                   <h4>Email</h4>
                   <input onChange={ this.handleEmail } value={ this.state.email } />
-                </label>
-                <label>
-                  <h4>Experation</h4>
-                  <select onChange={ this.handleExperationMonth}>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                  </select>
-                  <select onChange={ this.handleExperationYear}>
-                    {years}
-                  </select>
-                </label>
-                <label>
-                  <h4>Security Code</h4>
-                  <input onChange={ this.handleSecurityCode } value={ this.state.security_code } />
-                </label>
+                </div>
+                <div className="experation-and-security">
+                  <div>
+                    <h4>Experation</h4>
+                    <select onChange={ this.handleExperationMonth}>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select onChange={ this.handleExperationYear}>
+                      {years}
+                    </select>
+                  </div>
+                  <div className="security-code">
+                    <h4>Security Code</h4>
+                    <input type="number" onChange={ this.handleSecurityCode } value={ this.state.security_code } />
+                  </div>
+                </div>
                 <div className="button-container">
                   <button onClick={this.handleSubmit}>Pledge</button>
                 </div>
               </form>
-              <TransactionInfo amount = {this.props.amount}/>
             </div>
+            <TransactionInfo reward = {this.props.rewardInfo} amount = {this.props.amount}/>
           </div>
         </div>
     );

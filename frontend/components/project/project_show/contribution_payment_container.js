@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
     basicInfo: state.project.basicInfo,
     amount: state.pendingTransactions.amount,
     reward: state.pendingTransactions.reward,
+    rewardInfo: state.project.rewards[state.pendingTransactions.reward],
   };
 };
 

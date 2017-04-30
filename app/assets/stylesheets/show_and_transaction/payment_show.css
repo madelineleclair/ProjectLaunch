@@ -1,0 +1,41 @@
+.payment-info-container {
+  border: 1px solid  #a9a8a8;
+  background: #e0e4fb;
+  height: 75%;
+  width: 40%;
+}
+
+.payment-amount, .payment-info-reward {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.payment-amount {
+  border-bottom: 1px solid #a9a8a8;
+}
+
+.payment-info-container h5 {
+  font-weight: bold;
+  font-size: 12px;
+  color: #3D3D66;
+  margin-bottom: 10px;
+}
+
+.payment-amount h3 {
+  margin-bottom: 15px;
+}
+
+.payment-info-reward h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.payment-info-reward p:first-of-type {
+  margin-top: 10px;
+}
+
+.payment-info-reward p:last-of-type {
+  color: #80809E;
+  margin-top: 15px;
+  padding-bottom: 20px;
+}

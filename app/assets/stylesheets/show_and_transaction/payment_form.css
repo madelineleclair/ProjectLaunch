@@ -1,0 +1,49 @@
+.title-and-owner {
+  background: #F5F1DE;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-and-owner h1, .title-and-owner h3 {
+  text-align: center;
+}
+
+.title-and-owner h1 {
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 50px;
+  margin-bottom: 16px;
+}
+
+.title-and-owner h3 {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.payment-form-container h3 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card-form-and-caption {
+  width: 35%;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.card-form-and-caption h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card-form-and-caption input {
+  height: 30px;
+  width: 45%;
+  border: 1px solid #dcdcdb;
+  border-radius: 4px;
+}
+
+.card-form-and-caption input:focus {
+  border: 1px solid blue;
+  transition: 0.9;
+}

@@ -115,8 +115,8 @@
   color: white;
   opacity: 9;
   font-size: 20px;
-  top: 75px;
-  left: 110px;
+  top: 40%;
+  left: 17%;
 }
 
 .rewards-list-item-not-selected h2, .rewards-list-item-selected h2 {
@@ -165,6 +165,7 @@
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #F1EEEA;
+  width: 90%;
 }
 
 .rewards-list-item-selected button {

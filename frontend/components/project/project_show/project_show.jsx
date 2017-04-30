@@ -16,7 +16,9 @@ class ProjectShow extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearRewards()
+    if (this.props.router.location.pathname !== `projects/${this.props.projectId}/contribution/new`) {
+      this.props.clearRewards()
+    }
   }
 
   render() {

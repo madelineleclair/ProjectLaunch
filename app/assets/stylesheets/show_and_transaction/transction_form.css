@@ -1,3 +1,7 @@
+.payment-form-container {
+  padding-bottom: 50px;
+}
+
 .title-and-owner {
   background: #F5F1DE;
   display: flex;
@@ -20,16 +24,16 @@
   padding-bottom: 40px;
 }
 
-.payment-form-container h3 {
+.title-and-owner h3 {
   font-weight: bold;
   font-size: 24px;
 }
 
 .card-form-and-caption {
-  width: 35%;
+  width: 60%;
   margin: auto;
-  background: red;
-  margin-top: 90px;
+  padding-right: 20px;
+  /*margin-top: 90px;*/
 }
 
 .card-form-and-caption h4 {
@@ -38,9 +42,8 @@
 }
 
 .card-form-and-caption input {
-  background: yellow;
   height: 30px;
-  width: 45%;
+  width: 75%;
   border: 1px solid #dcdcdb;
   border-radius: 4px;
 }
@@ -48,4 +51,42 @@
 .card-form-and-caption input:focus {
   border: 1px solid blue;
   transition: 0.9;
+}
+.button-container {
+  border-top: 1px solid  #dcdcdb;
+  margin-top: 30px;
+}
+
+/*.payment-info-form {
+  width: 55%;
+}*/
+
+.payment-info-form button{
+  display: block;
+  background: #25CB68;
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+}
+
+.payment-info-form button:hover {
+  background: #05AF3C;
+}
+
+.card-form-and-transaction-info {
+  display: flex;
+  padding-top: 90px;
+  width: 50%;
+  margin: auto;
+}
+
+.experation-and-security {
+  display: flex;
+}
+
+.security-code {
+  margin-left: 10px;
+  width: 36%;
 }

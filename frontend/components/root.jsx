@@ -10,7 +10,7 @@ import StoryInfoFormContainer from './project/story_info_form_container';
 import RewardsInfoFormContainer from './project/rewards_info_form_container';
 import HomePageContainer from './project/home_page/home_page_container';
 import ProjectShowContainer from './project/project_show/project_show_container';
-import CreateContributionContainer from './project/project_show/payment_container';
+import CreateContributionContainer from './project/project_show/contribution_payment_container';
 import SearchResultsConttainer from './navigation/search_results_container';
 
 const Root = ({ store }) => {

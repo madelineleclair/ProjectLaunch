@@ -6,7 +6,7 @@ class RewardsShowList extends React.Component {
   constructor(props) {
     super(props);
     this.reward = props.reward;
-    this.state = { selected: false, amount: 0, id: this.reward.id, project_id: this.reward.project_id };
+    this.state = { selected: false, amount: this.reward.pledge_amount, id: this.reward.id, project_id: this.reward.project_id };
     this.deliveryDate = moment(this.reward.delivery_date).format('MM-YYYY');
     this.contribution_count = this.reward.contribution_count;
     this.backers = this.contribution_count === 1 ? "backer" : "backers";
@@ -70,7 +70,7 @@ class RewardsShowList extends React.Component {
             <p>{ this.backers }</p>
           </div>
           <form className="contribute">
-            <input type="number" onChange={this.updateContribution} value={ this.reward.pledge_amount } />
+            <input type="number" onChange={this.updateContribution} value={ this.state.amount } />
             <Link onClick={ this.handlePendingTransaction } to={`projects/${this.props.projectId}/contribution/new`}>
               <button>Contribute</button>
             </Link>
