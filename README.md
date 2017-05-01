@@ -81,7 +81,7 @@ Product Launch is a full stack web application inspired by Kickstarter for peopl
 
   ## Future Features For Production
     ### Contributions
-      Allow users to contribute to a project via a specific reward and allow them to select multiple rewards to contribute to a project.
+      Allow users to select multiple rewards to contribute to a project.
 
     ### Categories
       Make a list of categories on the front page that links to a page with all the projects in a category and shows the top project per category on the home page.
