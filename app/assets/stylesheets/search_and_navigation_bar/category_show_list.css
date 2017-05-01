@@ -1,0 +1,10 @@
+.search-results-number {
+  margin: 0 5px;
+  color: #2BDE73;
+}
+
+.search-results-caption {
+  display: flex;
+  font-size: 32px;
+  margin: 18px 0;
+}

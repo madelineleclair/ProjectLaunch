@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { logOut } from '../../actions/session_actions';
-import { changeSearchBarStatus } from '../../actions/navigation_actions'
+import { changeSearchBarStatus } from '../../actions/navigation_actions';
+import { viewCategories } from '../../actions/category_actions';
 import NavigationBar from './navigation_bar';
 
 
@@ -16,7 +17,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     logOut: () => dispatch(logOut()),
-    changeSearchBarStatus: (status) => dispatch(changeSearchBarStatus(status))
+    changeSearchBarStatus: (status) => dispatch(changeSearchBarStatus(status)),
+    viewCategories: (boolean) => dispatch(viewCategories(boolean)),
   };
 };
 

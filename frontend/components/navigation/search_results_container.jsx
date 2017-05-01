@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapStateToDispatch = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     fetchProjects: (fetch) => dispatch(fetchProjects(fetch))
   };
@@ -18,5 +18,5 @@ const mapStateToDispatch = (dispatch) => {
 
 export default connect(
   mapStateToProps,
-  mapStateToDispatch
+  mapDispatchToProps
 )(SearchResults);

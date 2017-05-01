@@ -21,7 +21,16 @@ class Api::ProjectsController < ApplicationController
           :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
          .group('projects.id', "#{PgSearch::Configuration.alias('projects')}.rank", 'users.name')
-         .where('launch = true', 'goal > funding')
+         .where('launch = true')
+       when 'category'
+         @projects = Project.select(:id, :title, :description,
+         :location, :goal, :launch_date, :duration,
+         'users.name as owner', 'sum(amount) as funding',
+         :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+         .joins(:contributions, :user)
+         .group("projects.id", 'users.name')
+         .where("launch = true")
+         .having(category: params[:fetch][:categoryType])
       end
 
       render 'api/projects/index.json.jbuilder'
@@ -64,7 +73,6 @@ class Api::ProjectsController < ApplicationController
   def update
 
     @project = current_user.projects.find(params[:project][:id])
-    debugger
     if @project.update(update_project_params)
       # if @project.valid?
         render 'api/projects/update'

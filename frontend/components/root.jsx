@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import App from './app';
+import AppContainer from './app_container';
 import SessionFormContainer from './session/session_form_container';
 import NewProjectFormContainer from './project/new_project_form_container';
 import EditProjectContainer from './project/edit_project_form_container';
@@ -12,27 +12,28 @@ import HomePageContainer from './project/home_page/home_page_container';
 import ProjectShowContainer from './project/project_show/project_show_container';
 import CreateContributionContainer from './project/project_show/contribution_payment_container';
 import SearchResultsConttainer from './navigation/search_results_container';
+import CategoryShowListContair from './categories/category_show_list_container';
 
 const Root = ({ store }) => {
 
   const _redirectIfLoggedIn = (nextState, replace) => {
-    const currentUser = store.getState().session.currentUser
+    const currentUser = store.getState().session.currentUser;
     if(currentUser) {
-      replace('/')
+      replace('/');
     }
-  }
+  };
 
   const _redirectIfNotLoggedIn = (nextState, replace ) => {
-    const currentUser = store.getState().session.currentUser
+    const currentUser = store.getState().session.currentUser;
     if(!currentUser) {
-      replace('/signup')
+      replace('/signup');
     }
-  }
+  };
 
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
-        <Route path="/" component={ App }>
+        <Route path="/" component={ AppContainer }>
           <IndexRoute component={ HomePageContainer } />
           <Route path="/signup" component = { SessionFormContainer } onEnter = { _redirectIfLoggedIn } />
           <Route path="/login"  component = { SessionFormContainer } onEnter = { _redirectIfLoggedIn } />
@@ -45,6 +46,7 @@ const Root = ({ store }) => {
             <Route path="/projects/edit/:projectId/storyInfo" onEnter = { _redirectIfNotLoggedIn } component = { StoryInfoFormContainer } />
             <Route path="/projects/edit/:projectId/rewardsInfo" onEnter = { _redirectIfNotLoggedIn } component = { RewardsInfoFormContainer } />
           </Route>
+          <Route path="categories/:categoryType" component = { CategoryShowListContair } />
         </Route>
       </Router>
     </Provider>

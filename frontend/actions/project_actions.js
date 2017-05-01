@@ -1,7 +1,7 @@
 import * as ProjectUtil from '../util/projects_util';
 
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
-export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS"
+export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
@@ -10,7 +10,7 @@ export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
 export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const RECEIVE_CONTRIBUTION = "RECEIVE_CONTRIBUTION";
-export const CLEAR_REWARDS = "CLEAR_REWARDS"
+export const CLEAR_REWARDS = "CLEAR_REWARDS";
 
 const receiveProject = (project) => {
   return {
@@ -165,7 +165,7 @@ export const updateReward = (reward) => (dispatch) => {
 
 export const fetchProjects = (fetch) => (dispatch) => {
   return ProjectUtil.fetchProjects(fetch).then((projects) => {
-    dispatch(receiveProjects(projects));
+    return dispatch(receiveProjects(projects));
   });
 };
 

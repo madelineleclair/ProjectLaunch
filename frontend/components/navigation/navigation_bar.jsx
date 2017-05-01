@@ -10,12 +10,13 @@ class NavigationBar extends React.Component {
     this.state = {displayInfo: false, search: this.props.search };
     this.handleUserInfoToggle = this.handleUserInfoToggle.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleExplore = this.handleExplore.bind(this);
     this.setState = this.setState.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({ search: nextProps.search });
-  };
+  }
 
   handleUserInfoToggle () {
     var displayInfo;
@@ -28,7 +29,11 @@ class NavigationBar extends React.Component {
   }
 
   handleSearch() {
-    this.props.changeSearchBarStatus(true)
+    this.props.changeSearchBarStatus(true);
+  }
+
+  handleExplore() {
+    this.props.viewCategories(true);
   }
 
   render() {
@@ -36,7 +41,7 @@ class NavigationBar extends React.Component {
 
       let info;
       if (this.state.displayInfo) {
-        info = <UserInfo userInfo={ this.props } setState={this.setState}/>;
+        info = <UserInfo userInfo={ this.props } setState={this.setState}/>
       }
 
 
@@ -45,6 +50,7 @@ class NavigationBar extends React.Component {
         return(
           <div className="navigation-bar">
             <div className="explore-and-start">
+              <button onClick={ this.handleExplore } >Explore</button>
               <Link to="/projects/new">
                 <div>Start a project</div>
               </Link>
@@ -66,6 +72,7 @@ class NavigationBar extends React.Component {
         return (
           <div className="navigation-bar">
             <div className="explore-and-start">
+              <button onClick={ this.handleExplore } >Explore</button>
             </div>
           <Link className="logo" to="/">
             <section className="project-logo">PROJECT</section>
