@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createContribution } from '../../../actions/project_actions';
+import { createContribution, clearErrors } from '../../../actions/project_actions';
 import { clearPendingTransactions } from '../../../actions/pending_transaction_actions';
 import ContributionPayment from "./contribution_payment";
 
@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => {
     amount: state.pendingTransactions.amount,
     reward: state.pendingTransactions.reward,
     rewardInfo: state.project.rewards[state.pendingTransactions.reward],
+    errors: state.project.errors,
   };
 };
 
@@ -18,6 +19,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     createContribution: (contribution) => dispatch(createContribution(contribution)),
     clearPendingTransactions: () => dispatch(clearPendingTransactions()),
+    clearErrors: () => dispatch(clearErrors()),
   };
 
 };

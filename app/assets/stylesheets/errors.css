@@ -1,24 +1,27 @@
 
-.errors {
-  margin: auto;
+.errors, .payment-errors {
   width: 330px;
   background: #fd003b;
   border-radius: 4px;
 }
 
-.errors li {
+.errors {
+  margin: auto;
+}
+
+.errors li, .payment-errors li {
   color: white;
   padding: 4px 21px;
   font-size: 15px;
   border-collapse: collapse;
 }
 
-.errors li:first-child {
+.errors li:first-child, .payment-errors li:first-child {
   border-top: 4px solid #fd003b;
   border-radius: 4px;
 }
 
-.errors li:last-child {
+.errors li:last-child, .payment-errors li:last-child {
   border-bottom: 4px solid #fd003b;
   border-radius: 4px;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { hashHistory } from 'react-router';
 import TransactionInfo from './payment_show';
 
+
 class CreateContribution extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,7 @@ class CreateContribution extends React.Component {
 
   componentWillUnmount() {
     this.props.clearPendingTransactions();
+    this.props.clearErrors();
   }
 
   handleCardNumber(e) {
@@ -67,7 +69,11 @@ class CreateContribution extends React.Component {
       for (let i = 2017; i < 2037; i++) {
         years.push(<option value={i}>{i}</option>);
       }
-      
+
+      const errors = this.props.errors.map((error, index) => {
+        return (<li key={ index }>{ error }</li>);
+      });
+
       return (
         <div className="payment-form-container">
           <div className="title-and-owner">
@@ -78,6 +84,9 @@ class CreateContribution extends React.Component {
             <div className="card-form-and-caption">
               <h3>Add card information</h3>
               <form className="payment-info-form">
+                <ul className="payment-errors">
+                  {errors}
+                </ul>
                 <div>
                   <h4>Card number</h4>
                   <input type="number" onChange={ this.handleCardNumber } value={this.state.card_number}/>

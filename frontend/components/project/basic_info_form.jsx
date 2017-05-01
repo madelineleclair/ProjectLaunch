@@ -84,16 +84,16 @@ class BasicInfoForm extends React.Component {
       var formData = new FormData();
       // const properties = Object.assign({}, this.state, {id:
       //   this.props.router.params.projectId})
-      formData.append("project[title]", this.state.title)
-      formData.append("project[description]", this.state.description)
-      formData.append("project[category]", this.state.category)
-      formData.append("project[location]", this.state.location)
-      formData.append("project[duration]", this.state.duration)
-      formData.append("project[goal]", this.state.goal)
-      formData.append("project[image]", this.state.imageFile)
-      formData.append("project[id]", this.props.router.params.projectId)
+      formData.append("project[title]", this.state.title);
+      formData.append("project[description]", this.state.description);
+      formData.append("project[category]", this.state.category);
+      formData.append("project[location]", this.state.location);
+      formData.append("project[duration]", this.state.duration);
+      formData.append("project[goal]", this.state.goal);
+      formData.append("project[image]", this.state.imageFile);
+      formData.append("project[id]", this.props.router.params.projectId);
 
-      this.props.updateProject(formData).then(() => this.setState({ save: false }))
+      this.props.updateProject(formData).then(() => this.setState({ save: false }));
     }
 
     handleSave(e) {
