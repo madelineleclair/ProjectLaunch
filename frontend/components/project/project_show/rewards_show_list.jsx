@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { Link } from 'react-router'l
+import { Link } from 'react-router'
 
 class RewardsShowList extends React.Component {
   constructor(props) {

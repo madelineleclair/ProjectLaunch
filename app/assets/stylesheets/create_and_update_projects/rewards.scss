@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 }
 
 .rewards-and-form div {
@@ -38,14 +39,15 @@
 .current-rewards {
   margin-bottom: 5px;
   background: #F7F7F9;
-  padding: 5px;
+  padding: 10px;
+  border: 1px solid #d6d6d5;
 
 }
 
 
 .reward-number label {
   font-weight: bold;
-  margin-right: 70px;
+  margin-right: 60px;
 }
 
 .current-reward-info {
@@ -104,4 +106,8 @@
   left: 389px;
   top: 3px;
   cursor:pointer;
+}
+
+.rewards-and-form ul {
+  margin-bottom: 20px;
 }
