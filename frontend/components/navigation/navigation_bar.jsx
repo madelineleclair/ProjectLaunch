@@ -50,7 +50,9 @@ class NavigationBar extends React.Component {
         return(
           <div className="navigation-bar">
             <div className="explore-and-start">
-              <button onClick={ this.handleExplore } >Explore</button>
+              <span onClick={ this.handleExplore } >
+                <div>Explore</div>
+              </span>
               <Link to="/projects/new">
                 <div>Start a project</div>
               </Link>
@@ -72,7 +74,9 @@ class NavigationBar extends React.Component {
         return (
           <div className="navigation-bar">
             <div className="explore-and-start">
-              <button onClick={ this.handleExplore } >Explore</button>
+              <span onClick={ this.handleExplore } >
+                <div>Explore</div>
+              </span>
             </div>
           <Link className="logo" to="/">
             <section className="project-logo">PROJECT</section>

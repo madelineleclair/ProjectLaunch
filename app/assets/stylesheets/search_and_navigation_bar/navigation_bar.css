@@ -12,20 +12,24 @@
   padding: 0px 10px;
 }
 
-.navigation-bar a {
+.navigation-bar a, .navigation-bar span {
   padding: 0px 10px;
   height: 100%;
 }
 
-.navigation-bar a div {
+.navigation-bar a div, .navigation-bar span div {
   height: 62%;
   font-size: 13px;
   font-weight: 500;
   padding-top: 20px
 }
 
-.navigation-bar a div:hover {
+.navigation-bar a div:hover, .navigation-bar span div:hover {
  border-bottom: 3px solid #00C82E;
+}
+
+.explore-and-start span:hover {
+  cursor: pointer;
 }
 
 .user-image {
