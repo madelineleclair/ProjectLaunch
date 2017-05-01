@@ -20,8 +20,12 @@ class CreateContribution extends React.Component {
 
   }
 
+  componentWillUnmount() {
+    this.props.clearPendingTransactions();
+  }
+
   handleCardNumber(e) {
-    const card_number = e.target.value ;
+    const card_number = e.target.value;
     this.setState({ card_number });
   }
 
@@ -32,7 +36,7 @@ class CreateContribution extends React.Component {
 
   handleEmail(e) {
     const email_address = e.target.value;
-    this.setState({ email_address })
+    this.setState({ email_address });
   }
 
   handleExperationMonth(e) {
@@ -59,10 +63,11 @@ class CreateContribution extends React.Component {
   }
 
   render() {
-    const years = []
+    const years = [];
       for (let i = 2017; i < 2037; i++) {
         years.push(<option value={i}>{i}</option>);
       }
+      
       return (
         <div className="payment-form-container">
           <div className="title-and-owner">

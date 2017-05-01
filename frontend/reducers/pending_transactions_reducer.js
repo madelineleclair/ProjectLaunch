@@ -1,4 +1,4 @@
-import { RECEIVE_PENDING_AMOUNT, RECEIVE_PENDING_REWARD } from '../actions/pending_transaction_actions';
+import { RECEIVE_PENDING_AMOUNT, RECEIVE_PENDING_REWARD, CLEAR_PENDING_TRANSACTIONS } from '../actions/pending_transaction_actions';
 
 const _defaultState = {
   amount: 0,
@@ -6,7 +6,7 @@ const _defaultState = {
 };
 
 const PendingTransactionsReducer = (state = _defaultState, action) => {
-  
+
   Object.freeze(state);
   switch(action.type) {
     case(RECEIVE_PENDING_REWARD): {
@@ -20,6 +20,10 @@ const PendingTransactionsReducer = (state = _defaultState, action) => {
       const newState = Object.assign({}, state);
       newState.amount += action.amount;
       return newState;
+    }
+
+    case(CLEAR_PENDING_TRANSACTIONS): {
+      return _defaultState;
     }
     default:
       return state;

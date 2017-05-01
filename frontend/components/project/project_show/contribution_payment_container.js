@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { createContribution } from '../../../actions/project_actions';
+import { clearPendingTransactions } from '../../../actions/pending_transaction_actions';
 import ContributionPayment from "./contribution_payment";
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
 
   return {
-    createContribution: (contribution) => dispatch(createContribution(contribution))
+    createContribution: (contribution) => dispatch(createContribution(contribution)),
+    clearPendingTransactions: () => dispatch(clearPendingTransactions()),
   };
 
 };
