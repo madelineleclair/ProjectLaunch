@@ -12,7 +12,7 @@ class AlmostFunded extends React.Component {
 
   render() {
     const projects =  this.props.almostFunded.map((project) => {
-        return <MiniProjectItem key={project.id} project={project} />;
+        return <MiniProjectItem key={project.project_id} project={project} />;
       });
 
     return (
