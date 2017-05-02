@@ -67,10 +67,11 @@ class CreateContribution extends React.Component {
   render() {
     const years = [];
       for (let i = 2017; i < 2037; i++) {
-        years.push(<option value={i}>{i}</option>);
+        years.push(<option key={i} value={i}>{i}</option>);
       }
 
       const errors = this.props.errors.map((error, index) => {
+
         return (<li key={ index }>{ error }</li>);
       });
 
