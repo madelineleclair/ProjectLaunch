@@ -1,32 +1,3 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
 # Product Launch
 
 [Product Launch](https://project-launch.herokuapp.com/)
@@ -77,7 +48,7 @@ Product Launch is a full stack web application inspired by Kickstarter for peopl
   .where('launch = true', 'goal > funding')
   .order('funding DESC').limit(3)
   ```
-  All information about almost funded projects is held in the projects slice of state in redux under the subcategory of almost funded. Visitors also have the ability to search for projects by key words in the title, location, and category. Searching is accomplished using pg_search. Once a user inputs the search term and hits enter, he/she is redirected to the search results page.
+  All information about almost funded projects is held in the projects slice of state in Redux under the subcategory of almost funded. Visitors also have the ability to search for projects by key words in the title, location, and category. Searching is accomplished using pg_search. Once a user inputs the search term and hits enter, he/she is redirected to the search results page.
 
   ## Future Features For Production
     ### Contributions
