@@ -18,7 +18,8 @@ class CategoryShowList extends React.Component {
 
   render() {
     const projects = this.state.projects.map((project) => {
-      return <MiniProjectItem project = {project} />
+
+      return <MiniProjectItem key = { project.project_id } project = {project} />
     })
 
     const text = projects.length === 1 ? "project" : "projects"

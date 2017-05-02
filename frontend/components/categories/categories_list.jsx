@@ -25,10 +25,10 @@ class CategoriesList extends React.Component {
 
     let categories;
     if (this.state.categoryInfo) {
-      categories = this.state.categoryNames.sort().map((name) => {
+      categories = this.state.categoryNames.sort().map((name, index) => {
         return(
-          <li>
-            <Link onClick={ this.handleViewCategories } to={ `/categories/${name}` }>{name}</Link>
+          <li key = { index }>
+            <Link onClick = { this.handleViewCategories } to = { `/categories/${name}` }>{name}</Link>
           </li>
         )
       })
