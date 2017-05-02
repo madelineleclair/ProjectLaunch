@@ -4,7 +4,7 @@ import MiniProjectItem from '../project/home_page/mini_project_index_item'
 const SearchResults = (props) => {
   const projects = props.projects.map((project) => {
 
-    return <MiniProjectItem key={project.id} project = {project} />;
+    return <MiniProjectItem key={project.project_id} project = {project} />;
   });
 
   let text;
