@@ -1,10 +1,10 @@
 import React from 'react';
 import FundingStatus from './funding_status';
-import RewardsShowList from './rewards_show_list'
+import RewardsShowList from './rewards_show_list';
 
 class ProjectShow extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
@@ -17,7 +17,7 @@ class ProjectShow extends React.Component {
 
   componentWillUnmount() {
     if (this.props.router.location.pathname !== `projects/${this.props.projectId}/contribution/new`) {
-      this.props.clearRewards()
+      this.props.clearRewards();
     }
   }
 
@@ -25,8 +25,8 @@ class ProjectShow extends React.Component {
     let fundingStatus;
 
     if (this.props.contributionsInfo) {
-      fundingStatus = <FundingStatus basicInfo={this.props.basicInfo}
-        contributionsInfo={this.props.contributionsInfo}/>;
+      fundingStatus = (<FundingStatus basicInfo={this.props.basicInfo}
+        contributionsInfo={this.props.contributionsInfo}/>);
     }
 
     const rewards = Object.values(this.props.rewards).map((reward) => {
@@ -78,27 +78,3 @@ class ProjectShow extends React.Component {
 }
 
 export default ProjectShow;
-
-
-
-
-
-
-
-
-//   <div>
-//     <section className="project-intro">
-//       <div className="owner-icon-and-title">
-//         <img src={this.props.basicInfo.owner_image} />
-//         <h2>{this.props.basicInfo.title}</h2>
-//       </div>
-//       <div className="owner-name-and-description">
-//         <span>
-//           <p>By</p>
-//           <p>{this.props.basicInfo.owner}</p>
-//         </span>
-//         <h3>{this.props.basicInfo.description}</h3>
-//       </div>
-//     </section>
-//   </div>
-// )
