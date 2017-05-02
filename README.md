@@ -10,7 +10,7 @@ Product Launch is a full stack web application inspired by Kickstarter for peopl
   The main feature of Project Launch is allowing users to create and display projects. Project information is held in the database in four different tables: Projects, Stories, Rewards, Contributions. The Projects table contains a boolean column called Launch. When a project is first created, this column defaults to false. Projects will not be seen by Project Launch visitors unless a project's owner clicks the launch button. This provides users with the ability to update and perfect their projects without having to worry about wasting their campaign days.
 
   One of the main features of project creation is the ability to create and delete rewards.
-  ![alt text] (https://github.com/madeline1991/ProjectLaunch/blob/master/docs/screenshots/create_rewards_screenshot.png?raw=true)
+  ![rewards]
 
   Rewards are a main component of Project Launch because they entice users to contribute to a project. Features can be created and deleted in real time. Individual rewards are created via a form. Once the reward has been created in rails, the information is added to the rewards object in the project slice of state. Rewards are held in state as an object for fast insertion and deletion.
 
@@ -40,7 +40,7 @@ Product Launch is a full stack web application inspired by Kickstarter for peopl
 
   ### Project Display and Search
   Once a project had been launched, it can be found via the search bar or the home page. The home page filters projects based on specific criteria. For example, the almost funded category finds the top three launched projects that have not been completely funded yet.
-  ![alt text] (https://github.com/madeline1991/ProjectLaunch/blob/master/docs/screenshots/nearly_funded_projects.png?raw=true)
+  ![nearly_funded_projects]
 
   Filtering out projects is accomplished with Active Record.
 
@@ -71,3 +71,6 @@ Product Launch is a full stack web application inspired by Kickstarter for peopl
 
     ### Videos
       Replace the main image on the project show page with a video
+
+![rewards]: ./docs/screenshots/create_rewards_screenshot.png
+![nearly_funded_projects]: ./docs/screenshots/nearly_funded_projects.png
