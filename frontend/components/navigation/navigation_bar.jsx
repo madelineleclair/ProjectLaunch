@@ -57,10 +57,12 @@ class NavigationBar extends React.Component {
                 <div>Start a project</div>
               </Link>
             </div>
-            <Link className="logo" to="/">
-              <section className="project-logo">PROJECT</section>
-              <section className="launch-logo">LAUNCH</section>
-            </Link>
+            <div className="logo-container">
+              <Link className="logo" to="/">
+                <section className="project-logo">PROJECT</section>
+                <section className="launch-logo">LAUNCH</section>
+              </Link>
+            </div>
             <div>
               <img className="search-bar-logo" onClick={this.handleSearch} src="https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/magnifying_glass_icon.png"/>
             </div>
@@ -78,10 +80,12 @@ class NavigationBar extends React.Component {
                 <div>Explore</div>
               </span>
             </div>
-          <Link className="logo" to="/">
-            <section className="project-logo">PROJECT</section>
-            <section className="launch-logo">LAUNCH</section>
-          </Link>
+            <div className="logo-container">
+              <Link className="logo" to="/">
+                <section className="project-logo">PROJECT</section>
+                <section className="launch-logo">LAUNCH</section>
+              </Link>
+            </div>
           <img className="search-bar-logo" onClick={this.handleSearch} src="https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/magnifying_glass_icon.png"/>
             <div className="login-logout-container">
               <Link to="/login">

@@ -17,7 +17,7 @@ image {
   height: auto;
 }
 
-a:hover, button:hover {
+a:hover, button:hover, input[type=file]::-webkit-file-upload-button {
   cursor: pointer;
 }
 
