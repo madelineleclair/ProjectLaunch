@@ -18,10 +18,10 @@
 }
 
 .navigation-bar a div, .navigation-bar span div {
-  height: 62%;
+  height: 59%;
   font-size: 13px;
   font-weight: 500;
-  padding-top: 20px
+  padding-top: 22px
 }
 
 .navigation-bar a div:hover, .navigation-bar span div:hover {
