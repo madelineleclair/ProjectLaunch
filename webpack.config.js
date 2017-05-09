@@ -23,11 +23,13 @@ plugins = plugins.concat(
 
 
 module.exports = {
+  context: __dirname,
   entry: './frontend/project_launch.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js',
   },
+  plugins: plugins,
   module: {
     loaders: [
       {
