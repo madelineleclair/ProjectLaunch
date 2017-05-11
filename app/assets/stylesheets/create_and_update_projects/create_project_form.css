@@ -5,12 +5,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 20px;
-  background: #fdfdfd;
+  background-image: url("./start_project_background.png");
+  /*background: #fdfdfd;*/
   color: #80809E;
 }
 
 .create-project-form-container {
   width: 29%;
+  background: white;
 }
 
 .create-project-container h1 {
