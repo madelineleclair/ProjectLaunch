@@ -10,6 +10,10 @@ class SearchBar extends React.Component {
     this.changeSearchStatus = this.changeSearchStatus.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.props.changeSearchBarStatus(false);
+  }
+
   handleSearchTerm(e) {
     const search_term = e.target.value;
     this.setState({ search_term });
@@ -31,12 +35,16 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="search-bar-container nav-bar">
-        <img src="https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/magnifying_glass_icon.png" />
-        <form className="search-form">
-          <input onChange= { this.handleSearchTerm } type="text" placeholder="Search..." value={ this.state.search_term } />
-          <input onClick = {this.handleSubmit} type="submit" />
-        </form>
-        <button onClick= { this.changeSearchStatus }>X</button>
+        <div className = "search-left">
+          <img src="https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/magnifying_glass_icon.png" />
+          <form className="search-form">
+            <input onChange= { this.handleSearchTerm } type="text" placeholder="Search..." value={ this.state.search_term } />
+            <input onClick = {this.handleSubmit} type="submit" />
+          </form>
+        </div>
+        <div className = "search-right">
+          <button onClick= { this.changeSearchStatus }>X</button>
+        </div>
       </div>
     );
   }

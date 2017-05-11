@@ -3,8 +3,7 @@ import { fetchProjects } from './../../actions/project_actions';
 import { changeSearchBarStatus } from '../../actions/navigation_actions';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state) => {
-
+const mapStateToProps = (state, ownProps) => {
   return {
     projects: Object.values(state.projects),
     search: state.navigationBar.search,
