@@ -2,11 +2,16 @@
   padding: 35px;
 }
 
-.categories-list-container h1 {
+.categories-and-remove-button {
   border-bottom: 1px solid #CEEBD7;
-  color: #05AF3C;
+  display: flex;
   font-size: 28px;
   margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.categories-and-remove-button h1, .categories-and-remove-button button {
+  color: #05AF3C;
 }
 
 .categories-list-container ul li {

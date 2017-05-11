@@ -5,6 +5,11 @@ import CategoriesList from './categories/categories_list';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.resetCategoryView = this.resetCategoryView.bind(this);
+  }
+
+  resetCategoryView() {
+    this.props.setViewCategories(false);
   }
 
   render() {
@@ -12,10 +17,13 @@ class App extends React.Component {
     if (this.props.viewCategories) {
       return (
         <div className="categories-list-container">
-          <h1>Categories</h1>
+          <div className = "categories-and-remove-button">
+            <h1>Categories</h1>
+            <button onClick = { this.resetCategoryView }>X</button>
+          </div>
           <ul>
-            <CategoriesList fetchCategories={ this.props.fetchCategories }
-              setViewCategories={ this.props.setViewCategories } />
+            <CategoriesList fetchCategories = { this.props.fetchCategories }
+              setViewCategories = { this.props.setViewCategories } />
           </ul>
         </div>
       )
