@@ -12,7 +12,7 @@ const SearchResults = (props) => {
     text = (
       <div className="search-length">
         <h2>
-          Opps, looks like we couldn't find any results. Why not try broadening
+          Looks like we couldn't find any results. Why not try broadening
           your search?
         </h2>
       </div>
