@@ -236,7 +236,7 @@ reward10 = Reward.create(project_id: project6.id, title: "Thank you pledge", ple
 reward11 = Reward.create(project_id: project6.id, title: "Mini Model", pledge_amount: 30,
   description: "Receive a mini model of the hoverboard", delivery_date: Time.new())
 
-reward12 = Reward.create(project_id: project7.id, title: "Ride", pledge_amount: 100,
+reward12 = Reward.create(project_id: project6.id, title: "Ride", pledge_amount: 100,
   description: "Take a 10 minute ride on the hoverboard", delivery_date: Time.new())
 
 reward13 = Reward.create(project_id: project8.id, title: "Say name", pledge_amount: 10,
@@ -248,8 +248,8 @@ reward14 = Reward.create(project_id: project8.id, title: "Recipe Book", pledge_a
 reward15 = Reward.create(project_id: project8.id, title: "Receive a Piece of the sandwich", pledge_amount: 75,
   description: "Receive a piece of the sandwich", delivery_date: Time.new())
 
-reward15 = Reward.create(project_id: project9.id, title: "Good Feelings", pledge_amount: 5,
-  description: "Gain good feelings from supporting a growing business", delivery_date: Time.new())
+reward15 = Reward.create(project_id: project9.id, title: "Good Vibes", pledge_amount: 5,
+  description: "Gain good vibes from supporting a growing business", delivery_date: Time.new())
 
 reward16 = Reward.create(project_id: project9.id, title: "One box of marshmallows", pledge_amount: 25,
   description: "Receive a box of 4 different marshmallows", delivery_date: Time.new())
@@ -260,7 +260,7 @@ reward17 = Reward.create(project_id: project9.id, title: "Big box of marshmallow
 reward18 = Reward.create(project_id: project9.id, title: "Extra large marshmallows", pledge_amount: 65,
   description: "Receive a box of 12 extra large marshmallows", delivery_date: Time.new())
 
-reward19 = Reward.create(project_id: project10.id, title: "Early Bird", pledge_amount: 30,
+reward19 = Reward.create(project_id: project10.id, title: "Early Bird Discount", pledge_amount: 30,
   description: "Receive $10 off your purchase of Munchkin", delivery_date: Time.new())
 
 reward20 = Reward.create(project_id: project10.id, title: "Munchkin",
@@ -272,10 +272,10 @@ reward21 = Reward.create(project_id: project10.id, title: "Super Munchkin", pled
 reward22 = Reward.create(project_id: project11.id, title: "Take a photo with the Tardis", pledge_amount: 25,
   description: "Take a photo of the Tardis", delivery_date: Time.new())
 
-reward23 = Reward.create(project_id: project11.id, title: "Mini Model", pledge_amount: 45,
+reward23 = Reward.create(project_id: project11.id, title: "Mini Tardis Model", pledge_amount: 45,
   description: "Receive a mini model of the Tardis", delivery_date: Time.new())
 
-reward24 = Reward.create(project_id: project11.id, title: "Take a ride", pledge_amount: 150,
+reward24 = Reward.create(project_id: project11.id, title: "Take a ride on the Tardis", pledge_amount: 150,
   description: "Take a ride in the Tardis", delivery_date: Time.new())
 
 reward25 = Reward.create(project_id: project12.id, title: "Good Feelings", pledge_amount: 5,
@@ -290,8 +290,8 @@ reward27 = Reward.create(project_id: project12.id, title: "Recipe book", pledge_
 reward28 = Reward.create(project_id: project13.id, title: "Take a photo with the Millennium Falcon", pledge_amount: 25,
   description: "Take a photo of the Tardis", delivery_date: Time.new())
 
-reward29 = Reward.create(project_id: project13.id, title: "Mini Model", pledge_amount: 45,
-  description: "Receive a mini model of the Fillennium Falcon", delivery_date: Time.new())
+reward29 = Reward.create(project_id: project13.id, title: "Mini Millennium Falcon Model", pledge_amount: 45,
+  description: "Receive a mini model of the Millennium Falcon", delivery_date: Time.new())
 
 reward30 = Reward.create(project_id: project13.id, title: "Take a ride", pledge_amount: 150,
   description: "Take a ride in the Millennium Falcon", delivery_date: Time.new())
@@ -305,11 +305,34 @@ reward32 = Reward.create(project_id: project14.id, title: "Indoor Garden", pledg
 reward33 = Reward.create(project_id: project14.id, title: "Indoor Garden + Special Gift", pledge_amount: 100,
   description: "Receive an indoor garden plus a special gift that can only be found here on Project Launch", delivery_date: Time.new())
 
-contribution1 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project1.id, amount: 500, reward_id: reward1.id)
-contribution2 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project2.id, amount: 500, reward_id: reward2.id)
-contribution3 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 200, reward_id: reward3.id)
-contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 250, reward_id: reward3.id)
-contribution5 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 300, reward_id: reward6.id)
-contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
-contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
-contribution4 = Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 500, reward_id: reward6.id)
+reward34 = Reward.create(project_id: project7.id, title: "Early Bird Glasses", pledge_amount: 600,
+  description: "Receive a pair of glasses", delivery_date: Time.new())
+
+Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project1.id, amount: 500, reward_id: reward1.id)
+Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project2.id, amount: 500, reward_id: reward2.id)
+Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 200, reward_id: reward3.id)
+Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 250, reward_id: reward3.id)
+Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 300, reward_id: reward6.id)
+Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
+Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 40, reward_id: reward8.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project7.id, amount: 600, reward_id: reward34.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
