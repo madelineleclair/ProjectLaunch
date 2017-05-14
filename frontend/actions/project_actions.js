@@ -7,6 +7,7 @@ export const RECEIVE_REWARDS = "RECEIVE_REWARDS";
 export const RECEIVE_REWARD = "RECEIVE_REWARD";
 export const REMOVE_REWARD = "REMOVE_REWARD";
 export const RECEIVE_ALMOST_FUNDED = "ALMOST_FUNDED";
+export const RECEIVE_POPULAR = "POPULAR";
 export const RECEIVE_CONTRIBUTIONS = "RECEIVE_CONTRIBUTIONS";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const RECEIVE_CONTRIBUTION = "RECEIVE_CONTRIBUTION";
@@ -25,7 +26,6 @@ const receiveProjects = (projects) => {
     projects
   };
 };
-
 
 const receiveStory = (story) => {
   return {
@@ -65,6 +65,13 @@ export const clearRewards = () => {
 const receiveAlmostFunded = (projects) => {
   return {
     type: RECEIVE_ALMOST_FUNDED,
+    projects
+  };
+};
+
+const receivePopular = (projects) => {
+  return {
+    type: RECEIVE_POPULAR,
     projects
   };
 };
@@ -172,6 +179,12 @@ export const fetchProjects = (fetch) => (dispatch) => {
 export const fetchAlmostFunded = (fetch) => (dispatch) => {
   return ProjectUtil.fetchProjects(fetch).then((projects) => {
     dispatch(receiveAlmostFunded(projects));
+  });
+};
+
+export const fetchPopular = (fetch) => (dispatch) => {
+  return ProjectUtil.fetchProjects(fetch).then((projects) => {
+    dispatch(receivePopular(projects));
   });
 };
 

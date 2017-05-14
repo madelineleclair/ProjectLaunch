@@ -13,7 +13,16 @@ class Api::ProjectsController < ApplicationController
          .joins(:contributions, :user)
          .group("projects.id", 'users.name')
          .having('launch = true', "goal > sum(amount)")
-         .order("(sum(amount) * 100) / goal DESC").limit(4)
+         .order("(sum(amount) * 100) / goal DESC").limit(6)
+       when 'popular'
+         @projects = Project.select(:id, :title, :description,
+         :location, :goal, :launch_date, :duration,
+         'users.name as owner', 'sum(amount) as funding',
+         :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+         .joins(:contributions, :user)
+         .group("projects.id", 'users.name')
+         .having('launch = true', "goal > sum(amount)")
+         .order("count(*) DESC").limit(6)
        when 'search'
          searches = Project.search_for(params[:fetch][:searchTerm])
          @projects = searches.select(:id, :title, :description, :location, :goal, :launch_date,

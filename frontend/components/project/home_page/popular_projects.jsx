@@ -1,23 +1,23 @@
 import React from 'react';
 import MiniProjectItem from './mini_project_index_item';
 
-class AlmostFunded extends React.Component {
+class Popular  extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    this.props.fetchAlmostFunded({fetchType: 'almostFunded'});
+    this.props.fetchPopular({fetchType: 'popular'});
   }
 
   render() {
-    const projects =  this.props.almostFunded.map((project) => {
+    const projects =  this.props.popular.map((project) => {
         return <MiniProjectItem key={project.project_id} project={project} />;
       });
 
     return (
-      <div className="almost-funded-container">
-        <h3>Nearly funded projects</h3>
+      <div className="popular-projects-container">
+        <h3>Most popular projects</h3>
         <ul>
           {projects}
         </ul>
@@ -26,4 +26,4 @@ class AlmostFunded extends React.Component {
   }
 }
 
-export default AlmostFunded;
+export default Popular;

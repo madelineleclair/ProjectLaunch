@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from './carousel';
 import Categories from './categories';
 import AlmostFundedContainer from './almost_funded_projects_container';
+import PopularContainer from './popular_projects_container';
 
 const HomePage = (props) => {
   return (
@@ -12,6 +13,9 @@ const HomePage = (props) => {
       <div className='home-page-categories-container'>
         <div className="home-page-almost-funded">
           <AlmostFundedContainer />
+        </div>
+        <div className="home-page-popular">
+          <PopularContainer />
         </div>
       </div>
     </div>
