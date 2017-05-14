@@ -12,9 +12,10 @@ class Api::ProjectsController < ApplicationController
          :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
          .joins(:contributions, :user)
          .group("projects.id", 'users.name')
-         .where('launch = true', 'goal > funding')
-         .order('funding DESC').limit(3)
+         .having('launch = true', "goal > sum(amount)")
+         .order("(sum(amount) * 100) / goal DESC").limit(4)
        when 'search'
+         #this is not returning right because contributions has an inner join
          searches = Project.search_for(params[:fetch][:searchTerm])
          @projects = searches.select(:id, :title, :description, :location, :goal, :launch_date,
           :duration, 'users.name as owner', 'sum(amount) as funding',
