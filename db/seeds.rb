@@ -105,6 +105,30 @@ project14 = Project.create(user_id: user3.id, title: "Indoor Garden",
   location: "Boston, MA", launch: true, launch_date: Time.new(),
   category: "Technology", goal: 75000, duration: 60)
 
+project15 = Project.create(user_id: user3.id, title: "Giant Dumpling",
+  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/xialongboa.jpg",
+  description: "Giant xialongboa dumpling filled with chicken and crab soup",
+  location: "New York City, NY", launch: true, launch_date: Time.new(),
+  category: "Food", goal: 25000, duration: 60)
+
+project16 = Project.create(user_id: user3.id, title: "Make a taco",
+  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/taco.jpg",
+  description: "Making delicious shrimp tacos from scratch",
+  location: "New York City, NY", launch: true, launch_date: Time.new(),
+  category: "Food", goal: 500, duration: 55)
+
+project17 = Project.create(user_id: user5.id, title: "Homeshu",
+  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/umeshu.jpg",
+  description: "Making umeshu from scratch",
+  location: "New York City, NY", launch: true, launch_date: Time.new(),
+  category: "Food", goal: 400, duration: 55)
+
+project18 = Project.create(user_id: user5.id, title: "Chinese Food",
+  immage: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/pork_belly.jpg",
+  description: "Making dong pao pork from scratch",
+  location: "New York City, NY", launch: true, launch_date: Time.new(),
+  category: "Food", goal: 300, duration: 55)
+
 story1 = Story.create(project_id: project1.id, description:
   "When Liz Blackburn, who won a Nobel Prize for her work in genetics, took questions, Goldie Hawn, regal on a comfy sofa, purred, “I have a question about the mitochondria. I’ve been told about a molecule called glutathione that helps the health of the cell?” Glutathione is a powerful antioxidant that protects cells and their mitochondria, which provide energy; some in Hollywood call it “the God molecule.” But taken in excess it can muffle a number of bodily repair mechanisms, leading to liver and kidney problems or even the rapid and potentially fatal sloughing of your skin. Blackburn gently suggested that a varied, healthy diet was best, and that no single molecule was the answer to the puzzle of aging.
 
@@ -181,20 +205,62 @@ story11 = Story.create(project_id: project11.id, description: "The Tardis the
   of our Tardis is accurate and the Doctor to help us navigate the Tardis' difficult personality.")
 
 story12 = Story.create(project_id: project12.id, description: "We’re all about awakening your taste buds.
-There’s no ice cream here—that is, until we make it right in front of you. Once you order, we pull the lever
-and the delicious science of liquid nitrogen does its magic, flash freezing your ice cream in a cloud of ultra cool vapor. It’s Science.",
-risks_and_challenges: "The restaurant industry is extremely challenging. Every customer experience influences whether the
-customer will return again. Our founder has been trained as a chef and has experience running multiple restaurants.")
+  There’s no ice cream here—that is, until we make it right in front of you. Once you order, we pull the lever
+  and the delicious science of liquid nitrogen does its magic, flash freezing your ice cream in a cloud of ultra cool vapor. It’s Science.",
+  risks_and_challenges: "The restaurant industry is extremely challenging. Every customer experience influences whether the
+  customer will return again. Our founder has been trained as a chef and has experience running multiple restaurants.")
 
 story13 = Story.create(project_id: project13.id, description: "The Millennium Falcon, originally known as YT-1300 492727ZED, was a Corellian YT-1300f light freighter used by the smugglers Han Solo and Chewbacca during the Galactic Civil War. It was previously owned by Lando Calrissian, who lost it to Solo in a game of sabacc.
-Its aged appearance belied numerous advanced modifications to boost the ship's speed, weapons and shield, including a hyperdrive engine among the fastest in the entire galaxy, enabling it to outrun Imperial Star Destroyers. It included sensor-proof smuggling compartments, which were used during the rescue of Princess Leia Organa to evade Imperial stormtroopers.",
-risks_and_challenges: "This ship may look old, but it is ready for action. Our biggest challenge is finding a pilot, but Han Solo is more than capable.")
+  Its aged appearance belied numerous advanced modifications to boost the ship's speed, weapons and shield, including a hyperdrive engine among the fastest in the entire galaxy, enabling it to outrun Imperial Star Destroyers. It included sensor-proof smuggling compartments, which were used during the rescue of Princess Leia Organa to evade Imperial stormtroopers.",
+  risks_and_challenges: "This ship may look old, but it is ready for action. Our biggest challenge is finding a pilot, but Han Solo is more than capable.")
 
 story14 = Story.create(project_id: project14.id, description: "Green is in. The indoor garden allows users to grow plants
-inside your home, apartment, or company. Small, easy to mantain, and efficient, the indoor garden is perfect for people looking to grow
-plants and vegetables year round or just green up the place.",
-risks_and_challenges: "Making a stylish and efficient product has been our biggest challenge. Through careful planning, trail, and error
-we have been able to overcome these issues.")
+  inside your home, apartment, or company. Small, easy to mantain, and efficient, the indoor garden is perfect for people looking to grow
+  plants and vegetables year round or just green up the place.",
+  risks_and_challenges: "Making a stylish and efficient product has been our biggest challenge. Through careful planning, trail, and error
+  we have been able to overcome these issues.")
+
+story15 = Story.create(project_id: project15.id, description: "Making xialongboa from scratch.
+  Xiaolongbao is a type of steamed bun (baozi) from the Jiangnan region of China,
+  especially associated with Shanghai and Wuxi. It is traditionally prepared in xiaolong,
+  small bamboo steaming baskets, which give them their name. Xiaolongbao are
+  often referred to as a kind of "dumpling", but should not be confused with
+  British or American-style dumplings nor with Chinese jiaozi. Similarly, they
+  are considered a kind of "soup dumpling" but should not be confused with other larger varieties of tang bao. ",
+  risks_and_challenges: "Making xialongboa from scratch is extremely difficult.
+  Making the dough, creating rich and flavor broth, and folding the dumplings are all extremely
+  challenging. I have spent hours pouring over these areas to perfect them all.")
+
+story16 = Story.create(project_id: project16.id, description: "I'm making tacos from scratch. Tacos
+  are a a traditional Mexican dish composed of a corn or wheat tortilla folded or rolled around a
+  filling. A taco can be made with a variety of fillings, including beef, pork, chicken, seafood,
+  vegetables, and cheese, allowing for great versatility and variety. A taco is generally eaten
+  without utensils and is often accompanied by garnishes such as salsa, chili pepper, avocado,
+  guacamole, cilantro (coriander), tomatoes, onions, and lettuce.",
+  risks_and_challenges: "I have spent hours pouring of recipes to perfect the making of the tacos. Everything from the
+  filling, to the tortilla will be made from scratch.")
+
+story17 = Story.create(project_id: project17.id, description: "I am making umeshu from scratch. Umeshu is a
+  Japanese liqueur made by steeping ume fruits (while still unripe and green) in
+  alcohol (焼酎 shōchū?) and sugar. It has a sweet, sour taste, and an alcohol
+  content of 10–15%. The taste and aroma of umeshu can appeal to even those people
+  who normally dislike alcohol. Famous brands of umeshu include Choya and Takara
+  Shuzo. Varieties are available with whole ume fruits contained in the bottle,
+  and some people make their own umeshu at home.",
+  risks_and_challenges: "Although securing the sugar and alcohol needed to make
+  the umeshu is relatively easy, obtaining the plums can be tricky. To overcome this challenge,
+  I have contracted with multiple Japanese grocery stores.")
+
+story18 = Story.create(project_id: project18.id, description: "I am on a mission to make
+  dongpao pork. Dongpo pork (traditional Chinese: 東坡肉; simplified Chinese: 东坡肉; pinyin: dōngpōròu)
+  is a Hangzhou dish which is made by pan-frying and then red cooking pork belly.
+  The pork is cut thick, about 2 inches square, and should consist equally of fat and
+  lean meat. The skin is left on. The mouthfeel is oily but not greasy and the
+  dish is fragrant with wine. The dish is named after the famed Song Dynasty poet and gastronome Su Dongpo.",
+  risks_and_challenges: "Finding a decent dongpao pork recipe can be extremely challenging.
+  Great recipes are often not translated, and translated reciples are often not great. To
+  overcome this challenge, I have traveled accross China, researching different types of Chinese food and
+  purchasing many cookbooks.")
 
 reward1 = Reward.create!(project_id: project1.id,
 title: "Spend a day hanging out with me",
@@ -308,13 +374,54 @@ reward33 = Reward.create(project_id: project14.id, title: "Indoor Garden + Speci
 reward34 = Reward.create(project_id: project7.id, title: "Early Bird Glasses", pledge_amount: 600,
   description: "Receive a pair of glasses", delivery_date: Time.new())
 
+reward35 = Reward.create(project_id: project15.id, title: "Say your name", pledge_amount: 5,
+  description: "I will say your name while making the dumpling", delivery_date: Time.new())
+
+reward36 = Reward.create(project_id: project15.id, title: "Dumpling cookbook", pledge_amount: 35,
+  description: "Receive a copy of the recipes used to make the dumpling", delivery_date: Time.new())
+
+reward37 = Reward.create(project_id: project15.id, title: "Receive a dumpling", pledge_amount: 55,
+  description: "I will send you a dumpling that I make", delivery_date: Time.new())
+
+reward38 = Reward.create(project_id: project16.id, title: "Say your name while making tacos", pledge_amount: 5,
+  description: "I will say your name while making the tacos", delivery_date: Time.new())
+
+reward39 = Reward.create(project_id: project16.id, title: "Taco cookbook", pledge_amount: 35,
+  description: "Receive a copy of the recipes used to make the taco", delivery_date: Time.new())
+
+reward40 = Reward.create(project_id: project16.id, title: "Receive a taco", pledge_amount: 55,
+  description: "I will send you a taco that I make", delivery_date: Time.new())
+
+reward41 = Reward.create(project_id: project17.id, title: "Say your name while making umeshu", pledge_amount: 5,
+  description: "I will say your name while preparing the umeshu", delivery_date: Time.new())
+
+reward42 = Reward.create(project_id: project17.id, title: "Umeshu recipe book", pledge_amount: 35,
+  description: "Receive a copy of the recipe used to make the umeshu", delivery_date: Time.new())
+
+reward43 = Reward.create(project_id: project17.id, title: "Receive some umeshu", pledge_amount: 55,
+  description: "I will send you a can of the umeshu that I make", delivery_date: Time.new())
+
+reward44 = Reward.create(project_id: project18.id, title: "Say your name while making dongpao pork", pledge_amount: 5,
+  description: "I will say your name while making the dongpao pork", delivery_date: Time.new())
+
+reward45 = Reward.create(project_id: project18.id, title: "Chinese cookbook", pledge_amount: 35,
+  description: "Receive a copy of the recipe used to make the dongpao pork and
+  other great Chinese recipes", delivery_date: Time.new())
+
+reward46 = Reward.create(project_id: project18.id, title: "Receive some dongpao pork", pledge_amount: 55,
+  description: "I will send you some of the dongpao pork that I make", delivery_date: Time.new())
+
 Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project1.id, amount: 500, reward_id: reward1.id)
+
 Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project2.id, amount: 500, reward_id: reward2.id)
+
 Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 200, reward_id: reward3.id)
 Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project3.id, amount: 250, reward_id: reward3.id)
+
 Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 300, reward_id: reward6.id)
 Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
 Contribution.create!(name: "suzzy", email_address:'suzzy@gmail.com', project_id: project4.id, amount: 250, reward_id: reward5.id)
+
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 40, reward_id: reward8.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
@@ -322,6 +429,7 @@ Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project5.id, amount: 30, reward_id: reward7.id)
+
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
@@ -330,9 +438,46 @@ Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project6.id, amount: 30, reward_id: reward11.id)
+
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project7.id, amount: 600, reward_id: reward34.id)
+
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
 Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project8.id, amount: 30, reward_id: reward14.id)
+
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 5, reward_id: reward15.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 5, reward_id: reward15.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 5, reward_id: reward15.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 5, reward_id: reward15.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 5, reward_id: reward15.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 5, reward_id: reward15.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 5, reward_id: reward15.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 45, reward_id: reward17.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 45, reward_id: reward17.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 45, reward_id: reward17.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 45, reward_id: reward17.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 45, reward_id: reward17.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project9.id, amount: 45, reward_id: reward17.id)
+
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project10.id, amount: 30, reward_id: reward19.id)
+
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project11.id, amount: 25, reward_id: reward22.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project11.id, amount: 25, reward_id: reward22.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project11.id, amount: 25, reward_id: reward22.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project11.id, amount: 25, reward_id: reward22.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project11.id, amount: 25, reward_id: reward22.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project11.id, amount: 25, reward_id: reward22.id)
+Contribution.create!(name: Faker::Name.name, email_address:Faker::Internet.email, project_id: project11.id, amount: 25, reward_id: reward22.id)
