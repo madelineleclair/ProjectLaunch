@@ -44,7 +44,12 @@
   top: 40%;
 }
 
-.slick-next:focus {
+/*.slick-next:focus {
   color: black;
   opacity: none;
+}*/
+
+.slick-dots {
+  bottom: 100px;
+  margin: none;
 }
