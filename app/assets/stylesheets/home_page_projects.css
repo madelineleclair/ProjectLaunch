@@ -1,3 +1,7 @@
+.home-page-almost-funded, .search-results-container {
+  padding: 20px;
+}
+
 .almost-funded-container, .search-results-container, .popular-projects-container {
   margin-bottom: 30px;
   display: flex;
@@ -14,9 +18,11 @@
 .almost-funded-container ul, .popular-projects-container ul, .search-results{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+
 }
 
 .almost-funded-container ul li, .popular-projects-container ul li, .search-results li {
   margin-bottom: 40px;
+  margin-right: 15px;
 }
