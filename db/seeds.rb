@@ -124,7 +124,7 @@ project17 = Project.create(user_id: user5.id, title: "Homeshu",
   category: "Food", goal: 400, duration: 55)
 
 project18 = Project.create(user_id: user5.id, title: "Chinese Food",
-  immage: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/pork_belly.jpg",
+  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/pork_belly.jpg",
   description: "Making dong pao pork from scratch",
   location: "New York City, NY", launch: true, launch_date: Time.new(),
   category: "Food", goal: 300, duration: 55)
@@ -224,9 +224,9 @@ story15 = Story.create(project_id: project15.id, description: "Making xialongboa
   Xiaolongbao is a type of steamed bun (baozi) from the Jiangnan region of China,
   especially associated with Shanghai and Wuxi. It is traditionally prepared in xiaolong,
   small bamboo steaming baskets, which give them their name. Xiaolongbao are
-  often referred to as a kind of "dumpling", but should not be confused with
+  often referred to as a kind of \"dumpling\", but should not be confused with
   British or American-style dumplings nor with Chinese jiaozi. Similarly, they
-  are considered a kind of "soup dumpling" but should not be confused with other larger varieties of tang bao. ",
+  are considered a kind of \"soup dumpling\" but should not be confused with other larger varieties of tang bao. ",
   risks_and_challenges: "Making xialongboa from scratch is extremely difficult.
   Making the dough, creating rich and flavor broth, and folding the dumplings are all extremely
   challenging. I have spent hours pouring over these areas to perfect them all.")
