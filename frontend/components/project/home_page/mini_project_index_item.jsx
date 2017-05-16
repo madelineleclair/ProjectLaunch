@@ -11,7 +11,7 @@ class MiniProjectItem extends React.Component {
   }
 
   render() {
-
+    const funding = this.project.funding || "0"
     return (
         <li className="mini-project-container">
           <div className='mini-project-image'>
@@ -35,7 +35,7 @@ class MiniProjectItem extends React.Component {
               <div>funded</div>
             </section>
             <section className="pledged">
-              <div>${this.project.funding}</div>
+              <div>${funding}</div>
               <div>pledged</div>
             </section>
             <section className="days-to-go">

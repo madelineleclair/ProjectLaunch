@@ -28,6 +28,7 @@
 .mini-project-text h4 {
   font-weight: bold;
   margin-bottom: 7px;
+  text-transform: capitalize;
 }
 
 .mini-project-text p {
