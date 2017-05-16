@@ -5,7 +5,7 @@ const Carousel = () => {
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     arrows: true,
     dots: true,
     infinite: true,

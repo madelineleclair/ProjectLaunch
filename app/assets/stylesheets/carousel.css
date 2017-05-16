@@ -15,20 +15,20 @@
     margin-left: 30px;
     display: flex;
     align-items: center;
+    top: 35%;
     }
 
   .slick-next {
     z-index: 1;
-    margin-right: 40px;
+    right: 20px;
+    top: 35%;
   }
 
 .slick-prev:before {
     content: '\2039';
-    /*content: url('left_arrow.png');
-    opacity: 1;*/
     color: black;
     align-self: center;
-    zoom: 300%;
+    zoom: 500%;
 }
 
 .slick-next:before {
@@ -39,8 +39,9 @@
   color: black;
   transform: rotateY(180deg);
   align-self: center;
-  zoom: 300%;
+  zoom: 500%;
   align-self: center;
+  top: 40%;
 }
 
 .slick-next:focus {
