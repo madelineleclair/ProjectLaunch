@@ -18,10 +18,11 @@ const SearchResults = (props) => {
       </div>
     );
   } else {
+    const singularOrPlural = projects.length === 1 ? "project" : "projects"
     text = (
       <div className="search-length">
         <h1>Explore</h1>
-        <h1>{ projects.length } projects</h1>
+        <h1>{ projects.length } {singularOrPlural}</h1>
       </div>
     );
   }
