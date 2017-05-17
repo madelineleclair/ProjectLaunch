@@ -1,6 +1,5 @@
 # Product Launch
-[Project Launch][livesite]
-[livesite]: www.projectlaunch.nyc
+[Project Launch]: www.projectlaunch.nyc
 
 Product Launch is a full stack web application inspired by Kickstarter for people and companies to create and fund their projects. It uses Ruby on Rails on the backend, a PostgreSQL database, React.js with Redux for the frontend and a multiple outside libraries, such as React-Slick and pg_earch, to provide additional functionality and improve user experience.
 
