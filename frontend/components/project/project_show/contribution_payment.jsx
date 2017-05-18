@@ -100,7 +100,7 @@ class CreateContribution extends React.Component {
                   <h4>Email</h4>
                   <input onChange={ this.handleEmail } value={ this.state.email } />
                 </div>
-                <div className="experation-and-security">
+                <div className="expiration-and-security">
                   <div>
                     <h4>Expiration</h4>
                     <select onChange={ this.handleExpirationMonth}>
