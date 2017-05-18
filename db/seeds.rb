@@ -27,7 +27,7 @@ user5 = User.create(name: Faker::Name.name, email: Faker::Internet.email, passwo
 # user1 = User.create!(name: "Frank Hu", email: "frank@gmail.com", password: "password")
 
 project1 = Project.create!(user_id: user1.id, title: "Living Forever",
-  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/cute_dog.jpg",
+  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/MadScientist.jpg",
   description: "I am reseaching how to live forever so I finally have time to do all the things I want to do.",
   location: "New York City, NY", goal: 600, launch: true, launch_date: Time.new, category: "Technology", duration: 30)
 
@@ -76,7 +76,7 @@ project9 = Project.create(user_id: user5.id, title: "New age marshmallows",
   launch_date: Time.new(), category: "Food", duration: 55)
 
 project10 = Project.create(user_id: user4.id, title: "Munchkin",
-  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/munchkin.jpg",
+  image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/munchkin_logo.png",
   description: "Compete in a dungeon adventure card game to kill monsters, gain treasure, grab magic items and reach level 10",
   goal: 15000, location: "Nashville, TN", launch: true,
   launch_date: Time.new(), category: "Games", duration: 45)
@@ -148,9 +148,11 @@ story3 = Story.create(project_id: project3.id, description: "Super Smash Bros. i
   The gameplay objective differs from that of traditional fighters by aiming to knock opponents off of the stage instead of depleting life bars. The original Super Smash Bros., released in 1999 for the Nintendo 64, had a small budget and was originally a Japan-only release, but its domestic success led to a worldwide release. The series achieved even greater success with the release of Super Smash Bros. Melee, which was released in 2001 for the GameCube and became the best-selling game on that system. A third installment, Super Smash Bros. Brawl, was released in 2008 for the Wii. Although HAL Laboratory has been the developer of the first two titles, the third game was developed through the collaboration of several companies. The fourth and fifth installments,[1] Super Smash Bros. for Nintendo 3DS and Wii U, were released in 2014 for the Nintendo 3DS and Wii U, respectively. The 3DS installment was the first series title to be released on a handheld platform.",
   risks_and_challenges: "None to think of. Everyone loves Super Smash Bros.")
 
-story4 = Story.create(project_id: project4.id, description: "A dog a day is a web service dedicated to providing usings the cuteness of dogs, even if they do not own one.
-  Each day, a user will receive a new picture of a cute dog. Pictures will be based off of users' individual preferences and each user will receive unique photos.",
-  risks_and_challenges: "We are a young company and the online space can be extremely competitive. Our team has experience in marketing, dog walking, retail sales of dog related products, breeding, e-commerce. We
+story4 = Story.create(project_id: project4.id, description: "A dog a day is a web service dedicated to providing users with
+ the cuteness of dogs, even if they do not own one. Each day, a user will receive a new picture of a cute dog.
+   Pictures will be based off of users' individual preferences and each user will receive unique photos.",
+  risks_and_challenges: "We are a young company and the online space can be extremely competitive. Our team has
+  experience in marketing, dog walking, retail sales of dog related products, breeding, and e-commerce. We
   believe that our diverse background makes us able to overcome the challenges of the competitive market.")
 
 story5 = Story.create(project_id: project5.id, description: "Code Monkey Island is the most exciting educational board game in the world.
