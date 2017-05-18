@@ -15,7 +15,7 @@ const Carousel = () => {
     <div className='outer-slider-container'>
         <Slider {...settings}>
           <img src={window.lexus_hover} />
-          <img src={window.alinea}/>
+          <img src={window.tournament}/>
           <img src={window.code_monkey_island} />
         </Slider>
     </div>
