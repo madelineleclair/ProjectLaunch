@@ -14,13 +14,10 @@
   font-weight: bold;
 }
 
-/*.search-bar-container button {
-  padding-left: 20px;
-}*/
 
 .search-form {
   height: 100%;
-  width: 15%;
+  width: 70%;
 }
 
 .search-bar-container img {
