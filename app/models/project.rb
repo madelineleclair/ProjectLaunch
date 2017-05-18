@@ -23,7 +23,16 @@
 class Project < ActiveRecord::Base
   include PgSearch
 
-  pg_search_scope :search_for, against: [:title, :description, :location, :category], using: :tsearch
+  pg_search_scope :search_for, against:
+    {
+      title: "A",
+      description: "B",
+      location: "C",
+      category: "D"
+      },
+      using: {
+                tsearch: {prefix: true}
+              }
   validates :category, :user, presence: true
   validates :category, inclusion: %w(Untitled Technology Food Games)
   has_attached_file :image, default_url: "missing_picture.png"
