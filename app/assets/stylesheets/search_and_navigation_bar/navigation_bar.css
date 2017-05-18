@@ -8,7 +8,6 @@
 .navigation-bar {
   flex-direction: row;
   justify-content: space-between;
-  /*align-items: center;*/
   padding: 0px 10px;
 }
 
@@ -18,8 +17,8 @@
 }
 
 .navigation-bar a div, .navigation-bar span div {
-  height: 59%;
-  font-size: 13px;
+  height: 58%;
+  font-size: 16px;
   font-weight: 500;
   padding-top: 23px
 }
@@ -82,6 +81,7 @@
 .logo {
   display: flex;
   align-items: center;
+  font-size: 20px;
 }
 
 .project-logo {
@@ -89,7 +89,7 @@
 }
 
 .launch-logo {
-  color: green;
+  color: #2BDE73;
 }
 
 .login-logout-container, .user-image {
