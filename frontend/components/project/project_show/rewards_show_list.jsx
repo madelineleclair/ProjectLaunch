@@ -13,7 +13,6 @@ class RewardsShowList extends React.Component {
     this.handleSelect = this.handleSelect.bind(this);
     this.updateContribution = this.updateContribution.bind(this);
     this.handlePendingTransaction = this.handlePendingTransaction.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSelect(e) {
@@ -30,11 +29,6 @@ class RewardsShowList extends React.Component {
     this.props.receivePendingReward(this.state.id);
     this.props.receivePendingPayment(this.state.amount);
   }
-  //
-  // handleSubmit(e) {
-  //   this.props.createContribution(this.state)
-  //   //this is for submitting contributions. I don't think you need to be a user to contribute. Oh, well, check anyway
-  // }
 
   render() {
 

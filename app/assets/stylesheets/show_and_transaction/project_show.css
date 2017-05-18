@@ -157,6 +157,11 @@
   margin-top: 21px;
 }
 
+.contribution-count {
+  display: flex;
+  margin-top: 10px;
+}
+
 .contribution-count p {
   margin-right: 4px;
 }
