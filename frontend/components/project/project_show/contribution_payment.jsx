@@ -13,8 +13,8 @@ class CreateContribution extends React.Component {
       amount: this.props.amount };
     this.handleCardNumber = this.handleCardNumber.bind(this);
     this.handleName = this.handleName.bind(this);
-    this.handleExperationMonth = this.handleExperationMonth.bind(this);
-    this.handleExperationYear = this.handleExperationYear.bind(this);
+    this.handleExpirationMonth = this.handleExpirationMonth.bind(this);
+    this.handleExpirationYear = this.handleExpirationYear.bind(this);
     this.handleSecurityCode = this.handleSecurityCode.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,12 +41,12 @@ class CreateContribution extends React.Component {
     this.setState({ email_address });
   }
 
-  handleExperationMonth(e) {
+  handleExpirationMonth(e) {
     const experation_month = e.target.value;
     this.setState({ experation_month });
   }
 
-  handleExperationYear(e) {
+  handleExpirationYear(e) {
     const experation_year = e.target.value;
     this.setState({ experation_year });
   }
@@ -102,8 +102,8 @@ class CreateContribution extends React.Component {
                 </div>
                 <div className="experation-and-security">
                   <div>
-                    <h4>Experation</h4>
-                    <select onChange={ this.handleExperationMonth}>
+                    <h4>Expiration</h4>
+                    <select onChange={ this.handleExpirationMonth}>
                       <option value="01">01</option>
                       <option value="02">02</option>
                       <option value="03">03</option>
@@ -117,7 +117,7 @@ class CreateContribution extends React.Component {
                       <option value="11">11</option>
                       <option value="12">12</option>
                     </select>
-                    <select onChange={ this.handleExperationYear}>
+                    <select onChange={ this.handleExpirationYear}>
                       {years}
                     </select>
                   </div>

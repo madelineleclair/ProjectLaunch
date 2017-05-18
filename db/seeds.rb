@@ -28,7 +28,7 @@ user5 = User.create(name: Faker::Name.name, email: Faker::Internet.email, passwo
 
 project1 = Project.create!(user_id: user1.id, title: "Living Forever",
   image: "https://s3.us-east-2.amazonaws.com/project-launch-dev/seeds/cute_dog.jpg",
-  description: "I am reseraching how to live forever so I finally have time to do all the things I want to do.",
+  description: "I am reseaching how to live forever so I finally have time to do all the things I want to do.",
   location: "New York City, NY", goal: 600, launch: true, launch_date: Time.new, category: "Technology", duration: 30)
 
 project2 = Project.create!(user_id: user2.id, title: "Visit Sukiyabashi Jiro",
