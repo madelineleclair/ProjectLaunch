@@ -7,6 +7,6 @@
     json.description reward.description
     json.delivery_date reward.delivery_date
     json.number_available reward.number_available
-    json.contribution_count reward.contributions.count
+    json.contribution_count reward.contributions.length
   end
 end
