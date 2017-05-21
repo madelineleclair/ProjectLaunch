@@ -1,17 +1,11 @@
 class Api::RewardsController < ApplicationController
 
   def index
-    @project = Project.find(params[:project_id])
-    render 'api/rewards/show.json.jbuilder'
-  end
-
-  def show
-    @project = Project.includes(rewards: :contributions).find(params[:id])
-    render 'api/rewards/show.json.jbuilder'
+    @rewards = Reward.includes(:contributions).where(project_id: params[:project_id]).all
+    render 'api/rewards/index.json.jbuilder'
   end
 
   def create
-
     @reward = Reward.new(reward_params)
 
     if @reward.save
@@ -22,7 +16,6 @@ class Api::RewardsController < ApplicationController
   end
 
   def update
-
     @reward = current_user.projects.rewards.find(params[rewards][:id])
 
     if @reward.update(reward_params)
@@ -33,7 +26,6 @@ class Api::RewardsController < ApplicationController
   end
 
   def destroy
-
     @reward = Reward.find(params[:id])
     @reward.destroy
 
