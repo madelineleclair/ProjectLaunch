@@ -14,6 +14,14 @@
  *= require_self
  */
 
+ .logo section {
+   font-family: 'Chango', sans-serif;
+ }
+
+button, h1, h2, h3, h4, div, form, section, main, input, a, ul, li, html, body, ol, p, label, textarea {
+  font-family: 'Metal', sans-serif;
+}
+
 
  .sign-up-or-log-in, .create-project-container {
   box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
