@@ -1,0 +1,1517 @@
+
+.outer-slider-container {
+  height: 500px;
+  overflow: hidden;
+  border-bottom: 1px solid #DCDEDD;
+}
+
+.slick-track img {
+  height: 500px;
+  width: 100%;
+}
+
+.slick-prev {
+    z-index: 1;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    top: 35%;
+    }
+
+  .slick-next {
+    z-index: 1;
+    right: 20px;
+    top: 35%;
+  }
+
+.slick-prev:before {
+    content: '\2039';
+    color: black;
+    align-self: center;
+    zoom: 500%;
+}
+
+.slick-next:before {
+  display: inline-block;
+  /*zoom: 8%;
+  content: url('user_icon.png');*/
+  content: '\2039';
+  color: black;
+  transform: rotateY(180deg);
+  align-self: center;
+  zoom: 500%;
+  align-self: center;
+  top: 40%;
+}
+
+/*.slick-next:focus {
+  color: black;
+  opacity: none;
+}*/
+
+.slick-dots {
+  bottom: 100px;
+  margin: none;
+}
+.create-project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
+  background: image-url("/assets/start_project_page_background.png");
+  background-size: 100%;
+  color: #80809E;
+}
+
+.create-project-form-container {
+  width: 29%;
+  background: white;
+}
+
+.create-project-container h1 {
+  color: #2752ff;
+  font-size: 45px;
+  margin: 60px 0;
+  padding-left: 50px;
+}
+
+.create-project-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.create-project-form ol {
+  width: 100%;
+}
+
+.create-project-form ol li {
+  list-style-type: decimal;
+  padding: 0 0 40px 50px;
+
+}
+
+.create-project-form p {
+  padding-bottom: 12px;
+}
+
+.drop-down {
+  position: relative;
+}
+
+.drop-down ul {
+  position: absolute;
+  /*border: 1px solid red;*/
+  background: white;
+  top: 90px;
+  left: 25px;
+  width: 49%;
+  border-radius: 4px;
+}
+
+.drop-down ul li {
+  list-style: none;
+  padding: 5px 0px 5px 25px;
+  text-align: left;
+}
+
+.create-project-drop-down-button {
+  border: 1px solid grey;
+  border-radius: 4px;
+  height: 45px;
+  width: 45%;
+  color: #80809E;
+}
+
+.create-project-drop-down-button:hover {
+  border: 1px solid blue;
+}
+
+.create-project-form ol li input {
+  border-bottom: 1px solid black;
+  width: 100%;
+  font-size: 23px;
+}
+
+.create-project-form > button {
+  background: #25CB68;
+  border-radius: 4px;
+  color: white;
+  height: 50px;
+  width: 35%;
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+.create-project-form > button:hover{
+  background: #009900;
+}
+
+.selected, .selcted:hover {
+  border: 1px solid green;
+}
+
+/*.create-project-drop-down-button:selection {
+
+}*/
+
+.new-project-errors {
+  margin-bottom: 10px;
+  width: 330px;
+  background: #fd003b;
+  border-radius: 4px;
+  color: white;
+}
+
+.new-project-errors li {
+  padding: 4px 21px;
+  font-size: 15px;
+}
+.edit-project-container {
+  background: #F7F5F2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
+}
+
+.basic-info-container, .story-info-container, .rewards-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.edit-project-page-buttons {
+  display: flex;
+  width: 33%;
+  justify-content: center;
+  height: 125px;
+}
+
+
+.edit-project-page-buttons a, .launch-project-button {
+  display: flex;
+  height: 55px;
+  width: 14%;
+  border: 1px solid #dcdcdb;
+  border-right: none;
+  background: white;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.launch-project-button {
+  height: 57px;
+  border-right: 1px solid #dcdcdb;
+}
+
+.edit-project-page-buttons a:hover, .edit-project-page-buttons button:hover {
+  color: blue;
+}
+
+.basic-caption, .story-caption, .rewards-caption {
+  height: 100px;
+  width: 100%;
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.basic-caption h1, .story-caption h1, .rewards-caption h1 {
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+}
+
+.basic-caption p, .story-caption p, .rewards-caption h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.project-image-selector, .project-video-selector {
+  border: 1px dashed blue;
+}
+
+.form-and-side-bar, .rewards-and-form {
+  border: 1px solid #dcdcdb;
+  width: 35%;
+  background: white;
+}
+
+.basic-info-form section, .rewards-and-form div {
+  /*width: 88%;*/
+  background: #F7F7F9;
+  height: auto;
+  padding: 10px;
+}
+
+.project-image img {
+  display: block;
+}
+
+.form-and-side-bar, .rewards-and-form {
+  padding: 20px;
+}
+
+.form-and-side-bar section {
+  /*height: 120px;*/
+  margin: 10px;
+  border-radius: 4px;
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+.basic-info-location div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-and-side-bar input, .form-and-side-bar textarea, .category-drop-down-button, .limited-availability button {
+  width: 400px;
+  border-radius: 4px;
+  /*margin-left: 47px;*/
+}
+
+.basic-info-form label, .add-reward-form label {
+  margin-left: 19px;
+  width: 20%;
+  font-weight: bold;
+}
+
+.basic-info-form section p {
+  width: 401px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.form-and-side-bar input[type="text"], .form-and-side-bar input[type="number"],
+.form-and-side-bar textarea, .category-drop-down-button, .add-reward-form input[type="text"],
+.add-reward-form input[type="date"], .add-reward-form input[type="number"],
+.add-reward-form textarea, .limited-availability button {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #d6d6d5;
+  height: 40px;
+  /*margin-top: 5px;*/
+  margin-right: 5px;
+  padding-left: 8px;
+}
+
+
+
+.form-and-side-bar input[type="text"]:focus,
+.form-and-side-bar input[type="number"]:focus, .form-and-side-bar textarea:focus,
+.create-rewards-input-fields textarea:focus, .create-rewards-input-fields input {
+  transition: 0.9s;
+  border: 1px solid blue;
+}
+
+.form-and-side-bar textarea, .add-reward-form textarea, .story-description textarea, .risks-and-challenges textarea {
+  height: 55px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+}
+
+
+.save-button {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  border: 1px solid #d6d6d5;
+  display: flex;
+  justify-content: center;
+}
+
+.save-button div {
+  width: 711px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-button button {
+  margin: 10px 0 10px 0;
+  background: #25CB68;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+
+.save-button button:hover {
+  background: #009900;
+}
+
+.caption-text {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.product-title, .short-blurb, .funding-goal, .duration, .story-description, .risks-and-challenges, .project-image-label-and-input, .project-video-label-and-input,
+.current-rewards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basic-info-location {
+  height: 50px;
+}
+
+.project-image img {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.basic-info-drop-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category-drop-down-button {
+  position: relative;
+}
+
+.category-drop-down-button:hover, .limited-availability button:hover {
+  border: 1px solid blue;
+}
+
+.drop-down-toggle {
+  background: white;
+  position: absolute;
+  /*height: 100px;*/
+  width: 400px;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-left: 50px;
+  border: 1px solid #d6d6d5;
+  text-align: left;
+  top: 43px;
+  left: -53px;
+}
+
+.drop-down-toggle ul {
+  top: 42px;
+  left: -53px;
+}
+
+.drop-down-toggle li {
+  margin: 10px;
+}
+
+.create-rewards-input-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-rewards-input-fields input, .create-rewards-input-fields textarea {
+  width: 400px;
+}
+/* line 5, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.rewards-and-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+/* line 12, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.rewards-and-form div {
+  margin: 10px;
+  border-radius: 4px;
+}
+
+/* line 17, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.add-reward-button {
+  width: 591.484px;
+  border: 1px dashed #dcdcdb;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+/* line 26, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.add-reward-button p {
+  margin: 3px;
+}
+
+/* line 30, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.add-reward-button p:first-child {
+  font-weight: 900;
+}
+
+/* line 34, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.add-reward-button:hover {
+  background: #F7F7F9;
+  color: blue;
+}
+
+/* line 39, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.current-rewards {
+  margin-bottom: 5px;
+  background: #F7F7F9;
+  padding: 10px;
+  border: 1px solid #d6d6d5;
+}
+
+/* line 48, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.reward-number label {
+  font-weight: bold;
+  margin-right: 60px;
+}
+
+/* line 53, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.current-reward-info {
+  background: white;
+  padding-left: 10px;
+  width: 400px;
+  border: 1px solid #dcdcdb;
+  position: relative;
+}
+
+/* line 61, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.current-reward-info h3 {
+  color: #586BE9;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 17px;
+}
+
+/* line 68, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.current-reward-info h4 {
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+/* line 74, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.current-reward-info p {
+  color: #80809E;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* line 80, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.current-reward-info h5 {
+  margin-top: 0;
+}
+
+/* line 84, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.add-reward-form {
+  border: 1px solid #d6d6d5;
+  background: #F7F7F9;
+}
+
+/* line 89, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.add-reward-form label {
+  margin-right: 20px;
+}
+
+/* line 93, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.create-reward-title, .create-reward-amount, .create-reward-description, .create-reward-delivery-date, .limited-availability {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* line 98, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.title-and-inputs {
+  display: flex;
+}
+
+/* line 102, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.current-reward-info img {
+  position: absolute;
+  width: 10px;
+  height: auto;
+  left: 389px;
+  top: 3px;
+  cursor: pointer;
+}
+
+/* line 111, /home/madeline/Desktop/ProjectLaunch/app/assets/stylesheets/create_and_update_projects/rewards.scss */
+.rewards-and-form ul {
+  margin-bottom: 20px;
+}
+
+.errors, .payment-errors {
+  width: 330px;
+  background: #fd003b;
+  border-radius: 4px;
+}
+
+.errors {
+  margin: auto;
+}
+
+.errors li, .payment-errors li {
+  color: white;
+  padding: 4px 21px;
+  font-size: 15px;
+  border-collapse: collapse;
+}
+
+.errors li:first-child, .payment-errors li:first-child {
+  border-top: 4px solid #fd003b;
+  border-radius: 4px;
+}
+
+.errors li:last-child, .payment-errors li:last-child {
+  border-bottom: 4px solid #fd003b;
+  border-radius: 4px;
+}
+
+/*.home-page-almost-funded {
+  padding: 20px;
+}*/
+
+.home-page-almost-funded, .search-results-container {
+  padding: 20px;
+}
+
+.almost-funded-container, .search-results-container, .popular-projects-container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.almost-funded-container > h3, .popular-projects-container > h3 {
+  font-size: 24px;
+  margin: 18px 0;
+}
+
+.almost-funded-container ul, .popular-projects-container ul, .search-results{
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+
+}
+
+.almost-funded-container ul li, .popular-projects-container ul li, .search-results li {
+  margin-bottom: 40px;
+  margin-right: 15px;
+}
+.mini-project-container {
+  width: 322px;
+  border: 1px solid #e8e6e2;
+  border-radius: 6px;
+}
+
+.mini-project-container p {
+  color: #3D3D66;
+}
+
+.mini-project-image {
+  height: 180px;
+  display: block;
+  overflow: hidden;
+}
+
+
+.mini-project-image img {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+
+.mini-project-text {
+  margin: 10px;
+}
+
+.mini-project-text h4 {
+  font-weight: bold;
+  margin-bottom: 7px;
+  text-transform: capitalize;
+}
+
+.mini-project-text p {
+  margin-bottom: 10px;
+}
+
+.mini-project-text p:last-child {
+  height: 100px;
+}
+
+.percentage-pledged {
+  height: 100%;
+  background: #2BDE73;
+  max-width: 100%;
+}
+
+.location-and-funding {
+  margin-left: 10px;
+  margin-top: 35px;
+}
+
+.mini-project-location {
+  display: flex;
+}
+
+.mini-project-location img {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
+.percentage-funded, .pledged, .days-to-go {
+  align-items: baseline;
+  display: inline-block;
+  margin: 11px 5px;
+}
+
+.percentage-funded div:first-child, .pledged div:first-child, .days-to-go div:first-child{
+  font-weight: bold;
+}
+
+.percentage-funded div:last-child, .pledged div:last-child, .days-to-go div:last-child{
+  color:#3D3D66;
+}
+
+.location-and-funding p {
+  margin-bottom: 5px;
+}
+.progress-bar {
+  width: 96.2%;
+  /*width: 300px;*/
+  height: 6px;
+  background: #F1EEEA;
+}
+button, h1, h2, h3, h4, div, form, section, main, input, a, ul, li, html, body, ol, p, label, textarea {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+}
+
+image {
+  display: block;
+  height: auto;
+}
+
+a:hover, button:hover, input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+body {
+  font-family: inherit;
+  box-sizing: content-box;
+}
+
+a {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+textarea {resize: none}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.categories-list-container {
+  padding: 35px;
+}
+
+.categories-and-remove-button {
+  border-bottom: 1px solid #CEEBD7;
+  display: flex;
+  font-size: 28px;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.categories-and-remove-button h1, .categories-and-remove-button button {
+  color: #05AF3C;
+}
+
+.categories-list-container ul li {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.categories-list-container ul li a:hover {
+  transition: 0.6s;
+  color: #05AF3C;
+}
+.search-results-number {
+  margin: 0 5px;
+  color: #2BDE73;
+}
+
+.search-results-caption {
+  display: flex;
+  font-size: 32px;
+  margin: 18px 0;
+}
+
+.navigation-bar, .search-bar-container {
+  height: 60px;
+  border-bottom: 1px solid #dad7d4;
+  display: flex;
+}
+
+.navigation-bar {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.navigation-bar a, .navigation-bar span {
+  padding: 0px 10px;
+  height: 100%;
+}
+
+.navigation-bar a div, .navigation-bar span div {
+  height: 58%;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 23px
+}
+
+.navigation-bar a div:hover, .navigation-bar span div:hover {
+ border-bottom: 3px solid #00C82E;
+}
+
+.explore-and-start span:hover {
+  cursor: pointer;
+}
+
+.user-image {
+  height: 100%;
+  /*background: #F7F7F9;*/
+  position: relative;
+}
+
+.user-image img {
+  height: 95%;
+}
+
+.user-image:hover {
+  cursor: pointer;
+}
+
+.user-info-box {
+  display: flex;
+  position: absolute;
+  height: 80px;
+  width: 500px;
+  top: 61px;
+  right: 2px;
+  background: #F7F7F9;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.user-info-box button {
+  margin-left: 5px;
+  font-size: 14px;
+  color: blue;
+}
+
+.user-info-box div {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.logo-container {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.project-logo {
+  color: black;
+}
+
+.launch-logo {
+  color: #2BDE73;
+}
+
+.login-logout-container, .user-image {
+  width: 235px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.explore-and-start {
+  width: 235px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search-bar-logo {
+  height: 45px;
+  width: 45px;
+  padding-top: 6px;
+}
+
+.search-bar-logo:hover {
+  cursor: pointer;
+}
+
+.search-bar-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-left {
+  display: flex;
+  align-items: center;
+}
+
+.search-right {
+  width: 100px;
+  font-weight: bold;
+}
+
+
+.search-form {
+  height: 100%;
+  width: 70%;
+}
+
+.search-bar-container img {
+  width: 45px;
+  height: 45px;
+  margin: 0 20px 0 50px;
+}
+
+.search-form input[type="text"] {
+  height: 100%;
+  width: 100%;
+  width: 100%;
+  align-self: center;
+  padding-left: 25px;
+  color: black;
+  font-size: 24px;
+}
+
+.search-form input[type="submit"] {
+  display: none;
+}
+.search-length h1:last-of-type {
+  margin-left: 10px;
+  color: #2BDE73;
+}
+
+.search-length {
+  display: flex;
+  font-size: 32px;
+  margin: 18px 0;
+}
+.session ul {
+  margin: auto;
+  width: 330px;
+  background: #fd003b;
+  border-radius: 4px;
+}
+
+.session li {
+  color: white;
+  padding: 4px 21px;
+  font-size: 15px;
+  border-collapse: collapse;
+}
+
+.session li:first-child {
+  border-top: 4px solid #fd003b;
+  border-radius: 4px;
+}
+
+.session li:last-child {
+  border-bottom: 4px solid #fd003b;
+  border-radius: 4px;
+}
+
+.sign-up-or-log-in {
+  padding: 120px 20px;
+  background: #F7F5F2;
+}
+
+.session {
+  margin: 0 auto;
+  width: 400px;
+  padding-bottom: 20px;
+  background: white;
+  border: 1px 1px 0px 1px solid #F1EEEA;
+}
+
+.have-account {
+  margin: 0 auto;
+  width: 400px;
+  background: white;
+  height: 30px;
+  text-align: center;
+  align-content: center;
+  background: rgb(247, 247, 247);
+  border: 1px solid #F1EEEA;
+  font-size: 14px;
+}
+
+.have-account {
+  padding-top: 15px;
+}
+.have-account a {
+  color: blue;
+  padding-left: 10px;
+}
+
+.have-account a:hover {
+  color: black;
+}
+
+.sign-up-or-log-in section h2 {
+  margin: auto;
+  width: 350px;
+  padding: 10px 0px 5px 20px ;
+  font-size: 22px;
+}
+.session-form {
+  width: 350px;
+  margin: auto;
+}
+
+.session-form input {
+  display: inline-block;
+  margin: 10px;
+  width: 320px;
+  height: 37px;
+  border-radius: 4px;
+  border: 1px solid #dad7d4;
+}
+
+.session-form input[type=text], .session-form input[type=password] {
+  padding-left: 8px;
+  font-size: 12px;
+}
+
+.session-form input:focus {
+  transition: 0.9s;
+  border: 1px solid blue;
+}
+
+ .submit-button, .guest-button {
+  display: block;
+  border-radius: 4px;
+  margin: 10px;
+  width: 330px;
+  height: 37px;
+  color: white;
+  font-size: 15px;
+}
+
+.submit-button {
+  background: #25CB68;
+}
+
+.submit-button:hover {
+  background: #009900;
+}
+
+.guest-button {
+  background: #336EFF;
+  margin: auto;
+}
+
+.guest-button:hover {
+  background: #334FFF;
+}
+.funding-status-container {
+  width: 35%;
+  margin-left: 10px;
+}
+
+.funding-status-container div {
+  margin-bottom: 20px;
+}
+
+.funding-status-container h2 {
+  font-size: 24px;
+}
+
+.funding-status-container h4 {
+  color: #626369;
+  font-size: 18px;
+}
+
+.funding-raised h2 {
+  color: #05AF3C;
+}
+
+.funding-status-container button{
+  width: 96.2%;
+  height: 50px;
+  background: #24ca66;
+  border: 1px solid #05AF3C;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.funding-status-container button:hover {
+  transition: 0.9s;
+  background: #0dbf47;
+  box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.title-and-owner {
+  background: #F5F1DE;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-and-owner h1, .title-and-owner h3 {
+  text-align: center;
+}
+
+.title-and-owner h1 {
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 50px;
+  margin-bottom: 16px;
+}
+
+.title-and-owner h3 {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.payment-form-container h3 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card-form-and-caption {
+  width: 35%;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.card-form-and-caption h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card-form-and-caption input {
+  height: 30px;
+  width: 45%;
+  border: 1px solid #dcdcdb;
+  border-radius: 4px;
+}
+
+.card-form-and-caption input:focus {
+  border: 1px solid blue;
+  transition: 0.9;
+}
+.payment-info-container {
+  border: 1px solid  #a9a8a8;
+  background: #e0e4fb;
+  height: 75%;
+  width: 40%;
+}
+
+.payment-amount, .payment-info-reward {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.payment-amount {
+  border-bottom: 1px solid #a9a8a8;
+}
+
+.payment-info-container h5 {
+  font-weight: bold;
+  font-size: 12px;
+  color: #3D3D66;
+  margin-bottom: 10px;
+}
+
+.payment-amount h3 {
+  margin-bottom: 15px;
+}
+
+.payment-info-reward h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.payment-info-reward p:first-of-type {
+  margin-top: 10px;
+}
+
+.payment-info-reward p:last-of-type {
+  color: #80809E;
+  margin-top: 15px;
+  padding-bottom: 20px;
+}
+
+.project-intro {
+  width: 65%;
+  margin: auto;
+  margin-top: 55px;
+  background: #FBFBFA;
+  height: 50%;
+}
+
+.owner-and-title {
+  display: flex;
+}
+
+.owner-and-title span {
+  display: block;
+  margin-top: 8px;
+}
+
+.owner-and-title p {
+  display: inline-block;
+}
+
+.owner-and-title p:last-child {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.owner-info img {
+  height: auto;
+  width: 55px;
+}
+
+.owner-info {
+
+  padding-right: 25px;
+}
+
+.title-and-description {
+  padding-left: 25px;
+}
+
+.title-and-description h2 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.title-and-description h3 {
+  color: #626369;
+}
+
+.main-video-and-funding {
+  display: flex;
+  margin-top: 25px;
+  height: 450px;
+}
+
+.main-video-and-funding img {
+  width: 65%;
+  height: auto;
+}
+
+.about-and-support-project {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about-project {
+  width: 42%;
+}
+
+.rewards-show-list {
+  width: 20%;
+}
+
+.rewards-show-list h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.rewards-list-item-not-selected, .rewards-list-item-selected {
+  background-color: #F7F7F9;
+  font-weight: 400;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.rewards-list-item-not-selected {
+  border: 1px solid #e0e4fb;
+}
+
+.rewards-list-item-not-selected:hover{
+  cursor: pointer;
+  background: #14ce50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rewards-list-item-not-selected:hover h2, .rewards-list-item-not-selected:hover h3,
+.rewards-list-item-not-selected:hover h3, .rewards-list-item-not-selected:hover p {
+  visibility: hidden;
+}
+
+
+.rewards-list-item-not-selected div:first-child {
+  display: none;
+  text-align: center;
+  align-content: center;
+}
+
+.rewards-list-item-not-selected:hover div:first-child {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  opacity: 9;
+  font-size: 20px;
+  text-align: center;
+}
+
+.rewards-list-item-not-selected h2, .rewards-list-item-selected h2 {
+  color: #586BE9;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.rewards-list-item-not-selected h3, .rewards-list-item-selected h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rewards-list-item-not-selected p, .rewards-list-item-selected p {
+  color: #626369;
+}
+
+.delivery-info {
+  margin-top: 25px;
+}
+
+.delivery-info p:first-of-type {
+  font-size: 12px;
+}
+
+.delivery-info p:last-of-type {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+
+.contribute {
+  border-top: 1px dashed #dadada;
+  margin-top: 21px;
+}
+
+.contribution-count {
+  display: flex;
+  margin-top: 10px;
+}
+
+.contribution-count p {
+  margin-right: 4px;
+}
+
+.rewards-list-item-selected input {
+  display: block;
+  margin: 10px 0;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #F1EEEA;
+  width: 90%;
+}
+
+.rewards-list-item-selected button {
+  background: #14ce50;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.rewards-list-item-selected {
+  border: 1px solid blue
+}
+
+.about-project {
+  padding-right: 15px;
+}
+
+.about-project h2 {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-project h2:last-of-type {
+  margin-top: 30px;
+}
+
+.about-project p {
+  line-height: 150%;
+}
+.payment-form-container {
+  padding-bottom: 50px;
+}
+
+.title-and-owner {
+  background: #F5F1DE;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-and-owner h1, .title-and-owner h3 {
+  text-align: center;
+}
+
+.title-and-owner h1 {
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 50px;
+  margin-bottom: 16px;
+}
+
+.title-and-owner h3 {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.title-and-owner h3 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card-form-and-caption {
+  width: 60%;
+  margin: auto;
+  padding-right: 20px;
+  /*margin-top: 90px;*/
+}
+
+.card-form-and-caption h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card-form-and-caption input {
+  height: 30px;
+  width: 75%;
+  border: 1px solid #dcdcdb;
+  border-radius: 4px;
+}
+
+.card-form-and-caption input:focus {
+  border: 1px solid blue;
+  transition: 0.9;
+}
+.button-container {
+  border-top: 1px solid  #dcdcdb;
+  margin-top: 30px;
+}
+
+/*.payment-info-form {
+  width: 55%;
+}*/
+
+.payment-info-form button{
+  display: block;
+  background: #25CB68;
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+}
+
+.payment-info-form button:hover {
+  background: #05AF3C;
+}
+
+.card-form-and-transaction-info {
+  display: flex;
+  padding-top: 90px;
+  width: 50%;
+  margin: auto;
+}
+
+.expiration-and-security {
+  display: flex;
+}
+
+.security-code {
+  margin-left: 10px;
+  width: 36%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+ .logo section {
+   font-family: 'Chango', sans-serif;
+ }
+
+button, h1, h2, h3, h4, div, form, section, main, input, a, ul, li, html, body, ol, p, label, textarea {
+  font-family: 'Metal', sans-serif;
+}
+
+ .sign-up-or-log-in, .create-project-container {
+  box-shadow: inset 1px 4px 9px -4px rgba(0, 0, 0, 0.22);
+  height: 800px;
+ }
