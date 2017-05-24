@@ -5,7 +5,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 20px;
-  background: image-path("/assets/start_project_page_background.png");
+  background-image: image_url("/assets/start_project_page_background.png");
+  background-repeat: no-repeat;
   background-size: 100%;
   color: #80809E;
 }
