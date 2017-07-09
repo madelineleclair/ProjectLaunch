@@ -94,10 +94,6 @@
 .rewards-list-item-not-selected:hover{
   cursor: pointer;
   background: #14ce50;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .rewards-list-item-not-selected:hover h2, .rewards-list-item-not-selected:hover h3,
@@ -119,7 +115,9 @@
   color: white;
   opacity: 9;
   font-size: 20px;
-  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .rewards-list-item-not-selected h2, .rewards-list-item-selected h2 {
