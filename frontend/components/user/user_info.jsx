@@ -4,7 +4,6 @@ import { hashHistory } from 'react-router';
 
 class UserInfo extends React.Component {
   constructor(props) {
-    debugger
     super(props);
     this.logOut = this.logOut.bind(this);
   }
